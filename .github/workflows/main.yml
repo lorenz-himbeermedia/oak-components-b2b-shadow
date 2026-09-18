@@ -1,0 +1,58 @@
+name: Sync Shopify Theme
+
+on:
+  schedule:
+    - cron: "0 * * * *" # jede Stunde
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  pull-theme:
+    # nur auf main laufen lassen
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js (für Shopify CLI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # erfüllt die Shopify-Anforderung
+
+      - name: Install Shopify CLI (npm global)
+        run: |
+          npm install -g @shopify/cli @shopify/theme
+          shopify version
+
+      - name: Pull theme from Shopify
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_PASSWORD: ${{ secrets.SHOPIFY_CLI_PASSWORD }}
+        run: |
+          shopify theme pull \
+            --store="$SHOPIFY_STORE" \
+            --live \
+            --password="$SHOPIFY_CLI_PASSWORD" \
+            --path=./
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Changes detected, committing..."
+            git add -A
+            git commit -m "chore: sync theme from Shopify (automated)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
