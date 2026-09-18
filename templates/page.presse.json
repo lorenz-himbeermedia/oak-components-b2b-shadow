@@ -1,0 +1,346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_wjpCtt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_Wnjjtz": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Components"
+          }
+        },
+        "heading_rYR8Q6": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "{{ page.title }}",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_8G4Eta": {
+          "type": "description",
+          "settings": {
+            "description": "<p>{{ page.content }}</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_Wnjjtz",
+        "heading_rYR8Q6",
+        "description_8G4Eta"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/StemNeu-15.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "container-width": "2",
+        "background-color": "none",
+        "show-title": false,
+        "heading-type": "featured-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "text_columns_yma9K7": {
+      "type": "text-columns",
+      "blocks": {
+        "image_jHUkJf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "Mit Carbon & Aramid gegen Hitze",
+            "description": "<p>26. Januar 2026</p><p>Unter dem Namen Hyperstop gliedert Oak Components sein Verschleißteil-Sortiment neu. Den Anfang machen High-End-Bremsbeläge aus europäischer Fertigung, die mit einem speziellen Materialmix aus Carbon und Aramid massiver Hitze trotzen wollen.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/oak-hyperstop-mtb-bremsbelaege/",
+            "button-style": "block-link"
+          }
+        },
+        "image_QjG9fK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "Fünf Lieblingsprodukte der Redaktion",
+            "description": "<p>13. Januar 2026</p><p>In unserer Artikelserie „Geile Teile“ stellen wir immer kurz und knapp fünf Produkte aus der Redaktion vor, die wir bedenkenlos weiterempfehlen wollen.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/geile-teile-14-fuenf-lieblingsprodukte-der-redaktion/",
+            "button-style": "block-link"
+          }
+        },
+        "image_GYgcnE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "CNC-gefrästes Bling-Bling für dein Bike",
+            "description": "<p>12. Dezember 2025</p><p>Fork Caps von OAK Components: Auf der Suche nach dem gewissen Etwas? Dann dürften die neuen CNC-gefrästen Fork Caps für Fox- und RockShox-Federgabeln interessant sein. Wir haben alle Infos zu den kleinen Schmuckstücken.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/oak-fork-caps-info-preis/",
+            "button-style": "block-link"
+          }
+        },
+        "image_QbXpJM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "Optisches Detail und langlebiger Antrieb",
+            "description": "<p>10. Dezember 2025</p><p>OAK Components präsentiert mit dem Kurbel-Abdeckkappen Set und dem Amulet Kettenblatt zwei neue Komponenten, die nicht nur optisch Akzente setzen, sondern auch durch Funktion und Langlebigkeit überzeugen sollen. Während das Abdeckkappen-Set als kleiner, aber feiner Detailakzent an vielen SRAM-Kurbeln nachgerüstet werden kann, soll das Amulet Kettenblatt mit cleverem Multi-Mount-Design und robuster Konstruktion punkten.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/oak-amulet-kurbel-abdeckkappen/",
+            "button-style": "block-link"
+          }
+        },
+        "image_dpcQyt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene.jpg",
+            "image-enabled": true,
+            "title": "Review: Modifying the TRP DH-R Evo Brakes with Aftermarket Levers",
+            "description": "<p>05. November 2024</p><p>Brake choice is a rather personal matter, and while there are objective measures that play into the decision, much of it comes down to little details and subtle differences. Ergonomics are a big part of this calculus, and are generally the hardest part of a system to tune - you're typically stuck with whatever the initial designer laid out, and left to work around those constraints.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.pinkbike.com/news/review-modifying-the-trp-dh-r-evo-brakes-with-aftermarket-levers.html",
+            "button-style": "block-link"
+          }
+        },
+        "image_LfeYTJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "Endlich auch für Shimano-Bremsen",
+            "description": "<p>22. Oktober 2024</p><p>OAK-Bremshebel für Shimano: Von OAK Components gibt es seit 2024 gefräste Bremshebel für SRAM-, Magura- und TRP-Bremsen. Jetzt kommt das Modell OAK SH für Shimano-Bremsen dazu. Wer seinem Bike das gewisse Etwas verpassen und die Bremsperformance verbessern will, sollte sich die neuen OAK SH-Hebel genauer anschauen.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/oak-sh-bremshebel-shimano-info/",
+            "button-style": "block-link"
+          }
+        },
+        "image_UMh46j": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene.jpg",
+            "image-enabled": true,
+            "title": "Oak Components Releases Aftermarket Levers for Shimano Brakes",
+            "description": "<p>08. Oktober 2024</p><p>We are proud to announce a product that has been frequently requested since the launch of our Magura compatible Root Lever Pro in 2021. It was a difficult task to improve an already ergonomic lever blade. But we made it: The OAK SH Levers combines improved modulation and performance with ergonomics and durability.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.pinkbike.com/news/oak-components-launches-sh-brake-levers-fitting-shimano.html",
+            "button-style": "block-link"
+          }
+        },
+        "image_b4t8Gc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene2.jpg",
+            "image-enabled": true,
+            "title": "Mehr Style für MTB-Bremsen von SRAM",
+            "description": "<p>12. September 2024</p><p>OAK Components erweitert sein Portfolio und bietet künftig Bremshebel für SRAM-Bremsen an. Mit dem neuen Bremshebel OAK SR – passend für Bremsen von SRAM – erweitert der Anbieter hochwertiger Tuningparts sein Angebot um weitere Modelle. Wir konnten die neuen OAK SR-Bremshebel bereits testen und haben alle Infos zu den gefrästen Schönheiten.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.mtb-news.de/news/oak-components-bremshebel-sram/",
+            "button-style": "block-link"
+          }
+        },
+        "image_FTTq36": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene.jpg",
+            "image-enabled": true,
+            "title": "Oak Components Announces New SRAM Compatible Brake Levers",
+            "description": "<p>12. September 2024</p><p>They say history repeats itself, and that sure seems to be the case in the mountain bike world, at least if the resurgence of aftermarket machined and anodized parts is any indication. Oak Components are part of that revival, a small European company that got their start with replacement Magura levers. The latest addition to their lineup is SRAM compatible aluminum lever blades, which will work with Maven, Code, Guide, G2, and Level brakes.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.pinkbike.com/news/oak-components-announces-new-sram-compatible-brake-lever.html",
+            "button-style": "block-link"
+          }
+        },
+        "image_TbFjdU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene.jpg",
+            "image-enabled": true,
+            "title": "Review: Oak Components Root Lever - An Aftermarket Upgrade for Magura Brakes",
+            "description": "<p>24. März 2022</p><p>You may have flashbacks to the mid-2000s when Dangerboy CNC'd brake levers were all the rage, but the Oak Component's Root Lever does more than just look like a sculpted stick of aluminum. In addition to providing more adjustments to fine tune a broader lever throw distance and personalized pad bite point contact on Magura brakes, there are some structural bonuses built into the lever as well.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.pinkbike.com/news/review-oak-components-root-lever-magura-brakes.html",
+            "button-style": "block-link"
+          }
+        },
+        "image_mKUcBf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/StimmenderSzene3.jpg",
+            "image-enabled": true,
+            "title": "OAK Components Root-Lever – Eine Alternative?",
+            "description": "<p>OAK Components? Wer jetzt an Whiskey aus schicken Eichenfässern denkt hat zwar Geschmack, liegt aber leider falsch. Denn der OAK Components Root-Lever ist kein rauchiger Whiskey mit erdigem Abgang, sondern das wohl interessanteste Add-On für die Magura MT Reihe, das 2021 auf den Markt gekommen ist.</p>",
+            "button-text": "Jetzt lesen",
+            "button-link": "https://www.inside-mtb.de/tests/oak-components-root-lever-eine-alternative/",
+            "button-style": "block-link"
+          }
+        }
+      },
+      "block_order": [
+        "image_jHUkJf",
+        "image_QjG9fK",
+        "image_GYgcnE",
+        "image_QbXpJM",
+        "image_dpcQyt",
+        "image_LfeYTJ",
+        "image_UMh46j",
+        "image_b4t8Gc",
+        "image_FTTq36",
+        "image_TbFjdU",
+        "image_mKUcBf"
+      ],
+      "custom_css": [
+        "img {height: auto; margin: auto; max-width: 120px;}",
+        ".image--root {height: auto;}",
+        "@media only screen and (max-width: 767px) {.image--root {height: 120px; }}"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "block-spacing": true,
+        "width": 3,
+        "heading-type": "block-heading",
+        "text-color": "body",
+        "text-alignment": "center",
+        "text-indent": true,
+        "aspect-ratio": "square",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "grid"
+      }
+    },
+    "grid_with_overlay_qFpAY7": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_JrY9RV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RTH_Samstag_web-34.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gdUTwf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting_22062024_web_64_von_115.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_JrY9RV",
+        "image_gdUTwf"
+      ],
+      "custom_css": [
+        ".featured-grid--root {padding: 0;}",
+        "@media only screen and (max-width: 767px) {[data-container=\"panel\"] {grid-column-gap: 0; grid-row-gap: 0; }}"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_wjpCtt",
+    "main",
+    "text_columns_yma9K7",
+    "grid_with_overlay_qFpAY7"
+  ]
+}

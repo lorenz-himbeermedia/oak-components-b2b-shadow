@@ -1,0 +1,398 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "border": "none",
+        "spacing-above": "half",
+        "spacing-below": "none",
+        "show-title": true,
+        "show-description": true,
+        "description-alignment": "with-title",
+        "heading-type": "featured-heading",
+        "heading-alignment": "center",
+        "text-color": "white",
+        "overlay-style": "darken",
+        "text-style": "none",
+        "image-enabled": true,
+        "use-image-fallback": true,
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "image_with_text_overlay_ihrXyj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_tQcNHY": {
+          "type": "overline",
+          "settings": {}
+        },
+        "heading_F9Jiid": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "{{ collection.title }}",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_Lgp9VD": {
+          "type": "description",
+          "settings": {
+            "description": "{{ collection.description }}",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_tQcNHY",
+        "heading_F9Jiid",
+        "description_Lgp9VD"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "navigation": {
+      "type": "collection-navigation",
+      "settings": {
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "show-browse-button": true,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": true,
+        "show-collections-list": true,
+        "custom-list-collections": "",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches": "circle",
+        "show-search-link": true,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "columns": 4,
+        "rows": 4,
+        "mobile-columns": "2",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "1773393346a7b26752": {
+      "type": "apps",
+      "settings": {
+        "border": "none",
+        "spacing-above": "small",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "light",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "small",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "image_with_text_FpE7HX": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_cXhpbN": {
+          "type": "overline",
+          "settings": {
+            "overline": "Team OAK"
+          }
+        },
+        "heading_nFkPnF": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Von Bikern für Biker",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_UdV3K3": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Unsere Ingenieure sind selbst Vollblut Mountainbiker und holen mit ihren OAK Entwicklungen aus jeder Abfahrt maximalen Spaß und Performance heraus. Das Produktfeedback von Kunden aus aller Welt wird mit einbezogen um die bestmöglichen Parts anzubieten.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_rqHpTL": {
+          "type": "button",
+          "settings": {
+            "text": "Mehr erfahren",
+            "link": "shopify://pages/about-us",
+            "style": "button-4"
+          }
+        }
+      },
+      "block_order": [
+        "overline_cXhpbN",
+        "heading_nFkPnF",
+        "description_UdV3K3",
+        "button_rqHpTL"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/ShootingLeogang_web-26.jpg",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "dark",
+        "reverse-layout": false,
+        "text-color": "white",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "medium",
+        "mobile-text-color": "white",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "icons_row_rkcTnx": {
+      "type": "icons-row",
+      "blocks": {
+        "icon_W4i8j9": {
+          "type": "icon",
+          "settings": {
+            "icon": "sun",
+            "icon-image": "shopify://shop_images/CO2Neutral_WebshopOAK.png",
+            "title": "CO2 reduzierte Lieferungen",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_f6xQed": {
+          "type": "icon",
+          "settings": {
+            "icon": "tree",
+            "icon-image": "shopify://shop_images/LieferketteIcon_WebshopOAK.png",
+            "title": "Kurze Lieferketten",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_WnXrVU": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "icon-image": "shopify://shop_images/HerzEuropaIcon_WebshopOAK.png",
+            "title": "Made in Europe",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_W4i8j9",
+        "icon_f6xQed",
+        "icon_WnXrVU"
+      ],
+      "name": "Icons row",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "block-spacing": true,
+        "background-color": "light",
+        "outer-background": true,
+        "container-width": "4",
+        "width": 3,
+        "icon-width": 0,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "grid"
+      }
+    },
+    "grid_with_overlay_f7bzMa": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_pUWwpH": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_ATdUNW": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_djRfeA": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_MxKqc4": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_pUWwpH",
+        "image_ATdUNW",
+        "image_djRfeA",
+        "image_MxKqc4"
+      ],
+      "name": "Grid with overlay",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 4,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "darken",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "aspect-ratio",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "image_with_text_overlay_ihrXyj",
+    "navigation",
+    "main",
+    "1773393346a7b26752",
+    "image_with_text_FpE7HX",
+    "icons_row_rkcTnx",
+    "grid_with_overlay_f7bzMa"
+  ]
+}

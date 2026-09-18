@@ -1,0 +1,699 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_ELfdB9": {
+      "type": "slideshow",
+      "blocks": {
+        "image_mdiCmp": {
+          "type": "image",
+          "settings": {
+            "overline": "Ihr habt es euch gewünscht",
+            "title": "OAK RLP Bremshebel jetzt in Farbe",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "<p>Die bewährte Performance, jetzt mit noch mehr Auswahlmöglichkeiten für deinen individuellen Dreambuild.<br/><br/></p>",
+            "button-text-1": "Zum Bremshebel",
+            "button-link-1": "shopify://products/root-lever-set-2-stk-raw-passend-fur-magura-bremssysteme",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_C9nAFn": {
+          "type": "image",
+          "settings": {
+            "overline": "The Brake Lever Company",
+            "title": "OAK Tuning Bremshebel",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "<p>Hol mehr aus deinem Bremssystem und hol dir das OAK Upgrade.</p>",
+            "button-text-1": "Jetzt ansehen",
+            "button-link-1": "shopify://collections/tuning-bremshebel",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_7JXRRV": {
+          "type": "image",
+          "settings": {
+            "overline": "New in",
+            "title": "OAK Amulet Kettenblatt",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "",
+            "button-text-1": "Jetzt ansehen",
+            "button-link-1": "shopify://products/amulet-kettenblatt",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_3aPw86": {
+          "type": "image",
+          "settings": {
+            "overline": "New in",
+            "title": "Forkcap Air & HSC",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "<p>Das unverwechselbare Design und der farbliche Akzent wird dir bei jedem Ride ins Auge springen.</p>",
+            "button-text-1": "Jetzt ansehen",
+            "button-link-1": "shopify://collections/cockpit",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_HtEEXy": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "overline": "NEW IN",
+            "title": "OAK Hyperstop Bremsbeläge",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "<p>Bring mehr Performance an dein Bremssystem mit OAK Bremsbelägen.</p>",
+            "button-text-1": "Jetzt ansehen",
+            "button-link-1": "shopify://products/oak-bremsbelag-hyperstop",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_amRYgr": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "overline": "NEW IN",
+            "title": "OAK Kurbel-Abdeckkappen",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "<p>Werte deine Kurbel auf und setze zudem einen farblichen Akzent.</p>",
+            "button-text-1": "Jetzt ansehen",
+            "button-link-1": "shopify://products/kurbel-abdeckkappen-set-fur-sram-dub-oak-m18-m30lh",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        }
+      },
+      "block_order": [
+        "image_mdiCmp",
+        "image_C9nAFn",
+        "image_7JXRRV",
+        "image_3aPw86",
+        "image_HtEEXy",
+        "image_amRYgr"
+      ],
+      "disabled": true,
+      "name": "Slideshow",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "arrows-enabled": false,
+        "spacing-around-blocks": false,
+        "blocks-per-slide": 1,
+        "auto-rotate": true,
+        "rotate-frequency": 5,
+        "transition-type": "slide",
+        "text-color": "white",
+        "overlay-style": "darken",
+        "text-style": "eclipse-shadow",
+        "text-background-color": "transparent",
+        "heading-type": "featured-heading",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "small",
+        "mobile-aspect-ratio": 84,
+        "blocks-per-slide-mobile": "1"
+      }
+    },
+    "featured_text_Umy4dD": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_y7cdpq": {
+          "type": "overline",
+          "settings": {
+            "overline": "Das OAK Universum"
+          }
+        },
+        "heading_zB9JbN": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Hightech for your ride",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_y7cdpq",
+        "heading_zB9JbN"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "grid_with_overlay_drLKbi": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_bPWFQy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RLD177_1.jpg",
+            "title": "Tuning Bremshebel",
+            "button-text": "ansehen",
+            "button-link": "shopify://collections/tuning-bremshebel",
+            "x-blocks": "1",
+            "y-blocks": "2",
+            "text-width": 500,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_4YRUtG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingLagerEdited_web-20.jpg",
+            "title": "Premium Parts",
+            "button-text": "ansehen",
+            "button-link": "shopify://collections/premium-parts",
+            "x-blocks": "1",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_Gt3yLp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingLagerEdited_web-106.jpg",
+            "title": "Titanschrauben",
+            "button-text": "ansehen",
+            "button-link": "shopify://collections/titanschrauben",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_6dEeMg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hyperstop_BrakePads_19.jpg",
+            "title": "Zubehör",
+            "button-text": "ansehen",
+            "button-link": "shopify://collections/zubehor",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_bPWFQy",
+        "image_4YRUtG",
+        "image_Gt3yLp",
+        "image_6dEeMg"
+      ],
+      "name": "Grid with overlay",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "spacing": true,
+        "columns": 3,
+        "row-height": 200,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "text-shadow",
+        "heading-type": "block-heading",
+        "overlay-style": "darken",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "1",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_hjfCJN": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_N4EqHm": {
+          "type": "overline",
+          "settings": {
+            "overline": "Community Stimmen"
+          }
+        },
+        "heading_itFTEW": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Überzeuge dich selbst",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_N4EqHm",
+        "heading_itFTEW"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "1773230450de37fc34": {
+      "type": "apps",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "small",
+        "container-width": "6",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "featured_text_kDXkdh": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_6EUbL7": {
+          "type": "overline",
+          "settings": {
+            "overline": "also ♥ by"
+          }
+        }
+      },
+      "block_order": [
+        "overline_6EUbL7"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "text_columns_icVDhC": {
+      "type": "text-columns",
+      "blocks": {
+        "image_pqyLa6": {
+          "type": "image",
+          "settings": {
+            "image-enabled": true,
+            "title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_kYfLeD": {
+          "type": "image",
+          "settings": {
+            "image-enabled": true,
+            "title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_MyUWND": {
+          "type": "image",
+          "settings": {
+            "image-enabled": true,
+            "title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_YYmdUw": {
+          "type": "image",
+          "settings": {
+            "image-enabled": true,
+            "title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        }
+      },
+      "block_order": [
+        "image_pqyLa6",
+        "image_kYfLeD",
+        "image_MyUWND",
+        "image_YYmdUw"
+      ],
+      "custom_css": [
+        "picture.image--root {width: 80px; height: 80px; margin: auto auto 20px auto;}"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "small",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "1",
+        "block-spacing": true,
+        "width": 4,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "text-alignment": "center",
+        "text-indent": true,
+        "aspect-ratio": "square",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "full",
+        "mobile-text-alignment": "center",
+        "mobile-width": "2",
+        "mobile-media-layout": "grid"
+      }
+    },
+    "featured_text_nw3kKW": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_nEGLDB": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Vision"
+          }
+        },
+        "heading_7K6UCg": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Mach dein Bike zu deinem Dreambuild",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_XUzPac": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Du brauchst nicht das neueste Bike Modell und die teuersten Parts um dein Bike zu deinem individuellen Dreambuild zu machen. Die DNA von OAK: Haltbarkeit, Design, Performance und Innovationskraft. <br/><br/>Mit OAK bringst du optisch herausstechende und performance-steigernde Parts an dein Bike. Profitiere von unseren ausgeklügelten Komponenten und spüre den Unterschied bei jedem Ride.</p><p> </p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_PxBFpt": {
+          "type": "button",
+          "settings": {
+            "text": "",
+            "link": "shopify://pages/about-us",
+            "style": "button-1"
+          }
+        }
+      },
+      "block_order": [
+        "overline_nEGLDB",
+        "heading_7K6UCg",
+        "description_XUzPac",
+        "button_PxBFpt"
+      ],
+      "custom_css": [
+        "a {margin-top: 20px;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "5",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "large",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "grid_with_overlay_CPQN6G": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_P8p8gT": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_mpE3Km": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_Nn8kNK": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_yCDn9N": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_aXMPmN": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_pPty7k": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_P8p8gT",
+        "image_mpE3Km",
+        "image_Nn8kNK",
+        "image_yCDn9N",
+        "image_aXMPmN",
+        "image_pPty7k"
+      ],
+      "custom_css": [],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "dark",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "white",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "section-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "slideshow_ELfdB9",
+    "featured_text_Umy4dD",
+    "grid_with_overlay_drLKbi",
+    "featured_text_hjfCJN",
+    "1773230450de37fc34",
+    "featured_text_kDXkdh",
+    "text_columns_icVDhC",
+    "featured_text_nw3kKW",
+    "grid_with_overlay_CPQN6G"
+  ]
+}

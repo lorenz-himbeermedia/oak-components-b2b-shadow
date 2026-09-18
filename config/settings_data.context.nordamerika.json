@@ -1,0 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "nordamerika"
+  },
+  "current": {
+    "cart--shipping-threshold-1": "15000",
+    "cart--shipping-costs-1": "2800",
+    "cart--shipping-threshold-2": "25000",
+    "cart--shipping-costs-2": "1400",
+    "cart--shipping-costs-3": "100",
+    "cart--shipping-info-text": "<p>$14 Versand ab $150<br/>Nur $1 Versand ab $250</p>"
+  }
+}

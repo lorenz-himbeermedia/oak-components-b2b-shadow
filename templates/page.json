@@ -1,0 +1,179 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_wjpCtt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_Wnjjtz": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Components"
+          }
+        },
+        "heading_rYR8Q6": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "{{ page.title }}",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_Wnjjtz",
+        "heading_rYR8Q6"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/StemNeu-15.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "container-width": "2",
+        "background-color": "none",
+        "show-title": false,
+        "heading-type": "featured-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "1781782410a296538e": {
+      "type": "apps",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "grid_with_overlay_qFpAY7": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_JrY9RV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RTH_Samstag_web-34.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gdUTwf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting_22062024_web_64_von_115.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_JrY9RV",
+        "image_gdUTwf"
+      ],
+      "custom_css": [
+        ".featured-grid--root {padding: 0;}",
+        "@media only screen and (max-width: 767px) {[data-container=\"panel\"] {grid-column-gap: 0; grid-row-gap: 0; }}"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_wjpCtt",
+    "main",
+    "1781782410a296538e",
+    "grid_with_overlay_qFpAY7"
+  ]
+}

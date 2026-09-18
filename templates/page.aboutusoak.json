@@ -1,0 +1,709 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "image_with_text_overlay_ejKjTA": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_FnJz99": {
+          "type": "overline",
+          "settings": {
+            "overline": "About Us"
+          }
+        },
+        "heading_xgqJMR": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Auf Augenhöhe mit der Szene",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_rtyQbw": {
+          "type": "description",
+          "settings": {
+            "description": "<p>OAK baut auf Design, Performance und Funktion.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_FnJz99",
+        "heading_xgqJMR",
+        "description_rtyQbw"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Shooting_2025_web-134.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_V7FCTb": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_xYPMfc": {
+          "type": "overline",
+          "settings": {
+            "overline": "Qualitätsversprechen"
+          }
+        },
+        "heading_WmgUWn": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Hightech for your ride",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_wJQDGT": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir nutzen die innovativsten Fertigungstechnologien, besten Materialien und akzeptieren nur höchste Qualitätsstandards. <br/>Kompromisslos in der Qualität, um dem Slogan 'Hightech for your ride' gerecht zu werden.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_xYPMfc",
+        "heading_WmgUWn",
+        "description_wJQDGT"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Shooting_2025_web-151.jpg",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_HHkmdy": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_7gDR4H": {
+          "type": "overline",
+          "settings": {
+            "overline": "Was uns antreibt"
+          }
+        },
+        "heading_bVJ3t7": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Entwicklung mit Haltung",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_fHe8f7": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir glauben nicht an Trends, sondern an Lösungen.<br/><br/>Wenn wir ein Anbauteil entwickeln, dann nur, weil es besser sein kann als das, was es ersetzen soll. Keine Kompromisse. Keine Gimmicks. Nur ausgewählte Materialien, klare Funktion und kompromisslose Zuverlässigkeit.<br/><br/>CNC-gefräst und unzählige Male auf den härtesten Trails getestet.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_7gDR4H",
+        "heading_bVJ3t7",
+        "description_fHe8f7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-19.jpg",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": true,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_qNwLA9": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_kwVBGD": {
+          "type": "overline",
+          "settings": {
+            "overline": "Unsere Arbeitsweise"
+          }
+        },
+        "heading_MbkVMY": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Nah dran statt weit weg",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_iya9VR": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Bei OAK kommen Ideen nicht vom Reißbrett, sondern vom Bike.<br/><br/>Feedback aus der Community landet direkt bei den Leuten, die es umsetzen können. Wir testen iterativ, hören nicht auf unsere Ideen weiter auszufeilen und stehen auch nach dem Kauf als Ansprechpartner bereit.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_kwVBGD",
+        "heading_MbkVMY",
+        "description_iya9VR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/TRL_web_3.jpg",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_HQwxaL": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_hzAxGk": {
+          "type": "overline",
+          "settings": {
+            "overline": "Verantwortung"
+          }
+        },
+        "heading_qB6GBb": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Wofür wir stehen und was bleibt",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_dgLM6K": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir wollen keine Wegwerfteile bauen. Wir wollen Lösungen schaffen, die bleiben.<br/><br/>Deshalb setzen wir auf langlebige Materialien, durchdachtes Design und zuverlässigen Service.<br/><br/>Wenn du OAK fährst, entscheidest du dich für bewusste Technik und für eine Marke, für die hochwertige Komponenten an erster Stelle stehen.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_hzAxGk",
+        "heading_qB6GBb",
+        "description_dgLM6K"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Shooting_SH_23092024_Stoibruch_web-21.jpg",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": true,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_Jy3zar": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_CbtPt6": {
+          "type": "overline",
+          "settings": {
+            "overline": "Leidenschaft"
+          }
+        },
+        "heading_Uzi8PB": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Warum OAK für uns mehr als eine Marke ist",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_aWN9XT": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir machen unsere Arbeit, weil sich unser Lifestyle um das Biken dreht.<br/><br/>Und weil wir glauben, dass es einen Unterschied macht, durchdachte und sinnvolle Parts zu entwickeln, die für die Ewigkeit bestimmt sind. OAK ist für uns kein Produktkatalog, es ist unser Werkzeug, um Mountainbiken besser zu machen. </p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_CbtPt6",
+        "heading_Uzi8PB",
+        "description_aWN9XT"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Shooting_22062024_web_70_von_115.jpg",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "half",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_jYB3mr": {
+      "type": "featured-text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "image_with_text_gxprTR": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_4ktcf7": {
+          "type": "overline",
+          "settings": {
+            "overline": "Team OAK"
+          }
+        },
+        "heading_iYBqry": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Wir sind OAK Components",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_x3zyfX": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Bei OAK entwickeln wir Komponenten, die Rider nicht nur beeindrucken, sondern überzeugen sollen. <br/><br/>Im Rennen. Im Alltag. Im Grenzbereich. Und ja, manchmal auch nach dem fünften Sturz!<br/><br/>Wir stehen in der Werkstatt oder am Trail-Eingang. <br/>Und wir hören zu, vor allem euch.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_4ktcf7",
+        "heading_iYBqry",
+        "description_x3zyfX"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/RTH_Sonntag_web-108.jpg",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "dark",
+        "reverse-layout": false,
+        "text-color": "white",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_fPWjEQ": {
+      "type": "featured-text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "half",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "icons_row_dQjpUi": {
+      "type": "icons-row",
+      "blocks": {
+        "icon_Ri7Qqi": {
+          "type": "icon",
+          "settings": {
+            "icon": "sun",
+            "icon-image": "shopify://shop_images/oak1_75cb1c9f-3cc5-44e1-bb61-a801e3fb77f3.png",
+            "title": "1. Startschuss",
+            "description": "<p>Erste Produktidee durch Schwierigkeiten mit Standard Magura Bremshebeln - schnell war klar: Das geht besser!</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_Exahnt": {
+          "type": "icon",
+          "settings": {
+            "icon": "tree",
+            "icon-image": "shopify://shop_images/oak2_2af86ab2-b2e4-4b07-a790-52b1b30b12dc.png",
+            "title": "2. Prototyp und Geschäftsidee",
+            "description": "<p>Fräsen erster Prototypen, testen auf dem Trail & Gestaltung einer funktionierenden Geschäftsidee durch Rob und das Team.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_kWEQfV": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "icon-image": "shopify://shop_images/oak3_8903285b-6afc-4c26-b05e-e9920c84b64e.png",
+            "title": "3. Die Vision schärft sich",
+            "description": "<p>Mehr Performance, Haltbarkeit und Ästhetitik aus der Bremse herausholen: Hightech for your ride.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_nEJBRD": {
+          "type": "icon",
+          "settings": {
+            "icon": "atom",
+            "icon-image": "shopify://shop_images/oak4_1d351137-37ad-42ff-9b90-2cda892afda1.png",
+            "title": "4. Die Marke OAK",
+            "description": "<p>Produktion der ersten Charge und Gewinnung erster Kunden: The brake lever company is born!</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_9BJr6a": {
+          "type": "icon",
+          "settings": {
+            "icon": "atom",
+            "icon-image": "shopify://shop_images/oak5_53a642d9-023d-4d5a-a5e1-359029b4a2e7.png",
+            "title": "5. Weltweit verfügbar",
+            "description": "<p>Das OAK Portfolio ist weltweit verfügbar und entwickelt sich weiter. </p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_Qrbc3a": {
+          "type": "icon",
+          "settings": {
+            "icon": "atom",
+            "title": "... to be continued",
+            "description": "<p>OAK ist noch lange nicht am Ziel angelangt und hat Großes vor - We are going nuts!</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_Ri7Qqi",
+        "icon_Exahnt",
+        "icon_kWEQfV",
+        "icon_nEJBRD",
+        "icon_9BJr6a",
+        "icon_Qrbc3a"
+      ],
+      "custom_css": [
+        ".featured-grid--root {padding: 60px 20px;}"
+      ],
+      "settings": {
+        "overline": "Unsere Geschichte",
+        "heading": "Wie OAK entstanden und gewachsen ist",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "block-spacing": true,
+        "background-color": "none",
+        "outer-background": true,
+        "container-width": "4",
+        "width": 3,
+        "icon-width": 0,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "grid_with_overlay_qFpAY7": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_JrY9RV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting19072024_DaniSH_web_31_von_114.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gdUTwf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KiliShotsSlider-8.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_fFpW7E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RTH_Sonntag_web-102.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_w3U9xt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RTH_Samstag_web-34.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_JrY9RV",
+        "image_gdUTwf",
+        "image_fFpW7E",
+        "image_w3U9xt"
+      ],
+      "custom_css": [
+        ".featured-grid--root {padding: 0;}",
+        "@media only screen and (max-width: 767px) {[data-container=\"panel\"] {grid-column-gap: 0; grid-row-gap: 0; }}"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_ejKjTA",
+    "image_with_text_V7FCTb",
+    "image_with_text_HHkmdy",
+    "image_with_text_qNwLA9",
+    "image_with_text_HQwxaL",
+    "image_with_text_Jy3zar",
+    "featured_text_jYB3mr",
+    "image_with_text_gxprTR",
+    "featured_text_fPWjEQ",
+    "icons_row_dQjpUi",
+    "grid_with_overlay_qFpAY7"
+  ]
+}

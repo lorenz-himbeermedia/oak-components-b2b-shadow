@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "featured-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Page not found",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description": "<p>We're sorry, but the page you're looking for could not be found.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button-1": {
+          "type": "button",
+          "settings": {
+            "text": "Return home",
+            "link": "/",
+            "style": "button-1"
+          }
+        },
+        "button-2": {
+          "type": "button",
+          "settings": {
+            "text": "Shop products",
+            "link": "/collections/all",
+            "style": "button-3"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "description",
+        "button-1",
+        "button-2"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "x-large",
+        "container-width": "1",
+        "background-color": "light",
+        "outer-background": false,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "x-large",
+        "mobile-text-alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,574 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "featured_text_wpjewH": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_hhTPB9": {
+          "type": "overline",
+          "settings": {
+            "overline": "🔥 Hightech for your ride 🔥"
+          }
+        },
+        "heading_6k6bcR": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Mach dein Bike zu deinem Dreambuild",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_6heLee": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Hole dir jetzt Upgrades für dein Bike für mehr Performance auf jedem Trail.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_hhTPB9",
+        "heading_6k6bcR",
+        "description_6heLee"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "slideshow_PzWMRc": {
+      "type": "slideshow",
+      "blocks": {
+        "image_UgAL4R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/oak-bicycle-handlebar-blue-brake-lever.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_tRkedK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/black-bicycle-seat-post-blue-clamp-oak.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_AFkAd9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/black-mountain-bike-handlebar-blue-screws.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_wEHFyX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/rockshox-sram-front-suspension-fork.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        }
+      },
+      "block_order": [
+        "image_UgAL4R",
+        "image_tRkedK",
+        "image_AFkAd9",
+        "image_wEHFyX"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "arrows-enabled": true,
+        "spacing-around-blocks": false,
+        "blocks-per-slide": 4,
+        "auto-rotate": true,
+        "rotate-frequency": 5,
+        "transition-type": "slide",
+        "text-color": "white",
+        "overlay-style": "none",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "heading-type": "featured-heading",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "small",
+        "mobile-aspect-ratio": 134,
+        "blocks-per-slide-mobile": "2"
+      }
+    },
+    "featured_collections_x3krTW": {
+      "type": "featured-collections",
+      "name": "Collections list",
+      "settings": {
+        "heading": "Entdecke OAK Produktwelten",
+        "collection-list": [
+          "tuning-bremshebel",
+          "cockpit",
+          "antrieb",
+          "bremsen-tuning"
+        ],
+        "image-type": "collection",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "dark",
+        "display-type": "grid",
+        "width": 4,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "white",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "left",
+        "mobile-width": "2"
+      }
+    },
+    "featured_collection_K9XgBd": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "alle-produkte",
+        "heading": "Entdecke das OAK Universum",
+        "button-text": "Alle Parts ansehen",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "none",
+        "max-blocks": 12,
+        "display-type": "slideshow",
+        "columns": "4",
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "left",
+        "mobile-columns": "1"
+      }
+    },
+    "featured_text_WF94nU": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_3AWKk4": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Caps"
+          }
+        },
+        "heading_FGjVWi": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Kleines Update mit großer Wirkung",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_QXed73": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Kleine Details können bereits eine riesige Wirkung haben, sowohl optisch als auch vonseiten Performance.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_3AWKk4",
+        "heading_FGjVWi",
+        "description_QXed73"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "featured_products_JR6CbA": {
+      "type": "featured-products",
+      "name": "Featured products",
+      "settings": {
+        "product-list": [
+          "forkcap-air-fur-federgabel-ventil",
+          "forkcap-hsc-fur-fox-34-36-38-40",
+          "kurbel-abdeckkappen-set-fur-sram-dub-oak-m18-m30lh"
+        ],
+        "heading": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "background-color": "light",
+        "display-type": "slideshow",
+        "columns": "3",
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "left",
+        "mobile-columns": "2"
+      }
+    },
+    "featured_text_iCVjiY": {
+      "type": "featured-text",
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "shop_the_look_hJJX6A": {
+      "type": "shop-the-look",
+      "blocks": {
+        "hotspot_fMtQhW": {
+          "type": "hotspot",
+          "settings": {
+            "product": "oak-sh-bremshebel-set-passend-fur-shimano",
+            "horizontal": 18,
+            "vertical": 38,
+            "mobile-horizontal": 17,
+            "mobile-vertical": 51
+          }
+        },
+        "hotspot_WALxVx": {
+          "type": "hotspot",
+          "settings": {
+            "product": "eternal-stem",
+            "horizontal": 51,
+            "vertical": 37,
+            "mobile-horizontal": 51,
+            "mobile-vertical": 49
+          }
+        },
+        "hotspot_Rbwtqk": {
+          "type": "hotspot",
+          "settings": {
+            "product": "the-eternal-topcap",
+            "horizontal": 59,
+            "vertical": 29,
+            "mobile-horizontal": 64,
+            "mobile-vertical": 33
+          }
+        },
+        "hotspot_kKr3Nc": {
+          "type": "hotspot",
+          "settings": {
+            "product": "titanium-bolt-kit",
+            "horizontal": 51,
+            "vertical": 24,
+            "mobile-horizontal": 47,
+            "mobile-vertical": 20
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_fMtQhW",
+        "hotspot_WALxVx",
+        "hotspot_Rbwtqk",
+        "hotspot_kKr3Nc"
+      ],
+      "settings": {
+        "heading": "",
+        "image": "shopify://shop_images/oak-mountain-bike-handlebars-red-levers.jpg",
+        "button-text": "",
+        "button-style": "button-1",
+        "heading-alignment": "center",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "3",
+        "background-color": "none",
+        "hotspot-color": "white",
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "service_list_mNFVhi": {
+      "type": "service-list",
+      "blocks": {
+        "header_grhC3f": {
+          "type": "header",
+          "settings": {
+            "title": "Standard Parts"
+          }
+        },
+        "item_FqYLQg": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Standardisierte Designs ohne Blickfang",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_ep3JEb": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Grobe Toleranzen mit spürbarem Spiel",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_3nhbiQ": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Materialien mit kurzer Lebensdauer",
+            "price": "",
+            "description": ""
+          }
+        },
+        "header_EaiaYA": {
+          "type": "header",
+          "settings": {
+            "title": "OAK Premium Parts"
+          }
+        },
+        "item_Eihxpw": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Individuelle Looks mit Wiederkennungswert",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_NyPGLG": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Präzise Fertigung Made in Europe",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_4MDt6N": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Hochwertiges und haltbares Material",
+            "price": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "header_grhC3f",
+        "item_FqYLQg",
+        "item_ep3JEb",
+        "item_3nhbiQ",
+        "header_EaiaYA",
+        "item_Eihxpw",
+        "item_NyPGLG",
+        "item_4MDt6N"
+      ],
+      "name": "Service list",
+      "settings": {
+        "heading": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "medium",
+        "background-color": "light",
+        "container-width": "2",
+        "show-description": true,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "featured_text_LLzdfH": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_NRQxrd": {
+          "type": "overline",
+          "settings": {
+            "overline": "Never enough"
+          }
+        },
+        "heading_Rx8Jjg": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Noch nicht genug gesehen?",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "button_9dGDPm": {
+          "type": "button",
+          "settings": {
+            "text": "Alle Parts ansehen",
+            "link": "shopify://collections/alle-produkte",
+            "style": "button-3"
+          }
+        }
+      },
+      "block_order": [
+        "overline_NRQxrd",
+        "heading_Rx8Jjg",
+        "button_9dGDPm"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "x-large",
+        "container-width": "4",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "x-large",
+        "mobile-text-alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_text_wpjewH",
+    "slideshow_PzWMRc",
+    "featured_collections_x3krTW",
+    "featured_collection_K9XgBd",
+    "featured_text_WF94nU",
+    "featured_products_JR6CbA",
+    "featured_text_iCVjiY",
+    "shop_the_look_hJJX6A",
+    "service_list_mNFVhi",
+    "featured_text_LLzdfH"
+  ]
+}

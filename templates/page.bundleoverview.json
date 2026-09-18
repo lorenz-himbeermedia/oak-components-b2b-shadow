@@ -1,0 +1,541 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_wjpCtt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_Wnjjtz": {
+          "type": "overline",
+          "settings": {
+            "overline": "Von Bikern für Biker"
+          }
+        },
+        "heading_rYR8Q6": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "{{ page.title }}",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_7b7KdM": {
+          "type": "description",
+          "settings": {
+            "description": "{{ page.content }}",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_Wnjjtz",
+        "heading_rYR8Q6",
+        "description_7b7KdM"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/ShootingLagerEdited_web-230.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "container-width": "2",
+        "background-color": "none",
+        "show-title": false,
+        "heading-type": "featured-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "featured_text_RkekyB": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_9mC9KR": {
+          "type": "overline",
+          "settings": {
+            "overline": "Let's build"
+          }
+        },
+        "heading_hbCnRf": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Part Sets passend für dein Bremssystem",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_Dra4K3": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Alle OAK Parts, die für spezifische Bremssysteme entwicklt wurden, werden dir zur Auswahl angezeigt. Wähle den Hersteller deines aktuellen Bremssystems und setze dein individuelles OAK Setup zusammen.<br/><br/><em>Hinweis: Die angezeigten Rabatte funktionieren nur innerhalb des Konfigurators. Außerhalb des Konfigurators hinzugefügte Parts zählen nicht dazu.</em></p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_9mC9KR",
+        "heading_hbCnRf",
+        "description_Dra4K3"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "text_columns_jjWUCj": {
+      "type": "text-columns",
+      "blocks": {
+        "image_JrWfQT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BundleOverview_web-7.jpg",
+            "image-enabled": true,
+            "title": "Part Set - Passend für Magura",
+            "description": "",
+            "button-text": "Jetzt starten",
+            "button-link": "shopify://products/oak-upgrade-fits-magura",
+            "button-style": "button-3"
+          }
+        },
+        "image_xFUhrT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BundleeOverview_web-5_2.jpg",
+            "image-enabled": true,
+            "title": "Part Set - Passend für Shimano",
+            "description": "",
+            "button-text": "Jetzt starten",
+            "button-link": "shopify://products/oak-upgrade-fits-shimano",
+            "button-style": "button-3"
+          }
+        },
+        "image_cf7fbz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BundleeOverview_web-5_5.jpg",
+            "image-enabled": true,
+            "title": "Part Set - Passend für SRAM",
+            "description": "",
+            "button-text": "Jetzt starten",
+            "button-link": "shopify://products/oak-upgrade-fits-sram",
+            "button-style": "button-3"
+          }
+        },
+        "image_FCL3Yd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BundleOverview_web-3.jpg",
+            "image-enabled": true,
+            "title": "Part Set - Passend für TRP",
+            "description": "",
+            "button-text": "Jetzt starten",
+            "button-link": "shopify://products/oak-upgrade-fits-trp",
+            "button-style": "button-3"
+          }
+        }
+      },
+      "block_order": [
+        "image_JrWfQT",
+        "image_xFUhrT",
+        "image_cf7fbz",
+        "image_FCL3Yd"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "block-spacing": true,
+        "width": 4,
+        "heading-type": "block-heading",
+        "text-color": "body",
+        "text-alignment": "center",
+        "text-indent": true,
+        "aspect-ratio": "square",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "image_with_text_XmxMWM": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_9Vkkyt": {
+          "type": "overline",
+          "settings": {
+            "overline": "Let's Build"
+          }
+        },
+        "heading_hmqkrD": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Part Set - Alle Parts",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_a4jWWV": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Du kannst aus allen OAK Parts dein individuelles OAK Setup zusammensetzen.<br/><br/><em>Hinweis: Die angezeigten Rabatte funktionieren nur innerhalb des Konfigurators. Außerhalb des Konfigurators hinzugefügte Parts zählen nicht dazu.</em></p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_WgHJ88": {
+          "type": "button",
+          "settings": {
+            "text": "Jetzt starten",
+            "link": "shopify://products/build-your-dream-bike",
+            "style": "button-1"
+          }
+        }
+      },
+      "block_order": [
+        "overline_9Vkkyt",
+        "heading_hmqkrD",
+        "description_a4jWWV",
+        "button_WgHJ88"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Norco_OAK_red_web-84.jpg",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "light",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 500,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "darken-bottom",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "medium",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_DKQfzi": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_EqXQHx": {
+          "type": "overline",
+          "settings": {
+            "overline": "Team OAK"
+          }
+        },
+        "heading_ef6FXC": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Von Bikern für Biker",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_VJbn9w": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Unsere Ingenieure sind selbst Vollblut Mountainbiker und holen mit ihren OAK Entwicklungen aus jeder Abfahrt maximalen Spaß und Performance heraus. Das Produktfeedback von Kunden aus aller Welt wird mit einbezogen um die bestmöglichen Parts anzubieten.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_zfdphD": {
+          "type": "button",
+          "settings": {
+            "text": "Mehr erfahren",
+            "link": "shopify://pages/about-us",
+            "style": "button-4"
+          }
+        }
+      },
+      "block_order": [
+        "overline_EqXQHx",
+        "heading_ef6FXC",
+        "description_VJbn9w",
+        "button_zfdphD"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/RLP_TuningScrews_web-107.jpg",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "dark",
+        "reverse-layout": false,
+        "text-color": "white",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 800,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "darken-bottom",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "medium",
+        "mobile-text-color": "white",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "icons_row_XwJpLJ": {
+      "type": "icons-row",
+      "blocks": {
+        "icon_wUp9Cm": {
+          "type": "icon",
+          "settings": {
+            "icon": "sun",
+            "icon-image": "shopify://shop_images/CO2Neutral_WebshopOAK.png",
+            "title": "CO2 reduzierte Lieferungen",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_78JFc8": {
+          "type": "icon",
+          "settings": {
+            "icon": "tree",
+            "icon-image": "shopify://shop_images/LieferketteIcon_WebshopOAK.png",
+            "title": "Kurze Lieferketten",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_t79fLm": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "icon-image": "shopify://shop_images/HerzEuropaIcon_WebshopOAK.png",
+            "title": "Made in Europe",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_wUp9Cm",
+        "icon_78JFc8",
+        "icon_t79fLm"
+      ],
+      "name": "Icons row",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "block-spacing": true,
+        "background-color": "light",
+        "outer-background": true,
+        "container-width": "4",
+        "width": 3,
+        "icon-width": 0,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "grid_with_overlay_qFpAY7": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_JrY9RV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_16092024_Lars_web-49.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_R9K4CK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting26072024_Plasmadapt_web_10_von_47.png",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_KN7HeY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting19072024_DaniSH_web_29_von_114.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gdUTwf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-19.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_JrY9RV",
+        "image_R9K4CK",
+        "image_KN7HeY",
+        "image_gdUTwf"
+      ],
+      "custom_css": [],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 4,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_wjpCtt",
+    "main",
+    "featured_text_RkekyB",
+    "text_columns_jjWUCj",
+    "image_with_text_XmxMWM",
+    "image_with_text_DKQfzi",
+    "icons_row_XwJpLJ",
+    "grid_with_overlay_qFpAY7"
+  ]
+}

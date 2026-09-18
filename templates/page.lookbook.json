@@ -1,0 +1,628 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "image_with_text_overlay_8tiXh6": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_DijVcz": {
+          "type": "overline",
+          "settings": {
+            "overline": "Lookbook"
+          }
+        },
+        "heading_MbWKRp": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Dein perfekt abgestimmtes Setup",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_7R8tYa": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Dein Bike. Dein Style. Deine OAK-Vision.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_DijVcz",
+        "heading_MbWKRp",
+        "description_7R8tYa"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/PRContent_SRBrakeLeverBlade_OAKComponents_2.png",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_JtQ9fE": {
+      "type": "featured-text",
+      "blocks": {
+        "heading_i6cqdd": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Wir wollen nur das beste für dein Bike",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_3mmE7R": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Deswegen bieten wir dir eine breite Farbpalette und viele verschiedene Größen an, um dein Traumbike zu verwirklichen.<br/><br/>Es geht nämlich nicht nur um Einzelteile, sondern um ein stimmiges Gesamtbild. Unser Portfolio führt dich Schritt für Schritt zum Dreambuild. Von Tuning Bremshebeln über ein Premium-Cockpit bis hin zu feinen Details wie Titan-Schrauben.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_i6cqdd",
+        "description_3mmE7R"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "2",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "grid_with_overlay_pNmgT4": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_AqKdPY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Farbvergleichsbilder_V_2.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_rEQnnY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Farbvergleichsbilder_V_1.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_AqKdPY",
+        "image_rEQnnY"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 2,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "image_comparison_9aCeqT": {
+      "type": "image-comparison",
+      "blocks": {
+        "before_6UP4Nk": {
+          "type": "before",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-66.jpg",
+            "overline": "",
+            "title": "Before",
+            "heading-type": "section-heading",
+            "text-position": "start",
+            "text-color": "white",
+            "overlay-style": "none"
+          }
+        },
+        "after_UPdkkT": {
+          "type": "after",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-65.jpg",
+            "overline": "",
+            "title": "After",
+            "heading-type": "section-heading",
+            "text-position": "end",
+            "text-color": "white",
+            "overlay-style": "darken-bottom"
+          }
+        }
+      },
+      "block_order": [
+        "before_6UP4Nk",
+        "after_UPdkkT"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "4",
+        "background-color": "none",
+        "cursor-direction": "horizontal",
+        "cursor-position": 48,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "grid_with_overlay_4jdLaH": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_wTLGMV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1733936497__387a8716__huge.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_YPUJLj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1745176306__whatsappbild2025-04-20um210938_739e5472__huge.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_FfJpfh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1741886602__1741886588730-image__huge.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_3TKfxK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1742645619__1742645590206-tempimagekohyys__huge.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_fYyBnF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/metallic-bike-components-red-blue-oak.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_Q8H7Yf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1732132994__1732132981475-8d7d17ad-2db1-49a8-9f55-ba__huge.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_wTLGMV",
+        "image_YPUJLj",
+        "image_FfJpfh",
+        "image_3TKfxK",
+        "image_fYyBnF",
+        "image_Q8H7Yf"
+      ],
+      "name": "Grid with overlay",
+      "settings": {
+        "overline": "Community",
+        "heading": "Dreambuilds so individuell wie unsere Community",
+        "description": "<p>Dein Setup inspiriert andere und andere inspirieren dich. <br/>Teile dein Dreambuild mit OAK in den Reviews, hol dir Feedback, finde neue Farbkombinationen.</p>",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "aspect-ratio",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_ECtDYE": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_whmJ3Q": {
+          "type": "overline",
+          "settings": {
+            "overline": "Shop the look"
+          }
+        },
+        "heading_pGNrmV": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Finde deine OAK Parts",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_8Gg67d": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Trail-getestet. CNC-gefräst. Farben für Feinschmecker.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_whmJ3Q",
+        "heading_pGNrmV",
+        "description_8Gg67d"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "shop_the_look_KXM8HF": {
+      "type": "shop-the-look",
+      "blocks": {
+        "hotspot_bDF6HM": {
+          "type": "hotspot",
+          "settings": {
+            "product": "grown-bashguard-32t-34t",
+            "horizontal": 41,
+            "vertical": 68,
+            "mobile-horizontal": 38,
+            "mobile-vertical": 73
+          }
+        },
+        "hotspot_WeXFHQ": {
+          "type": "hotspot",
+          "settings": {
+            "product": "amulet-kettenblatt",
+            "horizontal": 39,
+            "vertical": 60,
+            "mobile-horizontal": 44,
+            "mobile-vertical": 62
+          }
+        },
+        "hotspot_KXhLb7": {
+          "type": "hotspot",
+          "settings": {
+            "product": "kurbel-abdeckkappen-set-fur-sram-dub-oak-m18-m30lh",
+            "horizontal": 39,
+            "vertical": 63,
+            "mobile-horizontal": 33,
+            "mobile-vertical": 63
+          }
+        },
+        "hotspot_TpmbYr": {
+          "type": "hotspot",
+          "settings": {
+            "product": "plasmadapt-bremsadapter",
+            "horizontal": 67,
+            "vertical": 68,
+            "mobile-horizontal": 69,
+            "mobile-vertical": 74
+          }
+        },
+        "hotspot_ze6VwF": {
+          "type": "hotspot",
+          "settings": {
+            "product": "root-lever-set-2-stk-raw-passend-fur-magura-bremssysteme",
+            "horizontal": 70,
+            "vertical": 16,
+            "mobile-horizontal": 73,
+            "mobile-vertical": 15
+          }
+        },
+        "hotspot_gRFMrU": {
+          "type": "hotspot",
+          "settings": {
+            "product": "root-lever-pro-screw-kit",
+            "horizontal": 54,
+            "vertical": 12,
+            "mobile-horizontal": 57,
+            "mobile-vertical": 13
+          }
+        },
+        "hotspot_dBUTEB": {
+          "type": "hotspot",
+          "settings": {
+            "product": "eternal-stem",
+            "horizontal": 57,
+            "vertical": 11,
+            "mobile-horizontal": 61,
+            "mobile-vertical": 4
+          }
+        },
+        "hotspot_GWkTiY": {
+          "type": "hotspot",
+          "settings": {
+            "product": "orbit-seatclamp",
+            "horizontal": 40,
+            "vertical": 35,
+            "mobile-horizontal": 42,
+            "mobile-vertical": 32
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_bDF6HM",
+        "hotspot_WeXFHQ",
+        "hotspot_KXhLb7",
+        "hotspot_TpmbYr",
+        "hotspot_ze6VwF",
+        "hotspot_gRFMrU",
+        "hotspot_dBUTEB",
+        "hotspot_GWkTiY"
+      ],
+      "settings": {
+        "heading": "",
+        "image": "shopify://shop_images/ShootingLagerEdited_web-328.jpg",
+        "button-text": "",
+        "button-style": "button-1",
+        "heading-alignment": "center",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "container-width": "3",
+        "background-color": "none",
+        "hotspot-color": "white",
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "small"
+      }
+    },
+    "image_with_text_overlay_EpHx7b": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_XB6D3q": {
+          "type": "overline",
+          "settings": {
+            "overline": "Never enough"
+          }
+        },
+        "heading_hBGV98": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Noch nicht genug Inspiration?",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "button_qCndF6": {
+          "type": "button",
+          "settings": {
+            "text": "Alle Parts ansehen",
+            "link": "shopify://collections/alle-produkte",
+            "style": "button-4"
+          }
+        }
+      },
+      "block_order": [
+        "overline_XB6D3q",
+        "heading_hBGV98",
+        "button_qCndF6"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/metallic-bike-components-dark-surface.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "none",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_8tiXh6",
+    "featured_text_JtQ9fE",
+    "grid_with_overlay_pNmgT4",
+    "image_comparison_9aCeqT",
+    "grid_with_overlay_4jdLaH",
+    "featured_text_ECtDYE",
+    "shop_the_look_KXM8HF",
+    "image_with_text_overlay_EpHx7b"
+  ]
+}

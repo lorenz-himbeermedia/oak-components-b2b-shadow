@@ -1,0 +1,479 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "image_with_text_overlay_P7YY4X": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_qiBbj4": {
+          "type": "overline",
+          "settings": {
+            "overline": "Kontaktiere uns"
+          }
+        },
+        "heading_XgQtpf": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Service & Support",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_ML3xkP": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir helfen dir, wenn's drauf ankommt. Ob Crash, Umbau oder Fragezeichen, wir lassen dich nicht hängen.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_qiBbj4",
+        "heading_XgQtpf",
+        "description_ML3xkP"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Shooting24082023_web_46_von_93.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_k73YiH": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_C7Lt7E": {
+          "type": "overline",
+          "settings": {
+            "overline": "Montage"
+          }
+        },
+        "heading_JttXx9": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Benutzerhandbücher & Montagevideos",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_C7Lt7E",
+        "heading_JttXx9"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "half",
+        "container-width": "2",
+        "background-color": "light",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "collapsible_rows_aA8tNL": {
+      "type": "collapsible-rows",
+      "blocks": {
+        "collapsible_row_bXn9Vg": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "🛠️ Benutzerhandbücher (DE / EN) downloaden",
+            "description": "<p>Use rows to highlight unique features, <br/>sizing information, <br/>or other sales information.</p>",
+            "page-content": "benutzerhandbuecher",
+            "default-open": false
+          }
+        },
+        "collapsible_row_yE6Jxi": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "📹 Installation Bremshebel: Jetzt Montagevideo ansehen",
+            "description": "",
+            "page-content": "montagevideos",
+            "default-open": false
+          }
+        },
+        "collapsible_row_Y8gyf7": {
+          "type": "collapsible-row",
+          "disabled": true,
+          "settings": {
+            "heading": "💥 Garantie und Crash-Replacement: Problem mit einem Produkt? Hier geht's zum Formular.",
+            "description": "",
+            "page-content": "garantieformular",
+            "default-open": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bXn9Vg",
+        "collapsible_row_yE6Jxi",
+        "collapsible_row_Y8gyf7"
+      ],
+      "settings": {
+        "heading": "",
+        "border": "none",
+        "spacing-above": "small",
+        "spacing-below": "large",
+        "background-color": "light",
+        "container-width": "2",
+        "two-columns-enabled": false,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "large"
+      }
+    },
+    "featured_text_AhVAQP": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_txDW8X": {
+          "type": "overline",
+          "settings": {
+            "overline": "Support | Retoure | Feedback | Garantie"
+          }
+        },
+        "heading_AEHUCt": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Kontakt aufnehmen",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_XbBekQ": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wir nehmen euer Feedback und eure Anliegen sehr ernst. Jeder Rider fährt andere Trails, hat andere ergonomische Anforderungen und setzt andere Prioritäten für sein Equipment.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_txDW8X",
+        "heading_AEHUCt",
+        "description_XbBekQ"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "none",
+        "container-width": "2",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "17714936394142514c": {
+      "type": "apps",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "full",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "scrolling_content_JJqUQ3": {
+      "type": "scrolling-content",
+      "blocks": {
+        "image_yxmGRg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_LessLeverPlay_white.png",
+            "image-height": 50,
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "mobile-image-height": 50
+          }
+        },
+        "text_f3qedX": {
+          "type": "text",
+          "settings": {
+            "text": "Hier zu unseren FAQs",
+            "highlight-type": "italic",
+            "highlight-color": "dark",
+            "highlight-text": "none",
+            "link": "https://oakcomponents.de/a/faq",
+            "hide-on-mobile": false,
+            "hide-on-desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "image_yxmGRg",
+        "text_f3qedX"
+      ],
+      "name": "Scrolling content",
+      "settings": {
+        "border": "none",
+        "spacing-above": "small",
+        "spacing-below": "small",
+        "background-color": "dark",
+        "animation-direction": "left",
+        "gap": 40,
+        "animation-speed": 1,
+        "pause-on-hover": false,
+        "text-color": "white",
+        "text-size": "block-heading",
+        "overlay-style": "darken-bottom",
+        "parallax-enabled": false,
+        "mobile-spacing-above": "small",
+        "mobile-spacing-below": "small"
+      }
+    },
+    "image_with_text_overlay_Fei7Tp": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_bVcNpD": {
+          "type": "overline",
+          "settings": {
+            "overline": "Support"
+          }
+        },
+        "heading_Q4p8NL": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Von Bikern für Biker",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_pH94dh": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Bei OAK bekommst du eine Antwort direkt aus der Werkstatt. Von jemandem, der immer die passende Antwort auf dein Problem findet.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_Hc4NHx": {
+          "type": "button",
+          "settings": {
+            "text": "Zu den FAQs",
+            "link": "https://oakcomponents.de/a/faq",
+            "style": "button-2"
+          }
+        }
+      },
+      "block_order": [
+        "overline_bVcNpD",
+        "heading_Q4p8NL",
+        "description_pH94dh",
+        "button_Hc4NHx"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Shooting_SH_23092024_Stoibruch_web-11.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "grid_with_overlay_6drLNP": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_6yKAUp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shooting24082023_web_33_von_93.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_PG7fM4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShotsUpdateWebsite22112022_59.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_qbcgJh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_Components_shoots-10.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_bzDT6b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TestshootsWebsite-25.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_6yKAUp",
+        "image_PG7fM4",
+        "image_qbcgJh",
+        "image_bzDT6b"
+      ],
+      "custom_css": [],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "none",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 2,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "aspect-ratio",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_P7YY4X",
+    "featured_text_k73YiH",
+    "collapsible_rows_aA8tNL",
+    "featured_text_AhVAQP",
+    "17714936394142514c",
+    "scrolling_content_JJqUQ3",
+    "image_with_text_overlay_Fei7Tp",
+    "grid_with_overlay_6drLNP"
+  ]
+}

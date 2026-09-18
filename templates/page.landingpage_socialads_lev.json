@@ -1,0 +1,442 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "image_with_text_overlay_aWNcC3": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_8wXinP": {
+          "type": "overline",
+          "settings": {
+            "overline": "🔥 The brake lever company 🔥"
+          }
+        },
+        "heading_FBkwpx": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Tuning Bremshebel für dein Bremssystem",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_Gafb7T": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Hole dir jetzt das Upgrade für dein Bremssystem für mehr Performance auf jedem Trail.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_8wXinP",
+        "heading_FBkwpx",
+        "description_Gafb7T"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/PRContent_SRBrakeLeverBlade_OAKComponents_2.png",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_iCVjiY": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_VNyjwB": {
+          "type": "overline",
+          "settings": {
+            "overline": "Hightech for your ride"
+          }
+        },
+        "heading_QDgByr": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Jetzt passende Hebel finden",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_6HhG9T": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Verfügbar für Shimano, SRAM, Magura, Hope und TRP Bremsen. Kompatibilitäten auf der Produktdetailseite einsehbar.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_VNyjwB",
+        "heading_QDgByr",
+        "description_6HhG9T"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "featured_collection_eLtgiD": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "tuning-bremshebel",
+        "heading": "",
+        "button-text": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "background-color": "none",
+        "max-blocks": 6,
+        "display-type": "grid",
+        "columns": "3",
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "large",
+        "mobile-heading-alignment": "center",
+        "mobile-columns": "2"
+      }
+    },
+    "image_comparison_weapky": {
+      "type": "image-comparison",
+      "blocks": {
+        "before_J8XnYW": {
+          "type": "before",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-66.jpg",
+            "overline": "",
+            "title": "Before",
+            "heading-type": "section-heading",
+            "text-position": "start",
+            "text-color": "white",
+            "overlay-style": "none"
+          }
+        },
+        "after_fcwPNi": {
+          "type": "after",
+          "settings": {
+            "image": "shopify://shop_images/ShootingSR_Verbaut_10092024_web-65.jpg",
+            "overline": "",
+            "title": "After",
+            "heading-type": "section-heading",
+            "text-position": "end",
+            "text-color": "white",
+            "overlay-style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "before_J8XnYW",
+        "after_fcwPNi"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "6",
+        "background-color": "none",
+        "cursor-direction": "horizontal",
+        "cursor-position": 44,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "image-display-type": "x-small",
+        "aspect-ratio": 24,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "aspect-ratio",
+        "mobile-aspect-ratio": 32
+      }
+    },
+    "featured_text_n64nzP": {
+      "type": "featured-text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "dark",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "1773839507af9c1e9f": {
+      "type": "apps",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "service_list_mNFVhi": {
+      "type": "service-list",
+      "blocks": {
+        "header_grhC3f": {
+          "type": "header",
+          "settings": {
+            "title": "Serienhebel"
+          }
+        },
+        "item_FqYLQg": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Einheitsform & rutschige Oberfläche",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_ep3JEb": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Unpräziser Druckpunkt & mehr Kraftaufwand",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_3nhbiQ": {
+          "type": "item",
+          "settings": {
+            "title": "❌ Kompromisslösung mit wenig Optionen",
+            "price": "",
+            "description": ""
+          }
+        },
+        "header_EaiaYA": {
+          "type": "header",
+          "settings": {
+            "title": "OAK Hebel"
+          }
+        },
+        "item_Eihxpw": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Ergonomische Form & sicherer Grip",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_NyPGLG": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Direktes Feedback & volle Kontrolle",
+            "price": "",
+            "description": ""
+          }
+        },
+        "item_4MDt6N": {
+          "type": "item",
+          "settings": {
+            "title": "✅ Farben & Einstellmöglichkeiten",
+            "price": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "header_grhC3f",
+        "item_FqYLQg",
+        "item_ep3JEb",
+        "item_3nhbiQ",
+        "header_EaiaYA",
+        "item_Eihxpw",
+        "item_NyPGLG",
+        "item_4MDt6N"
+      ],
+      "name": "Service list",
+      "settings": {
+        "heading": "",
+        "button-text": "Mehr über Bremshebel erfahren",
+        "button-link": "shopify://collections/tuning-bremshebel",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "light",
+        "container-width": "2",
+        "show-description": true,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "grid_with_overlay_jjjGEU": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_iTaP7n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FarbvergleichsbildFarben.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "2",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_nFJ86P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PRContent_SRBrakeLeverBlade_OAKComponents_2.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "2",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_iTaP7n",
+        "image_nFJ86P"
+      ],
+      "settings": {
+        "overline": "Nur das beste für dein Bike",
+        "heading": "Hol dir die richtige Farbe für dein Cockpit",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "half",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "section-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_LLzdfH": {
+      "type": "featured-text",
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "full",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "full",
+        "mobile-text-alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_aWNcC3",
+    "featured_text_iCVjiY",
+    "featured_collection_eLtgiD",
+    "image_comparison_weapky",
+    "featured_text_n64nzP",
+    "1773839507af9c1e9f",
+    "service_list_mNFVhi",
+    "grid_with_overlay_jjjGEU",
+    "featured_text_LLzdfH"
+  ]
+}

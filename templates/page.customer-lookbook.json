@@ -1,0 +1,1319 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_wjpCtt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_Wnjjtz": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Components"
+          }
+        },
+        "heading_rYR8Q6": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "So nutzen Kunden unsere Produkte",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_Wnjjtz",
+        "heading_rYR8Q6"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/StemNeu-15.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "text-shadow",
+        "text-background-color": "accent-2",
+        "image-display-type": "aspect-ratio",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "container-width": "2",
+        "background-color": "none",
+        "show-title": false,
+        "heading-type": "featured-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "grid_with_overlay_qFpAY7": {
+      "type": "grid-with-overlay",
+      "custom_css": [
+        ".featured-grid--root {padding: 0;}",
+        "@media only screen and (max-width: 767px) {[data-container=\"panel\"] {grid-column-gap: 0; grid-row-gap: 0; }}"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "grid_with_overlay_kRBCB6": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_rDn9VR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_NqC6eT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gBaEYV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_XGjq3K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_FfGwWw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_e4yR6G": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_rDn9VR",
+        "image_NqC6eT",
+        "image_gBaEYV",
+        "image_XGjq3K",
+        "image_FfGwWw",
+        "image_e4yR6G"
+      ],
+      "name": "Grid with overlay",
+      "settings": {
+        "overline": "Bikes unserer Kunden",
+        "heading": "Zeig uns dein komplettes bike, wir stellen es hier aus!",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "spacing": true,
+        "columns": 4,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "darken",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "aspect-ratio",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_AHDji7": {
+      "type": "featured-text",
+      "blocks": {
+        "heading_MQpeFA": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Einzelne Parts unserer Kunden",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MQpeFA"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "slideshow_cqjaww": {
+      "type": "slideshow",
+      "blocks": {
+        "image_eeE9KM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TopcapSchraube_web-23.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_xRd376": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSC08634.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_LJQhBd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RLP_color_web-21.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_qRrXJF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_blue.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_hAzm96": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kurbel_web-53.png",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_yAWVG3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_kashgold.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_FhjCaD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MeteorKurbel_web-32.jpg",
+            "overline": "",
+            "title": "",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        }
+      },
+      "block_order": [
+        "image_eeE9KM",
+        "image_xRd376",
+        "image_LJQhBd",
+        "image_qRrXJF",
+        "image_hAzm96",
+        "image_yAWVG3",
+        "image_FhjCaD"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "arrows-enabled": true,
+        "spacing-around-blocks": false,
+        "blocks-per-slide": 3,
+        "auto-rotate": true,
+        "rotate-frequency": 10,
+        "transition-type": "slide",
+        "text-color": "body",
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "heading-type": "featured-heading",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "blocks-per-slide-mobile": "2"
+      }
+    },
+    "contact_xk8LPY": {
+      "type": "contact",
+      "blocks": {
+        "text_LcA3Dk": {
+          "type": "text",
+          "settings": {
+            "placeholder": "Full name",
+            "autocomplete": "name",
+            "half-width": false,
+            "required": false
+          }
+        },
+        "email_mU8fiD": {
+          "type": "email",
+          "settings": {
+            "placeholder": "Email",
+            "half-width": true,
+            "required": false
+          }
+        },
+        "phone_WAftmA": {
+          "type": "phone",
+          "settings": {
+            "placeholder": "Phone",
+            "half-width": true,
+            "required": false
+          }
+        },
+        "message_np6Qiw": {
+          "type": "message",
+          "settings": {
+            "placeholder": "Message",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "text_LcA3Dk",
+        "email_mU8fiD",
+        "phone_WAftmA",
+        "message_np6Qiw"
+      ],
+      "name": "Contact form",
+      "settings": {
+        "heading": "Zeig uns dein Bike",
+        "button-text": "Send",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "outer-background": true,
+        "show-recaptcha-terms": false,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "x-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    },
+    "image_with_text_overlay_44LqJ8": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_WwH9mw": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Components"
+          }
+        },
+        "heading_egDJFU": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "So nutzen Kunden unsere Produkte",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_WwH9mw",
+        "heading_egDJFU"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/StemNeu-15.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "text-shadow",
+        "text-background-color": "accent-2",
+        "image-display-type": "aspect-ratio",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "media_with_highlight_CrTjbK": {
+      "type": "media-with-highlight",
+      "blocks": {
+        "image_nwNi8P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LosHackos_Schweiz2025_eignerframes_DSC2619.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_dnn3gq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SimplonGarda_web-84.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_MJKc8q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Norco_OAK_red_web-76.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_pdxibC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingLagerEdited_web-334.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_XpEknf": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_J9Wdde": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_nwNi8P",
+        "image_dnn3gq",
+        "image_MJKc8q",
+        "image_pdxibC",
+        "image_XpEknf",
+        "image_J9Wdde"
+      ],
+      "name": "Media with highlight",
+      "settings": {
+        "image": "shopify://shop_images/Website_Foto.png",
+        "image-enabled": true,
+        "overline": "",
+        "heading": "",
+        "highlight-type": "italic",
+        "highlight-color": "transparent",
+        "highlight-text": "none",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-4",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "reverse-layout": false,
+        "blocks-per-row": "2",
+        "vertical-alignment": "top",
+        "text-color": "white",
+        "heading-type": "featured-heading",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 600,
+        "overlay-style": "none",
+        "text-style": "eclipse-shadow",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "block-overlay-style": "none",
+        "block-display-type": "aspect-ratio",
+        "block-aspect-ratio": 80,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-blocks-per-row": "2",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-hide-description": false,
+        "block-mobile-display-type": "aspect-ratio",
+        "block-mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_9dVBhw": {
+      "type": "featured-text",
+      "blocks": {
+        "heading_JLHyxj": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "einzelne parts, die unsere Kunden gekauft haben",
+            "highlight-type": "italic",
+            "highlight-color": "dark",
+            "highlight-text": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JLHyxj"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "text_columns_jLKTjN": {
+      "type": "text-columns",
+      "blocks": {
+        "image_EdVCKq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_raw.jpg",
+            "image-enabled": true,
+            "title": "Montierter HT4 Bremshebel",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_cHq6bH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kurbel_web-42.jpg",
+            "image-enabled": true,
+            "title": "Montierte Kurbel",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_RgbdpV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RLP_Mounted_web-2.jpg",
+            "image-enabled": true,
+            "title": "Montierter RLP Bremshebel",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        },
+        "image_cUWjRi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TopcapSchraube_web-5.jpg",
+            "image-enabled": true,
+            "title": "Top cap",
+            "description": "",
+            "button-text": "",
+            "button-link": "",
+            "button-style": "block-link"
+          }
+        }
+      },
+      "block_order": [
+        "image_EdVCKq",
+        "image_cHq6bH",
+        "image_RgbdpV",
+        "image_cUWjRi"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "none",
+        "background-color": "light",
+        "container-width": "6",
+        "block-spacing": true,
+        "width": 4,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "text-alignment": "center",
+        "text-indent": true,
+        "aspect-ratio": "natural",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "custom_content_eVdMkU": {
+      "type": "custom-content",
+      "custom_css": [],
+      "name": "Custom content",
+      "settings": {
+        "custom_html": "<style>\n  .custom-content--wrapper h2 {\n    font-size: 50px !important;\n  }\n</style>\n<h2>\n  <a href=\"mailto:flores@oakcomponents.com?subject=Mein%20Bike-Foto&amp;body=Hallo,%20anbei%20mein%20Foto%20von%20meinem%20Bike%20mit%20euren%20Komponenten!\">\n    Zeig uns dein Bike!\n  </a>\n</h2>",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "small",
+        "container-width": "1",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "custom_liquid_XwQ4fg": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom-liquid": "",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "grid_with_overlay_zRKYpV": {
+      "type": "grid-with-overlay",
+      "custom_css": [
+        ".featured-grid--root {padding: 0;}",
+        "@media only screen and (max-width: 767px) {[data-container=\"panel\"] {grid-column-gap: 0; grid-row-gap: 0; }}"
+      ],
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 3,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-columns": "2",
+        "mobile-spacing": true,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "image_with_text_overlay_kfR3NR": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_tGrWjV": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Components"
+          }
+        },
+        "heading_RFEWGn": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "So nutzen Kunden unsere Produkte",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_tGrWjV",
+        "heading_RFEWGn"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/StemNeu-15.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 500,
+        "overlay-style": "darken",
+        "text-style": "text-shadow",
+        "text-background-color": "accent-2",
+        "image-display-type": "aspect-ratio",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "custom_content_3ghBrD": {
+      "type": "custom-content",
+      "custom_css": [],
+      "name": "Custom content",
+      "settings": {
+        "custom_html": "<style>\n  .custom-content--wrapper h2 {\n    font-size: 28px !important;\n  }\n</style>\n<h2>\n  <a href=\"mailto:flores@oakcomponents.com?subject=Mein%20Bike-Foto&amp;body=Hallo,%20anbei%20mein%20Foto%20von%20meinem%20Bike%20mit%20euren%20Komponenten!\">\n   Schick uns hier deine eigenen Fotos zu\n  </a>\n</h2>",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "small",
+        "container-width": "1",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "media_with_highlight_dmDLFq": {
+      "type": "media-with-highlight",
+      "blocks": {
+        "image_3LPiMw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LosHackos_Schweiz2025_eignerframes_DSC2619.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_WMKAhf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SimplonGarda_web-84.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_U4jhHe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Norco_OAK_red_web-76.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_We4Md6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ShootingLagerEdited_web-334.jpg",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_XkXp3H": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_HnAnYU": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "text-color": "body",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_3LPiMw",
+        "image_WMKAhf",
+        "image_U4jhHe",
+        "image_We4Md6",
+        "image_XkXp3H",
+        "image_HnAnYU"
+      ],
+      "name": "Media with highlight",
+      "settings": {
+        "image": "shopify://shop_images/Website_Foto.png",
+        "image-enabled": true,
+        "overline": "",
+        "heading": "",
+        "highlight-type": "italic",
+        "highlight-color": "transparent",
+        "highlight-text": "none",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-4",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "reverse-layout": false,
+        "blocks-per-row": "2",
+        "vertical-alignment": "top",
+        "text-color": "white",
+        "heading-type": "featured-heading",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 600,
+        "overlay-style": "none",
+        "text-style": "eclipse-shadow",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "block-overlay-style": "none",
+        "block-display-type": "aspect-ratio",
+        "block-aspect-ratio": 80,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-blocks-per-row": "2",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-hide-description": false,
+        "block-mobile-display-type": "aspect-ratio",
+        "block-mobile-aspect-ratio": 134
+      }
+    },
+    "featured_text_JwtaTT": {
+      "type": "featured-text",
+      "blocks": {
+        "heading_X7pW39": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Kundenfotos von einzelnen Parts",
+            "highlight-type": "italic",
+            "highlight-color": "dark",
+            "highlight-text": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "heading_X7pW39"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "small",
+        "spacing-below": "small",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "large",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "slideshow_UqMQXi": {
+      "type": "slideshow",
+      "blocks": {
+        "image_UNRQFX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TopcapSchraube_web-23.jpg",
+            "overline": "",
+            "title": "Top cap",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "hier nachkaufen",
+            "button-link-2": "https://oakcomponents.de/products/the-eternal-topcap",
+            "button-style-2": "block-link",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_JTECHX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kurbel_web-4.jpg",
+            "overline": "",
+            "title": "Kurbel",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        },
+        "image_UMmaF3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OAK_HT4_mounted_orange.jpg",
+            "overline": "",
+            "title": "HT4 Bremshebel",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none",
+            "description": "",
+            "button-text-1": "",
+            "button-link-1": "",
+            "button-style-1": "button-2",
+            "button-text-2": "",
+            "button-link-2": "",
+            "button-style-2": "button-4",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center",
+            "mobile-hide-description": false
+          }
+        }
+      },
+      "block_order": [
+        "image_UNRQFX",
+        "image_JTECHX",
+        "image_UMmaF3"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "arrows-enabled": true,
+        "spacing-around-blocks": false,
+        "blocks-per-slide": 3,
+        "auto-rotate": true,
+        "rotate-frequency": 5,
+        "transition-type": "slide",
+        "text-color": "white",
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "heading-type": "featured-heading",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "x-large",
+        "mobile-aspect-ratio": 134,
+        "blocks-per-slide-mobile": "2"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_wjpCtt",
+    "main",
+    "grid_with_overlay_qFpAY7",
+    "grid_with_overlay_kRBCB6",
+    "featured_text_AHDji7",
+    "slideshow_cqjaww",
+    "contact_xk8LPY",
+    "image_with_text_overlay_44LqJ8",
+    "media_with_highlight_CrTjbK",
+    "featured_text_9dVBhw",
+    "text_columns_jLKTjN",
+    "custom_content_eVdMkU",
+    "custom_liquid_XwQ4fg",
+    "grid_with_overlay_zRKYpV",
+    "image_with_text_overlay_kfR3NR",
+    "custom_content_3ghBrD",
+    "media_with_highlight_dmDLFq",
+    "featured_text_JwtaTT",
+    "slideshow_UqMQXi"
+  ]
+}

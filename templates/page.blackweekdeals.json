@@ -1,0 +1,460 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "1",
+        "background-color": "none",
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "center"
+      }
+    },
+    "image_with_text_overlay_8yHPTL": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "overline_MQjQwT": {
+          "type": "overline",
+          "settings": {
+            "overline": "🔥 Black Week Deals 🔥"
+          }
+        },
+        "heading_NW6t4A": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Engineered für Rider, die mehr verlangen",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_PcEy4f": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Upgrade dein Bike. Upgrade deinen Ride.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_MQjQwT",
+        "heading_NW6t4A",
+        "description_PcEy4f"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/LosHackos_Schweiz2025_eignerframes_DSC2388.jpg",
+        "home-page-only": false,
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "background-color": "none",
+        "container-width": "6",
+        "text-color": "white",
+        "text-alignment": "center",
+        "text-x-position": 50,
+        "text-y-position": 50,
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "image-display-type": "small",
+        "aspect-ratio": 24,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-vertical-alignment": "center",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "featured_text_HdHxTc": {
+      "type": "featured-text",
+      "blocks": {
+        "overline_fzFfmq": {
+          "type": "overline",
+          "settings": {
+            "overline": "Limited statt Hype"
+          }
+        },
+        "heading_3RBMPJ": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Ausgewählte Deals",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        }
+      },
+      "block_order": [
+        "overline_fzFfmq",
+        "heading_3RBMPJ"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "4",
+        "background-color": "none",
+        "outer-background": true,
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "collection_with_highlight_wgJKEa": {
+      "type": "collection-with-highlight",
+      "blocks": {
+        "overline_XHAbpy": {
+          "type": "overline",
+          "settings": {
+            "overline": "Eternal Vorbau"
+          }
+        },
+        "heading_zB9wDB": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Für den extra Bling",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_4PfGEL": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Du siehst es den ganzen Tag am Trail, also gönn deinem Cockpit das OAK Upgrade.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_XHAbpy",
+        "heading_zB9wDB",
+        "description_4PfGEL"
+      ],
+      "name": "Collection with highlight",
+      "settings": {
+        "collection": "",
+        "product-list": [
+          "eternal-stem"
+        ],
+        "image": "shopify://shop_images/Norco_OAK_red_web-101.jpg",
+        "image-enabled": true,
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "background-color": "dark",
+        "container-width": "5",
+        "reverse-layout": false,
+        "max-products": 8,
+        "columns": "1",
+        "text-color": "white",
+        "product-text-color": "white",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 400,
+        "overlay-style": "none",
+        "text-style": "none",
+        "vertical-alignment": "top",
+        "image-display-type": "small",
+        "aspect-ratio": 56,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-columns": "1",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center"
+      }
+    },
+    "collection_with_highlight_BY9mgf": {
+      "type": "collection-with-highlight",
+      "blocks": {
+        "overline_Nz8jhf": {
+          "type": "overline",
+          "settings": {
+            "overline": "OAK Bremshebel Sets"
+          }
+        },
+        "heading_LCbFkd": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Upgrading matters",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_cAnHTA": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Erfüll deiner Bremshand ihren Wunsch nach mehr Ergonomie und Stabilität.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_Nz8jhf",
+        "heading_LCbFkd",
+        "description_cAnHTA"
+      ],
+      "name": "Collection with highlight",
+      "settings": {
+        "collection": "tuning-bremshebel",
+        "product-list": [],
+        "image": "shopify://shop_images/ShootingLukasSR_web-41.jpg",
+        "image-enabled": true,
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "background-color": "none",
+        "container-width": "5",
+        "reverse-layout": true,
+        "max-products": 8,
+        "columns": "2",
+        "text-color": "white",
+        "product-text-color": "body",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "vertical-alignment": "top",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "small",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-columns": "2",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center"
+      }
+    },
+    "collection_with_highlight_nCzVVg": {
+      "type": "collection-with-highlight",
+      "blocks": {
+        "overline_dWpYDR": {
+          "type": "overline",
+          "settings": {
+            "overline": "Neue Akzente"
+          }
+        },
+        "heading_V3DkzC": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Bring mehr Farbe an deine Magura Bremse",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_6NyWW4": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Finde ein Schraubenset in deiner Dreambuild Farbe.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_dWpYDR",
+        "heading_V3DkzC",
+        "description_6NyWW4"
+      ],
+      "name": "Collection with highlight",
+      "settings": {
+        "collection": "",
+        "product-list": [
+          "root-lever-pro-screw-kit"
+        ],
+        "image": "shopify://shop_images/RTH_Sonntag_web-66.jpg",
+        "image-enabled": true,
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "background-color": "dark",
+        "container-width": "5",
+        "reverse-layout": false,
+        "max-products": 8,
+        "columns": "1",
+        "text-color": "white",
+        "product-text-color": "white",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "vertical-alignment": "top",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-columns": "1",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center"
+      }
+    },
+    "collection_with_highlight_RjkWyh": {
+      "type": "collection-with-highlight",
+      "blocks": {
+        "overline_4zkKe9": {
+          "type": "overline",
+          "settings": {
+            "overline": "Mehr Design"
+          }
+        },
+        "heading_8RDJAk": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading",
+            "title": "Mehr Eyecatcher für dein Dreambike",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_deWiik": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Bring ein weiteres farbliches Highlight an dein Bike und wiederhole dein Farbschema.</p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_4zkKe9",
+        "heading_8RDJAk",
+        "description_deWiik"
+      ],
+      "name": "Collection with highlight",
+      "settings": {
+        "collection": "",
+        "product-list": [
+          "orbit-seatclamp",
+          "grown-bashguard-32t-34t",
+          "plasmadapt-bremsadapter"
+        ],
+        "image": "shopify://shop_images/black-bicycle-seat-post-blue-clamp-oak.jpg",
+        "image-enabled": true,
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "background-color": "none",
+        "container-width": "5",
+        "reverse-layout": true,
+        "max-products": 8,
+        "columns": "2",
+        "text-color": "white",
+        "product-text-color": "body",
+        "text-horizontal-alignment": "center",
+        "text-vertical-alignment": "center",
+        "text-width": 400,
+        "overlay-style": "darken-bottom",
+        "text-style": "none",
+        "vertical-alignment": "top",
+        "image-display-type": "medium",
+        "aspect-ratio": 56,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-media-layout": "slideshow",
+        "mobile-columns": "2",
+        "mobile-text-horizontal-alignment": "center",
+        "mobile-text-vertical-alignment": "center"
+      }
+    },
+    "scrolling_text_on_image_ybCqTw": {
+      "type": "scrolling-text-on-image",
+      "blocks": {
+        "text_UgcbGt": {
+          "type": "text",
+          "settings": {
+            "text": "Danke für euren Support",
+            "highlight-type": "italic",
+            "highlight-color": "#ffdd66",
+            "highlight-text": "#000000",
+            "link": "",
+            "hide-on-mobile": false,
+            "hide-on-desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "text_UgcbGt"
+      ],
+      "name": "Scrolling text on image",
+      "settings": {
+        "image": "shopify://shop_images/Shooting_2025_web-31.jpg",
+        "button-text": "Alle Parts ansehen",
+        "button-link": "shopify://collections/alle-produkte",
+        "button-style": "button-4",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "6",
+        "background-color": "none",
+        "animation-direction": "left",
+        "gap": 32,
+        "animation-speed": 2,
+        "pause-on-hover": false,
+        "heading-type": "featured-heading",
+        "full-width-text": true,
+        "text-color": "white",
+        "overlay-style": "darken-bottom",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_8yHPTL",
+    "featured_text_HdHxTc",
+    "collection_with_highlight_wgJKEa",
+    "collection_with_highlight_BY9mgf",
+    "collection_with_highlight_nCzVVg",
+    "collection_with_highlight_RjkWyh",
+    "scrolling_text_on_image_ybCqTw"
+  ]
+}

@@ -1,0 +1,177 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement_A9rPNd": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "🚨 ACHTUNG: Forkcap Air & HSC Bestellungen werden erst ab 27.03.2026 versendet. 🚨",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "",
+            "countdown-enabled": false,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "DD-MM-YYYY",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": true
+          }
+        },
+        "announcement_bfUV8Y": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "bell-ringing",
+            "text": "Get a free colored Screw Kit for your Magura Brake Lever Set Order",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "",
+            "countdown-enabled": true,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "30-07-2025",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": true
+          }
+        },
+        "announcement_NR4qA6": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "OAK B2B Shop",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "",
+            "countdown-enabled": false,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "DD-MM-YYYY",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": false
+          }
+        },
+        "announcement_kz7nNT": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "🔥 OAK Black Week 🔥",
+            "link": "shopify://pages/blackweek-deals",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "shopify://pages/blackweek-deals",
+            "countdown-enabled": true,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "03-12-2025",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": false
+          }
+        },
+        "announcement_RJpXMq": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "Black Week Deals werden im Warenkorb automatisch abgezogen.",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "shopify://pages/blackweek-deals",
+            "countdown-enabled": false,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "DD-MM-YYYY",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": false
+          }
+        }
+      },
+      "block_order": [
+        "announcement_A9rPNd",
+        "announcement_bfUV8Y",
+        "announcement_NR4qA6",
+        "announcement_kz7nNT",
+        "announcement_RJpXMq"
+      ],
+      "custom_css": [
+        "div {text-transform: none;}"
+      ],
+      "settings": {
+        "border": "none",
+        "background-color": "dark",
+        "sticky-enabled": false,
+        "arrows-enabled": true,
+        "rotate-frequency": 7,
+        "show-social-icons": false,
+        "show-region-selector": true,
+        "show-locale-selector": true,
+        "text-color": "white",
+        "scroll-text": false,
+        "animation-speed": 1
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "layout": "left-center",
+        "background-color": "none",
+        "white-menu-background": true,
+        "bottom-border": true,
+        "text-color": "body",
+        "hover-disabled": false,
+        "sticky-enabled": true,
+        "hide-on-scroll": false,
+        "reduce-height": true,
+        "overlap-behavior": "drawer",
+        "logo": "shopify://shop_images/OAKLogoFinal_RGB_OAK_Black.png",
+        "logo-height": 40,
+        "mobile-logo-height": 25,
+        "transparent-enabled": false,
+        "transparent-text-color": "body",
+        "menu": "main-menu",
+        "show-region-selector": false,
+        "show-locale-selector": false,
+        "search-enabled": true,
+        "icons-enabled": true,
+        "highlight-item": "Service",
+        "highlight-color": "#868686",
+        "modal-item": "",
+        "modal-content": "",
+        "modal-background-color": "accent-1",
+        "modal-text-color": "body"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "spacing-above": "large",
+        "spacing-below": "x-large",
+        "container-width": "2",
+        "show-tags": true,
+        "facebook-enabled": true,
+        "x-enabled": true,
+        "pinterest-enabled": true,
+        "email-enabled": true,
+        "url-enabled": true,
+        "show-title": true,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "show-date": true,
+        "show-author": true,
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "x-large"
+      }
+    },
+    "recents": {
+      "type": "article-recents",
+      "disabled": true,
+      "settings": {
+        "heading": "Continue reading",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "show-author": false,
+        "show-date": false,
+        "show-excerpt": false,
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "none",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "comments": {
+      "type": "article-comments",
+      "disabled": true,
+      "settings": {
+        "heading": "Comments",
+        "button-text": "Post comment",
+        "button-style": "button-1",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "disqus-enabled": false,
+        "disqus-shortname": "",
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "large",
+        "mobile-heading-alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recents",
+    "comments"
+  ]
+}

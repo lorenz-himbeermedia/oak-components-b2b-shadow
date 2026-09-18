@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.landingpage_socialads_lev.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "featured_text_LLzdfH": {
+      "custom_css": [],
+      "settings": {
+        "heading": "Noch nicht genug gesehen?",
+        "spacing-below": "full",
+        "link-text": "Entdecke alle OAK Parts"
+      },
+      "blocks": {}
+    }
+  }
+}

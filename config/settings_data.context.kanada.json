@@ -1,0 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "kanada"
+  },
+  "current": {
+    "cart--shipping-threshold-1": "20000",
+    "cart--shipping-costs-1": "4200",
+    "cart--shipping-threshold-2": "30000",
+    "cart--shipping-costs-2": "2100",
+    "cart--shipping-costs-3": "100",
+    "cart--shipping-info-text": "<p>C$21 Versand ab C$200<br/>Nur C$1 Versand ab C$300</p>"
+  }
+}
