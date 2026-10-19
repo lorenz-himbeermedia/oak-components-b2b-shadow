@@ -1,0 +1,358 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading"
+          }
+        },
+        "icon_fxhWUf": {
+          "type": "icon",
+          "settings": {
+            "icon": "check-fat",
+            "icon-width": 20,
+            "text": "Platzhalter USP 1"
+          }
+        },
+        "icon_98GHzK": {
+          "type": "icon",
+          "settings": {
+            "icon": "check-fat",
+            "icon-width": 20,
+            "text": "Platzhalter USP 2"
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant-style": "dropdowns",
+            "swatches": "circle",
+            "size-chart-enabled": true,
+            "size-chart-option": "size",
+            "size-chart-content": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "smart-payment-enabled": false,
+            "primary-button-style": "button-1",
+            "secondary-button-style": "button-3",
+            "sticky-add-enabled": true
+          }
+        },
+        "liquid_gjp7p3": {
+          "type": "liquid",
+          "settings": {
+            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "icon_fxhWUf",
+        "icon_98GHzK",
+        "options",
+        "price",
+        "buy-buttons",
+        "liquid_gjp7p3"
+      ],
+      "name": "Produktinformationen",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "x-large",
+        "container-width": "3",
+        "background-color": "none",
+        "breadcrumbs-enabled": false,
+        "modal-enabled": true,
+        "variant-scroll-enabled": true,
+        "image-zoom-enabled": false,
+        "loop-enabled": false,
+        "text-column-width": 300,
+        "text-color": "body",
+        "text-alignment": "left",
+        "media-layout": "thumbnails",
+        "thumbnail-width": 80,
+        "media-gap": 8,
+        "column-spacing": "close",
+        "mobile-spacing-above": "small",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "left",
+        "mobile-media-layout": "thumbnails"
+      }
+    },
+    "overlapping_media_e4Ghda": {
+      "type": "overlapping-media",
+      "blocks": {
+        "media_FeMQ7d": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "video-url": ""
+          }
+        },
+        "media_gEJNn9": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "video-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_FeMQ7d",
+        "media_gEJNn9"
+      ],
+      "name": "Beschreibung mit 2x Bilder",
+      "settings": {
+        "overline": "",
+        "title": "Platzhalter Beschreibung Titel",
+        "highlight-type": "italic",
+        "highlight-color": "#ffdd66",
+        "highlight-text": "#000000",
+        "description": "<p>{{ product.metafields.custom.beschreibung | metafield_tag }}</p>",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "reverse-layout": false,
+        "text-color": "body",
+        "heading-type": "block-heading",
+        "text-alignment": "left",
+        "text-column-width": 500,
+        "animation-enabled": false,
+        "image-offset": 48,
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "large",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "icons_row_LMp7Pg": {
+      "type": "icons-row",
+      "blocks": {
+        "icon_JUk3R6": {
+          "type": "icon",
+          "settings": {
+            "icon": "sun",
+            "icon-image": "shopify://shop_images/TestingIcon_WebshopOAK.png",
+            "title": "Auf Herz und Nieren",
+            "description": "<p>Neben Labortests prüfen unsere Profi Teamrider und Ingenieure alle Parts im anspruchsvollsten Einsatzbereich.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_jt38Ka": {
+          "type": "icon",
+          "settings": {
+            "icon": "tree",
+            "icon-image": "shopify://shop_images/KundenIcon_WebshopOAK.png",
+            "title": "We got your back",
+            "description": "<p>Du brauchst Ersatzteile oder weiterführende Hilfe? Kontaktiere uns gerne jederzeit, wir helfen dir!</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_wxCiqA": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "icon-image": "shopify://shop_images/RueckgaberechtIcon_WebshopOAK_New.png",
+            "title": "Ohne Kompromisse",
+            "description": "<p>Wenn du nicht zufrieden bist, kann das Produkt innerhalb von 30 Tagen zurückgeschickt werden.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_JUk3R6",
+        "icon_jt38Ka",
+        "icon_wxCiqA"
+      ],
+      "name": "3x USP OAK",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "medium",
+        "block-spacing": true,
+        "background-color": "light",
+        "outer-background": true,
+        "container-width": "4",
+        "width": 3,
+        "icon-width": 0,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "171741870759ffe17f": {
+      "type": "apps",
+      "name": "Reviews",
+      "settings": {
+        "border": "none",
+        "spacing-above": "half",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "17773762193898f283": {
+      "type": "apps",
+      "custom_css": [
+        "div,span,a,p {color: #fff !important; font-weight: normal;}",
+        "path {stroke: rgb(355, 355, 355) !important;}"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "dark",
+        "text-color": "white",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "image_with_text_pwFmEE": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_tBDNM4": {
+          "type": "overline",
+          "settings": {
+            "overline": "Team OAK"
+          }
+        },
+        "heading_XyEdYp": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Von Bikern für Biker",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_FDfKgk": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Unsere Ingenieure sind selbst Vollblut Mountainbiker und holen mit ihren OAK Entwicklungen aus jeder Abfahrt maximalen Spaß und Performance heraus. Das Produktfeedback von Kunden aus aller Welt wird mit einbezogen um die bestmöglichen Parts anzubieten.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_aD8xrQ": {
+          "type": "button",
+          "settings": {
+            "text": "Mehr erfahren",
+            "link": "shopify://pages/about-us",
+            "style": "button-4"
+          }
+        }
+      },
+      "block_order": [
+        "overline_tBDNM4",
+        "heading_XyEdYp",
+        "description_FDfKgk",
+        "button_aD8xrQ"
+      ],
+      "name": "About OAK",
+      "settings": {
+        "image": "shopify://shop_images/Shooting19072024_DaniSH_web_16_von_114.jpg",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "dark",
+        "reverse-layout": false,
+        "text-color": "white",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 400,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "darken-bottom",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "large",
+        "mobile-text-color": "white",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "custom_css": [],
+      "name": "Verwandte Produkte",
+      "settings": {
+        "title": "Weitere Parts entdecken",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "5",
+        "background-color": "light",
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-heading-alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "overlapping_media_e4Ghda",
+    "icons_row_LMp7Pg",
+    "171741870759ffe17f",
+    "17773762193898f283",
+    "image_with_text_pwFmEE",
+    "related-products"
+  ]
+}
