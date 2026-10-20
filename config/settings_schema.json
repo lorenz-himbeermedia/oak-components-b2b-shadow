@@ -1140,5 +1140,84 @@
         "info": "Disables all other non-essential animations"
       }
     ]
+  },
+  {
+    "name": "Bestandsampel",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Gilt für den Block „Bestandsampel“ auf der Produktseite. In jedem Text kann [count] verwendet werden, der Platzhalter wird durch den Bestand der Variante ersetzt."
+      },
+      {
+        "type": "number",
+        "id": "stock_light_threshold",
+        "label": "Ab dieser Stückzahl grün, darunter gelb",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Auf Lager"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_in_stock_text",
+        "label": "Text",
+        "default": "Auf Lager"
+      },
+      {
+        "type": "color",
+        "id": "stock_light_in_stock_color",
+        "label": "Farbe",
+        "default": "#4caf50"
+      },
+      {
+        "type": "header",
+        "content": "Geringer Bestand"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_low_stock_text",
+        "label": "Text",
+        "default": "Geringer Bestand"
+      },
+      {
+        "type": "color",
+        "id": "stock_light_low_stock_color",
+        "label": "Farbe",
+        "default": "#f5b400"
+      },
+      {
+        "type": "header",
+        "content": "Nachbestellung"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_backorder_text",
+        "label": "Text",
+        "default": "Lieferbar auf Nachbestellung"
+      },
+      {
+        "type": "color",
+        "id": "stock_light_backorder_color",
+        "label": "Farbe",
+        "default": "#f5b400"
+      },
+      {
+        "type": "header",
+        "content": "Ausverkauft"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_sold_out_text",
+        "label": "Text",
+        "default": "Ausverkauft"
+      },
+      {
+        "type": "color",
+        "id": "stock_light_sold_out_color",
+        "label": "Farbe",
+        "default": "#d32f2f"
+      }
+    ]
   }
 ]
