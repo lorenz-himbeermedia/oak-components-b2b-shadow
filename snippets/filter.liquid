@@ -29,6 +29,8 @@
   endif
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 <div class="filter--root" data-drawer-scroll-container>
   <div class="filter--wrapper">
     {%- if show_collection_list or show_sort_list or show_refine_list -%}
@@ -137,6 +139,11 @@
         {%- if show_refine_list -%}
           {%- if filters.size > 0 -%}
             {%- for filter in filters -%}
+              {%- comment -%} Spanne und Grenzwerte des Preisfilters würden die Preise verraten {%- endcomment -%}
+              {%- if filter.type == 'price_range' and b2b_can_see_prices != 'true' -%}
+                {%- continue -%}
+              {%- endif -%}
+
               <div class="filter--category">
                 <div
                   class="filter--toggle"

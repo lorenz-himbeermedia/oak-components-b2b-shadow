@@ -1024,6 +1024,34 @@
     ]
   },
   {
+    "name": "t:settings_schema.b2b_price_lock.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "b2b_price_lock_enabled",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_enabled.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_enabled.info",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_customer_tag",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_customer_tag.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_customer_tag.info",
+        "placeholder": "B2B",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "richtext",
+        "id": "b2b_price_lock_message",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_message.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_message.info",
+        "default": "<p>Bitte <a href=\"/account/login\">melde dich an</a>, um Preise zu sehen.</p>",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {
