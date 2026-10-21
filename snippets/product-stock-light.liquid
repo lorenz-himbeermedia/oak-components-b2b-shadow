@@ -25,36 +25,22 @@
 
   assign status_text_setting = 'stock_light_' | append: status | append: '_text'
   assign status_text = settings[status_text_setting] | replace: '[count]', inventory_quantity
+
+  assign status_color_setting = 'stock_light_' | append: status | append: '_color'
+  assign status_color = settings[status_color_setting]
 -%}
-
-{% style %}
-  .product-stock-light--root[data-status='in_stock'] {
-    --status-color: {{ settings.stock_light_in_stock_color }};
-  }
-
-  .product-stock-light--root[data-status='low_stock'] {
-    --status-color: {{ settings.stock_light_low_stock_color }};
-  }
-
-  .product-stock-light--root[data-status='backorder'] {
-    --status-color: {{ settings.stock_light_backorder_color }};
-  }
-
-  .product-stock-light--root[data-status='sold_out'] {
-    --status-color: {{ settings.stock_light_sold_out_color }};
-  }
-{% endstyle %}
 
 <product-stock-light-element
   class="product-stock-light--root"
   data-id="{{ id }}"
   data-status="{{ status }}"
+  style="--product-stock-light--color:{{ status_color }};"
   role="status"
   aria-live="polite"
 >
   <span class="product-stock-light--dot" aria-hidden="true"></span>
   <p class="product-stock-light--text" data-item="paragraph">
-    {{- status_text -}}
+    {{- status_text | escape -}}
   </p>
 
   <script type="application/json" data-stock-light-config>
@@ -65,6 +51,12 @@
         "low_stock": {{ settings.stock_light_low_stock_text | json }},
         "backorder": {{ settings.stock_light_backorder_text | json }},
         "sold_out": {{ settings.stock_light_sold_out_text | json }}
+      },
+      "colors": {
+        "in_stock": "{{ settings.stock_light_in_stock_color }}",
+        "low_stock": "{{ settings.stock_light_low_stock_color }}",
+        "backorder": "{{ settings.stock_light_backorder_color }}",
+        "sold_out": "{{ settings.stock_light_sold_out_color }}"
       }
     }
   </script>
@@ -77,6 +69,8 @@
     justify-content: var(--x-alignment, flex-start);
     /* 16px, damit nach dem 4px-Ring sichtbar 12px bis zum Text bleiben – wie bei den Icon-Zeilen */
     gap: var(--spacing--3);
+    /* Abstand am Block selbst, damit er unabhängig vom folgenden Block gilt – der Buy-Buttons-Block hat keinen eigenen */
+    margin-bottom: var(--spacing--3);
   }
 
   .product-stock-light--dot {
@@ -86,8 +80,8 @@
     /* Einzug in Ringbreite, damit der Ring bündig mit der Spaltenkante abschließt */
     margin-left: var(--spacing--0);
     border-radius: 50%;
-    background-color: var(--status-color);
-    box-shadow: 0 0 0 var(--spacing--0) color-mix(in srgb, var(--status-color) 22%, transparent);
+    background-color: var(--product-stock-light--color);
+    box-shadow: 0 0 0 var(--spacing--0) color-mix(in srgb, var(--product-stock-light--color) 22%, transparent);
   }
 {% endstylesheet %}
 
@@ -117,6 +111,7 @@
       const status = this.getStatus(variant, quantity);
 
       this.dataset.status = status;
+      this.style.setProperty('--product-stock-light--color', this.config.colors[status]);
       this.text.textContent = this.config.texts[status].replaceAll('[count]', quantity);
       this.parentNode.hidden = false;
     }
