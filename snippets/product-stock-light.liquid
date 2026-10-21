@@ -1,0 +1,137 @@
+<!-- snippets/product-stock-light.liquid -->
+
+{%- doc -%}
+  Renders the stock light (status dot and text) for the current variant.
+  Threshold, texts and colors come from the theme settings, the placeholder [count] is replaced by the inventory quantity.
+  @param {variant} current_variant - Variant providing inventory data.
+  @param {string} id - Unique product id, used to listen for variant changes.
+{%- enddoc -%}
+
+{%- liquid
+  assign threshold = settings.stock_light_threshold | default: 10
+  assign inventory_quantity = current_variant.inventory_quantity | default: 0
+
+  if current_variant.inventory_management == blank
+    assign status = 'in_stock'
+  elsif inventory_quantity >= threshold
+    assign status = 'in_stock'
+  elsif inventory_quantity > 0
+    assign status = 'low_stock'
+  elsif current_variant.inventory_policy == 'continue'
+    assign status = 'backorder'
+  else
+    assign status = 'sold_out'
+  endif
+
+  assign status_text_setting = 'stock_light_' | append: status | append: '_text'
+  assign status_text = settings[status_text_setting] | replace: '[count]', inventory_quantity
+-%}
+
+{% style %}
+  .product-stock-light--root[data-status='in_stock'] {
+    --status-color: {{ settings.stock_light_in_stock_color }};
+  }
+
+  .product-stock-light--root[data-status='low_stock'] {
+    --status-color: {{ settings.stock_light_low_stock_color }};
+  }
+
+  .product-stock-light--root[data-status='backorder'] {
+    --status-color: {{ settings.stock_light_backorder_color }};
+  }
+
+  .product-stock-light--root[data-status='sold_out'] {
+    --status-color: {{ settings.stock_light_sold_out_color }};
+  }
+{% endstyle %}
+
+<product-stock-light-element
+  class="product-stock-light--root"
+  data-id="{{ id }}"
+  data-status="{{ status }}"
+  role="status"
+  aria-live="polite"
+>
+  <span class="product-stock-light--dot" aria-hidden="true"></span>
+  <p class="product-stock-light--text" data-item="paragraph">
+    {{- status_text -}}
+  </p>
+
+  <script type="application/json" data-stock-light-config>
+    {
+      "threshold": {{ threshold | json }},
+      "texts": {
+        "in_stock": {{ settings.stock_light_in_stock_text | json }},
+        "low_stock": {{ settings.stock_light_low_stock_text | json }},
+        "backorder": {{ settings.stock_light_backorder_text | json }},
+        "sold_out": {{ settings.stock_light_sold_out_text | json }}
+      }
+    }
+  </script>
+</product-stock-light-element>
+
+{% stylesheet %}
+  .product-stock-light--root {
+    display: flex;
+    align-items: center;
+    justify-content: var(--x-alignment, flex-start);
+    /* 16px, damit nach dem 4px-Ring sichtbar 12px bis zum Text bleiben – wie bei den Icon-Zeilen */
+    gap: var(--spacing--3);
+  }
+
+  .product-stock-light--dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    /* Einzug in Ringbreite, damit der Ring bündig mit der Spaltenkante abschließt */
+    margin-left: var(--spacing--0);
+    border-radius: 50%;
+    background-color: var(--status-color);
+    box-shadow: 0 0 0 var(--spacing--0) color-mix(in srgb, var(--status-color) 22%, transparent);
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class ProductStockLight extends HTMLElement {
+    connectedCallback() {
+      this.text = this.querySelector('.product-stock-light--text');
+      this.config = JSON.parse(this.querySelector('script[data-stock-light-config]').textContent);
+      this.event_name = `theme:product:${this.dataset.id}:variantChanged`;
+      this.variantListener = ({ detail: { variant } }) => this.update(variant);
+
+      window.addEventListener(this.event_name, this.variantListener);
+    }
+
+    disconnectedCallback() {
+      window.removeEventListener(this.event_name, this.variantListener);
+    }
+
+    update(variant) {
+      // Ohne id gibt es die gewählte Kombination nicht – dann wird die Ampel ausgeblendet
+      if (!variant.id) {
+        this.parentNode.hidden = true;
+        return;
+      }
+
+      const quantity = variant.inventory_quantity || 0;
+      const status = this.getStatus(variant, quantity);
+
+      this.dataset.status = status;
+      this.text.textContent = this.config.texts[status].replaceAll('[count]', quantity);
+      this.parentNode.hidden = false;
+    }
+
+    getStatus(variant, quantity) {
+      if (!variant.inventory_management) return 'in_stock';
+      if (quantity >= this.config.threshold) return 'in_stock';
+      if (quantity > 0) return 'low_stock';
+      if (variant.inventory_policy === 'continue') return 'backorder';
+
+      return 'sold_out';
+    }
+  }
+
+  if (!customElements.get('product-stock-light-element')) {
+    customElements.define('product-stock-light-element', ProductStockLight);
+  }
+{% endjavascript %}

@@ -257,6 +257,9 @@
               block_settings: block.settings
             -%}
 
+          {%- when 'stock-light' -%}
+            {%- render 'product-stock-light', current_variant: current_variant, id: product_id -%}
+
           {%- when 'options' -%}
             {%-
               render 'product-options',

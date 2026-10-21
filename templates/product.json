@@ -46,6 +46,10 @@
           "type": "price",
           "settings": {}
         },
+        "stock-light": {
+          "type": "stock-light",
+          "settings": {}
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -68,6 +72,7 @@
         "icon_98GHzK",
         "options",
         "price",
+        "stock-light",
         "buy-buttons",
         "liquid_gjp7p3"
       ],
