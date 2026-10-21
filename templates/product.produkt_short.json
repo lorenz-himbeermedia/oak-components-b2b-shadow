@@ -48,6 +48,10 @@
           "type": "price",
           "settings": {}
         },
+        "stock_light_iKNcxt": {
+          "type": "stock-light",
+          "settings": {}
+        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -70,6 +74,7 @@
         "icon_98GHzK",
         "options",
         "price",
+        "stock_light_iKNcxt",
         "buy-buttons",
         "liquid_gjp7p3"
       ],
@@ -155,7 +160,6 @@
           "type": "icon",
           "settings": {
             "icon": "sun",
-            "icon-image": "shopify://shop_images/TestingIcon_WebshopOAK.png",
             "title": "Auf Herz und Nieren",
             "description": "<p>Neben Labortests prüfen unsere Profi Teamrider und Ingenieure alle Parts im anspruchsvollsten Einsatzbereich.</p>",
             "button-text": "",
@@ -166,7 +170,6 @@
           "type": "icon",
           "settings": {
             "icon": "tree",
-            "icon-image": "shopify://shop_images/KundenIcon_WebshopOAK.png",
             "title": "We got your back",
             "description": "<p>Du brauchst Ersatzteile oder weiterführende Hilfe? Kontaktiere uns gerne jederzeit, wir helfen dir!</p>",
             "button-text": "",
@@ -177,7 +180,6 @@
           "type": "icon",
           "settings": {
             "icon": "recycle",
-            "icon-image": "shopify://shop_images/RueckgaberechtIcon_WebshopOAK_New.png",
             "title": "Ohne Kompromisse",
             "description": "<p>Wenn du nicht zufrieden bist, kann das Produkt innerhalb von 30 Tagen zurückgeschickt werden.</p>",
             "button-text": "",
@@ -300,7 +302,6 @@
       ],
       "name": "About OAK",
       "settings": {
-        "image": "shopify://shop_images/Shooting19072024_DaniSH_web_16_von_114.jpg",
         "border": "none",
         "spacing-above": "none",
         "spacing-below": "large",

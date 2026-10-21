@@ -57,7 +57,7 @@
     "price": "Preis",
     "quantity": "Menge",
     "remove": "Entfernen",
-    "shipping_taxes_not_included": "Steuern und Versandkosten werden an der Kasse berechnet",
+    "shipping_taxes_not_included": "Exklusive Steuern, Versandkosten werden an der Kasse berechnet",
     "shipping_taxes_included": "Inklusive Steuern, Versandkosten werden an der Kasse berechnet",
     "subtotal": "Zwischensumme",
     "title": "Warenkorb",
