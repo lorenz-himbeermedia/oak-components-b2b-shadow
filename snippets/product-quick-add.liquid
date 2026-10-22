@@ -9,6 +9,8 @@
 
 {%- if settings.quick-add--enabled -%}
   {%- if product.available or onboarding -%}
+    {%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
     {%- liquid
       assign button_text = 'products.choose_options' | t
       if product.has_only_default_variant
@@ -17,8 +19,16 @@
 
       assign current_variant = product.selected_or_first_available_variant
 
+      comment
+        "Ohne Custom Element hat der gesperrte Button kein JS, das ihn wieder aktivieren könnte"
+      endcomment
+      assign quick_add_locked = false
+      if b2b_can_see_prices != 'true' and onboarding != true
+        assign quick_add_locked = true
+      endif
+
       assign tag = 'product-quick-add'
-      if onboarding
+      if onboarding or quick_add_locked
         assign tag = 'div'
       endif
     -%}
@@ -45,6 +55,9 @@
         aria-label="{{ button_text }}"
         {% if onboarding %}
           disabled
+        {% elsif quick_add_locked %}
+          disabled
+          aria-disabled="true"
         {% endif %}
       >
         <div class="product-quick-add--icon">

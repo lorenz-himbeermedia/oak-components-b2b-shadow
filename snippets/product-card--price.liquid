@@ -32,44 +32,49 @@
   endif
 -%}
 
-<div class="product--price-container">
-  <div class="product--price-wrapper">
-    {%- if product.price_varies -%}
-      <span class="product--from" data-item="nav-text">
-        {{- from_t -}}
-      </span>
-    {%- endif -%}
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
 
-    {%- if compare_price -%}
-      <span
-        class="product--compare-price"
-        data-item="nav-text"
-        data-text-color="gray"
-      >
-        {{- compare_price -}}
-      </span>
-    {%- endif -%}
-
-    <span class="product--price" data-item="nav-text">
-      {{- price -}}
-    </span>
-  </div>
-
-  {%- if current_variant.unit_price_measurement -%}
-    <div class="product--unit-price-container" data-item="small-text">
-      <span class="product--unit-price">
-        {{- current_variant.unit_price | money -}}
-      </span>/
-
-      {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
-        <span class="product--reference-value">
-          {{- current_variant.unit_price_measurement.reference_value -}}
+{%- comment -%} In Kacheln gibt es für Gäste bewusst keinen Platzhalter, damit keine Lücke entsteht {%- endcomment -%}
+{%- if b2b_can_see_prices == 'true' -%}
+  <div class="product--price-container">
+    <div class="product--price-wrapper">
+      {%- if product.price_varies -%}
+        <span class="product--from" data-item="nav-text">
+          {{- from_t -}}
         </span>
       {%- endif -%}
 
-      <span class="product--reference-unit">
-        {{- current_variant.unit_price_measurement.reference_unit -}}
+      {%- if compare_price -%}
+        <span
+          class="product--compare-price"
+          data-item="nav-text"
+          data-text-color="gray"
+        >
+          {{- compare_price -}}
+        </span>
+      {%- endif -%}
+
+      <span class="product--price" data-item="nav-text">
+        {{- price -}}
       </span>
     </div>
-  {%- endif -%}
-</div>
+
+    {%- if current_variant.unit_price_measurement -%}
+      <div class="product--unit-price-container" data-item="small-text">
+        <span class="product--unit-price">
+          {{- current_variant.unit_price | money -}}
+        </span>/
+
+        {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+          <span class="product--reference-value">
+            {{- current_variant.unit_price_measurement.reference_value -}}
+          </span>
+        {%- endif -%}
+
+        <span class="product--reference-unit">
+          {{- current_variant.unit_price_measurement.reference_unit -}}
+        </span>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

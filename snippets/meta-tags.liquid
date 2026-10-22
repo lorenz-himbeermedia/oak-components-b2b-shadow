@@ -23,6 +23,7 @@
 {%- if request.page_type == 'product' -%}
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign reviews = product.metafields.reviews -%}
+  {%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
 
   <meta property="og:type" content="product" />
   <meta property="og:title" content="{{ product.title | strip_html | escape }}" />
@@ -34,11 +35,13 @@
     <meta property="og:image:height" content="{{ media.height }}" />
   {%- endfor -%}
 
-  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}" />
-  <meta
-    property="og:price:amount"
-    content="{{ product.price | money_without_currency | strip_html | escape }}"
-  />
+  {%- if b2b_can_see_prices == 'true' -%}
+    <meta property="og:price:currency" content="{{ cart.currency.iso_code }}" />
+    <meta
+      property="og:price:amount"
+      content="{{ product.price | money_without_currency | strip_html | escape }}"
+    />
+  {%- endif -%}
 
   <script type="application/ld+json">
     {
@@ -80,8 +83,10 @@
               "gtin14": {{ variant.barcode }},
             {%- endif -%}
             "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-            "price": {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency": {{ cart.currency.iso_code | json }},
+            {%- if b2b_can_see_prices == 'true' -%}
+              "price": {{ variant.price | divided_by: 100.00 | json }},
+              "priceCurrency": {{ cart.currency.iso_code | json }},
+            {%- endif -%}
             "url": {{ request.origin | append: variant.url | json }}
           }{% unless forloop.last %},{% endunless %}
         {%- endfor -%}

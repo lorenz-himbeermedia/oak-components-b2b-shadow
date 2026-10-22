@@ -18,6 +18,8 @@
   assign text_color = text_color | default: 'body'
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 {%- if onboarding -%}
   <div class="product-form" data-text-color="{{ text_color }}">
     {%- for block in section.blocks -%}
@@ -197,6 +199,9 @@
 
               assign sold_out_enabled = block.settings.sold-out-enabled
               assign sale_enabled = block.settings.sale-enabled
+              if b2b_can_see_prices != 'true'
+                assign sale_enabled = false
+              endif
               assign sale_type = block.settings.sale-type
               assign label_color = block.settings.color
               assign label_shape = block.settings.shape

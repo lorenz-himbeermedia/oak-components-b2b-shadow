@@ -1,0 +1,21 @@
+{
+  "settings_schema": {
+    "b2b_price_lock": {
+      "name": "B2B price lock",
+      "settings": {
+        "b2b_price_lock_enabled": {
+          "label": "Enable price lock",
+          "info": "Prices, price filters, add to cart and checkout are only available to logged-in customers with the tag below."
+        },
+        "b2b_price_customer_tag": {
+          "label": "Customer tag",
+          "info": "Customers with this tag can see prices, e.g. B2B. Not case-sensitive. If left empty, logging in is enough."
+        },
+        "b2b_price_lock_message": {
+          "label": "Message for visitors without access",
+          "info": "Shown instead of the price on the product page and instead of the checkout button in the cart. Link to /account/login."
+        }
+      }
+    }
+  }
+}
