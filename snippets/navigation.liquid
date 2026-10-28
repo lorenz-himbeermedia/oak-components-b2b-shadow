@@ -34,8 +34,6 @@
   endif
 -%}
 
-{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
-
 <navigation-element
   class="navigation--root"
   data-section-id="{{ section.id }}"
@@ -213,21 +211,19 @@
               <span></span>
               {%- render 'icons', icon: 'cross' -%}
             </li>
-            {%- if b2b_can_see_prices == 'true' -%}
-              <li
-                class="navigation--active-tag"
-                data-type="price"
-                tabindex="0"
-                data-item="tag"
-                style="display:none;"
-              >
-                {{- cart.currency.symbol -}}
-                <span data-min-price></span>&nbsp;-&nbsp;
-                {{- cart.currency.symbol -}}
-                <span data-max-price></span>
-                {%- render 'icons', icon: 'cross' -%}
-              </li>
-            {%- endif -%}
+            <li
+              class="navigation--active-tag"
+              data-type="price"
+              tabindex="0"
+              data-item="tag"
+              style="display:none;"
+            >
+              {{- cart.currency.symbol -}}
+              <span data-min-price></span>&nbsp;-&nbsp;
+              {{- cart.currency.symbol -}}
+              <span data-max-price></span>
+              {%- render 'icons', icon: 'cross' -%}
+            </li>
           {%- endif -%}
           <li class="navigation--active-clear" tabindex="0" data-item="block-link">
             <span>{{ clear_all_t }}</span>

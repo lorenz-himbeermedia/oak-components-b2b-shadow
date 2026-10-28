@@ -5,24 +5,9 @@
   @param {product} product - Product to quick add.
   @param {boolean} [hover] - Marks rendering within a hover state.
   @param {boolean} [onboarding] - Render onboarding placeholders.
-  @param {string} [b2b_can_see_prices] - Ergebnis von `b2b-price-access` aus der Kachel. Fehlt es, prüft das Snippet selbst.
 {%- enddoc -%}
 
-{%- if b2b_can_see_prices == blank -%}
-  {%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
-{%- endif -%}
-
-{%- liquid
-  comment
-    "Ohne Preis-Zugriff gibt es keine Schaltfläche, weil Gäste nichts in den Warenkorb legen können"
-  endcomment
-  assign quick_add_hidden = false
-  if b2b_can_see_prices != 'true' and onboarding != true
-    assign quick_add_hidden = true
-  endif
--%}
-
-{%- if settings.quick-add--enabled and quick_add_hidden == false -%}
+{%- if settings.quick-add--enabled -%}
   {%- if product.available or onboarding -%}
     {%- liquid
       assign button_text = 'products.choose_options' | t

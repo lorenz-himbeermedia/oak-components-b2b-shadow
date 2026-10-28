@@ -29,23 +29,6 @@
   endif
 -%}
 
-{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
-
-{%- liquid
-  comment
-    "Gäste mit ?sort_by=price-… sehen als aktive Sortierung die Standard-Sortierung, weil die Preis-Optionen fehlen"
-  endcomment
-  if b2b_can_see_prices != 'true'
-    if sort_by == 'price-ascending' or sort_by == 'price-descending'
-      assign sort_by = collection.default_sort_by | default: 'relevance'
-
-      if sort_by == 'price-ascending' or sort_by == 'price-descending'
-        assign sort_by = sort_options.first.value
-      endif
-    endif
-  endif
--%}
-
 <div class="filter--root" data-drawer-scroll-container>
   <div class="filter--wrapper">
     {%- if show_collection_list or show_sort_list or show_refine_list -%}
@@ -123,13 +106,6 @@
               data-transition-type="fade-in"
             >
               {%- for option in sort_options -%}
-                {%- comment -%} Die Reihenfolge nach Preis würde Preisunterschiede verraten {%- endcomment -%}
-                {%- if b2b_can_see_prices != 'true' -%}
-                  {%- if option.value == 'price-ascending' or option.value == 'price-descending' -%}
-                    {%- continue -%}
-                  {%- endif -%}
-                {%- endif -%}
-
                 <li class="filter--link" data-type="sort">
                   <input
                     id="{{ option.name | handle | downcase }}-filter_sort"
@@ -161,11 +137,6 @@
         {%- if show_refine_list -%}
           {%- if filters.size > 0 -%}
             {%- for filter in filters -%}
-              {%- comment -%} Spanne und Grenzwerte des Preisfilters würden die Preise verraten {%- endcomment -%}
-              {%- if filter.type == 'price_range' and b2b_can_see_prices != 'true' -%}
-                {%- continue -%}
-              {%- endif -%}
-
               <div class="filter--category">
                 <div
                   class="filter--toggle"
