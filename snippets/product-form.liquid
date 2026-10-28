@@ -23,6 +23,11 @@
 {%- if onboarding -%}
   <div class="product-form" data-text-color="{{ text_color }}">
     {%- for block in section.blocks -%}
+      {%- comment -%} Im Theme-Editor ist nie ein Kunde angemeldet, dort bleiben die Blöcke deshalb sichtbar {%- endcomment -%}
+      {%- if block.settings.hide_when_price_locked and b2b_can_see_prices != 'true' and request.design_mode == false -%}
+        {%- continue -%}
+      {%- endif -%}
+
       <div
         class="product-form--block"
         data-block-type="{{ block.type }}"
@@ -145,6 +150,11 @@
     {%- endif -%}
 
     {%- for block in section.blocks -%}
+      {%- comment -%} Im Theme-Editor ist nie ein Kunde angemeldet, dort bleiben die Blöcke deshalb sichtbar {%- endcomment -%}
+      {%- if block.settings.hide_when_price_locked and b2b_can_see_prices != 'true' and request.design_mode == false -%}
+        {%- continue -%}
+      {%- endif -%}
+
       {%- liquid
         assign fit_together = false
         if block.type == 'collapsible-row'
