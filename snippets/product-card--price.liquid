@@ -4,6 +4,7 @@
   Renders product price, compare-at price, and unit price details.
   @param {product} product - Product to price.
   @param {boolean} [onboarding] - Render onboarding prices.
+  @param {string} [b2b_can_see_prices] - Ergebnis von `b2b-price-access` aus der Kachel. Fehlt es, prüft das Snippet selbst.
 {%- enddoc -%}
 
 {%- liquid
@@ -32,7 +33,9 @@
   endif
 -%}
 
-{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+{%- if b2b_can_see_prices == blank -%}
+  {%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+{%- endif -%}
 
 {%- comment -%} In Kacheln gibt es für Gäste bewusst keinen Platzhalter, damit keine Lücke entsteht {%- endcomment -%}
 {%- if b2b_can_see_prices == 'true' -%}

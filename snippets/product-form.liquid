@@ -383,7 +383,19 @@
             {%- render 'icon-block', settings: block.settings -%}
 
           {%- when 'liquid' -%}
-            {{- block.settings.custom-liquid -}}
+            {%- liquid
+              comment
+                "Die Zahlungs-Icons stehen als eigener Liquid-Block im Template. Ohne Kauf-Button sind sie für Gäste ohne Sinn."
+              endcomment
+              assign is_payment_icons_block = false
+              if block.settings.custom-liquid contains 'prd-Detail_PaymentProvider'
+                assign is_payment_icons_block = true
+              endif
+
+              if b2b_can_see_prices == 'true' or is_payment_icons_block == false
+                echo block.settings.custom-liquid
+              endif
+            -%}
 
           {%- when '@app' -%}
             {%- render block -%}

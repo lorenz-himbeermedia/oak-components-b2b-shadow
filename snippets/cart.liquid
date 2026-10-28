@@ -141,9 +141,7 @@
   {%- comment -%} Ohne Preis-Zugriff weder Summen noch Checkout-Button, damit Gäste nicht zur Kasse kommen {%- endcomment -%}
   {%- capture cart_summary -%}
     <div class="cart--summary">
-      <div class="cart--b2b-message" data-item="rte-content">
-        {{- settings.b2b_price_lock_message -}}
-      </div>
+      {%- render 'b2b-price-lock-box', button_style: checkout_button_style -%}
     </div>
   {%- endcapture -%}
 {%- endunless -%}

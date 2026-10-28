@@ -2,7 +2,7 @@
 
 {%- doc -%}
   Renders product add-to-cart and buy-now buttons.
-  Ohne Preis-Zugriff (siehe `b2b-price-access`) gibt es nur einen deaktivierten In-den-Warenkorb-Button.
+  Ohne Preis-Zugriff (siehe `b2b-price-access`) wird kein Kauf-Button gerendert.
   @param {form} form - Product form tag.
   @param {string} id - Unique element id.
   @param {product} product - Product context.
@@ -62,23 +62,10 @@
 
   {%- elsif b2b_can_see_prices != 'true' -%}
     {%- comment -%}
-      Ohne Custom Element, Varianten-ID, Zahlungs-Hinweis und Dynamic Checkout kann kein JS den Button wieder aktivieren.
-      Der deaktivierte Submit-Button verhindert zusätzlich das Absenden des Formulars per Enter.
+      Kein Kauf-Button, keine Varianten-ID: den Platz übernehmen die Links der Sperr-Box. Der unsichtbare,
+      deaktivierte Submit verhindert, dass das Formular per Enter trotzdem abgeschickt wird.
     {%- endcomment -%}
-    <div class="product-buy-buttons--root" data-container="block">
-      <button
-        class="product-buy-buttons--primary"
-        type="submit"
-        data-text="{{ add_to_cart_t }}"
-        data-item="{{ primary_button_style }}"
-        disabled
-        aria-disabled="true"
-      >
-        <span class="product-buy-buttons--cta-text">
-          {{- add_to_cart_t -}}
-        </span>
-      </button>
-    </div>
+    <button type="submit" disabled hidden></button>
 
   {%- else -%}
     <product-buy-buttons-element

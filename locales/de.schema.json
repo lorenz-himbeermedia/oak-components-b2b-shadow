@@ -11,9 +11,26 @@
           "label": "Kunden-Tag",
           "info": "Kunden mit diesem Tag sehen Preise, z. B. B2B. Groß-/Kleinschreibung egal. Bleibt das Feld leer, reicht die Anmeldung."
         },
+        "b2b_price_lock_heading": {
+          "label": "Titel der Sperr-Box"
+        },
         "b2b_price_lock_message": {
           "label": "Meldung für Besucher ohne Zugriff",
-          "info": "Erscheint auf der Produktseite statt des Preises und im Warenkorb statt des Checkout-Buttons. Login-Link: /account/login."
+          "info": "Erscheint in der Sperr-Box: auf der Produktseite und im Quick-Add statt des Preises, im Warenkorb statt des Checkout-Buttons."
+        },
+        "b2b_price_lock_login_label": {
+          "label": "Text Button Anmelden"
+        },
+        "b2b_price_lock_login_url": {
+          "label": "Link Button Anmelden",
+          "info": "Leer lassen für die Login-Seite des Shops."
+        },
+        "b2b_price_lock_register_label": {
+          "label": "Text Button Händlerkonto"
+        },
+        "b2b_price_lock_register_url": {
+          "label": "Link Button Händlerkonto",
+          "info": "Leer lassen für /pages/b2b-registration. Sollte nicht auf dieselbe Seite wie Anmelden führen."
         }
       }
     }

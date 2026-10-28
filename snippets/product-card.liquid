@@ -250,7 +250,7 @@
         echo hover_image
       endif
 
-      render 'product-quick-add', product: product_item, onboarding: onboarding, hover: true
+      render 'product-quick-add', product: product_item, onboarding: onboarding, hover: true, b2b_can_see_prices: b2b_can_see_prices
     -%}
   </a>
 
@@ -286,7 +286,12 @@
       {%- endif -%}
     </div>
 
-    {%- render 'product-card--price', product: product_item, onboarding: onboarding -%}
+    {%-
+      render 'product-card--price',
+      product: product_item,
+      onboarding: onboarding,
+      b2b_can_see_prices: b2b_can_see_prices
+    -%}
 
     {%- if swatch_option -%}
       <div class="product-card--swatches--column-view">

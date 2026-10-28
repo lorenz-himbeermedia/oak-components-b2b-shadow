@@ -2,7 +2,7 @@
 
 {%- doc -%}
   Renders product price, compare price, unit price, and tax info.
-  Ohne Preis-Zugriff (siehe `b2b-price-access`) erscheint stattdessen die Login-Meldung aus den Theme-Einstellungen.
+  Ohne Preis-Zugriff (siehe `b2b-price-access`) erscheint stattdessen die Sperr-Box `b2b-price-lock-box`.
   @param {string} id - Unique element id.
   @param {product} product - Product to price.
 {%- enddoc -%}
@@ -73,9 +73,7 @@
   </product-price-element>
 {%- else -%}
   {%- comment -%} Ohne Preis-Element bleibt auch das Preis-JS beim Variantenwechsel außen vor {%- endcomment -%}
-  <div class="product-price--b2b-message" data-item="rte-content">
-    {{- settings.b2b_price_lock_message -}}
-  </div>
+  {%- render 'b2b-price-lock-box' -%}
 {%- endif -%}
 
 {% stylesheet %}
