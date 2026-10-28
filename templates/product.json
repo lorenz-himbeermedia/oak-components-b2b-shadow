@@ -15,21 +15,26 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading-type": "section-heading"
+            "heading-type": "section-heading",
+            "hide_when_price_locked": false
           }
         },
         "icon_fxhWUf": {
           "type": "icon",
           "settings": {
             "icon": "check-fat",
-            "icon-width": 20
+            "icon-width": 20,
+            "text": "Feature text",
+            "hide_when_price_locked": false
           }
         },
         "icon_98GHzK": {
           "type": "icon",
           "settings": {
             "icon": "check-fat",
-            "icon-width": 20
+            "icon-width": 20,
+            "text": "Feature text",
+            "hide_when_price_locked": false
           }
         },
         "options": {
@@ -39,7 +44,8 @@
             "swatches": "circle",
             "size-chart-enabled": true,
             "size-chart-option": "size",
-            "size-chart-content": ""
+            "size-chart-content": "",
+            "hide_when_price_locked": false
           }
         },
         "price": {
@@ -48,7 +54,9 @@
         },
         "stock-light": {
           "type": "stock-light",
-          "settings": {}
+          "settings": {
+            "hide_when_price_locked": true
+          }
         },
         "buy-buttons": {
           "type": "buy-buttons",
@@ -56,13 +64,15 @@
             "smart-payment-enabled": false,
             "primary-button-style": "button-1",
             "secondary-button-style": "button-3",
-            "sticky-add-enabled": true
+            "sticky-add-enabled": true,
+            "hide_when_price_locked": false
           }
         },
         "liquid_gjp7p3": {
           "type": "liquid",
           "settings": {
-            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>"
+            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>",
+            "hide_when_price_locked": false
           }
         }
       },
@@ -126,6 +136,7 @@
       "name": "Beschreibung mit 2x Bilder",
       "settings": {
         "overline": "",
+        "title": "Overlapping media",
         "highlight-type": "italic",
         "highlight-color": "#ffdd66",
         "highlight-text": "#000000",
@@ -157,7 +168,6 @@
           "type": "icon",
           "settings": {
             "icon": "sun",
-            "icon-image": "shopify://shop_images/TestingIcon_WebshopOAK.png",
             "title": "Auf Herz und Nieren",
             "description": "<p>Neben Labortests prüfen unsere Profi Teamrider und Ingenieure alle Parts im anspruchsvollsten Einsatzbereich.</p>",
             "button-text": "",
@@ -168,7 +178,6 @@
           "type": "icon",
           "settings": {
             "icon": "tree",
-            "icon-image": "shopify://shop_images/KundenIcon_WebshopOAK.png",
             "title": "We got your back",
             "description": "<p>Du brauchst Ersatzteile oder weiterführende Hilfe? Kontaktiere uns gerne jederzeit, wir helfen dir!</p>",
             "button-text": "",
@@ -179,7 +188,6 @@
           "type": "icon",
           "settings": {
             "icon": "recycle",
-            "icon-image": "shopify://shop_images/RueckgaberechtIcon_WebshopOAK_New.png",
             "title": "Ohne Kompromisse",
             "description": "<p>Wenn du nicht zufrieden bist, kann das Produkt innerhalb von 30 Tagen zurückgeschickt werden.</p>",
             "button-text": "",
@@ -302,7 +310,6 @@
       ],
       "name": "About OAK",
       "settings": {
-        "image": "shopify://shop_images/Shooting19072024_DaniSH_web_16_von_114.jpg",
         "border": "none",
         "spacing-above": "none",
         "spacing-below": "large",
