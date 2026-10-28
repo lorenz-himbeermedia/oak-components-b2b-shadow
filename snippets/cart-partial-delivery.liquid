@@ -1,0 +1,224 @@
+<!-- snippets/cart-partial-delivery.liquid -->
+
+{%- doc -%}
+  Renders the partial delivery choice above the cart totals.
+  The block only shows when the cart mixes available and unavailable lines (optionally also when every line is unavailable).
+  The choice is stored as cart attribute "Teillieferung", the wrapper stays in the DOM while hidden so theme.js can clear an old value.
+  @param {string} view - Active cart view ('desktop', 'mobile' or 'drawer'), used for unique ids.
+{%- enddoc -%}
+
+{%- liquid
+  # Feste deutsche Werte, damit das Lager unabhängig von der Shop-Sprache einheitliche Angaben sieht
+  assign all_value = 'Nein – Gesamtlieferung'
+  assign partial_value = 'Ja – Teillieferung gewünscht'
+  assign saved_value = cart.attributes['Teillieferung']
+
+  assign available_count = 0
+  assign unavailable_count = 0
+  for item in cart.items
+    if item.variant.inventory_management == blank
+      assign available_count = available_count | plus: 1
+    elsif item.quantity <= item.variant.inventory_quantity
+      assign available_count = available_count | plus: 1
+    else
+      assign unavailable_count = unavailable_count | plus: 1
+    endif
+  endfor
+
+  assign show_partial_delivery = false
+  if settings.partial_delivery_enabled and unavailable_count > 0
+    if available_count > 0
+      assign show_partial_delivery = true
+    elsif settings.partial_delivery_show_if_all_unavailable
+      assign show_partial_delivery = true
+    endif
+  endif
+
+  assign selected_value = all_value
+  if saved_value == partial_value
+    assign selected_value = partial_value
+  endif
+
+  assign option_keys = 'all,partial' | split: ','
+-%}
+
+<div
+  class="cart-partial-delivery--root"
+  data-saved-value="{{ saved_value | escape }}"
+  {% unless show_partial_delivery %}
+    hidden
+  {% endunless %}
+>
+  {%- if show_partial_delivery -%}
+    <fieldset class="cart-partial-delivery--fieldset">
+      <legend class="cart-partial-delivery--legend">
+        {%- render 'icons', icon: 'truck' -%}
+        <span>{{ settings.partial_delivery_heading | escape }}</span>
+      </legend>
+
+      <div class="cart-partial-delivery--options">
+        {%- for option_key in option_keys -%}
+          {%- liquid
+            assign option_id = view | append: '-partial-delivery-' | append: option_key
+            assign title_setting = 'partial_delivery_' | append: option_key | append: '_title'
+            assign text_setting = 'partial_delivery_' | append: option_key | append: '_text'
+
+            assign option_value = all_value
+            if option_key == 'partial'
+              assign option_value = partial_value
+            endif
+          -%}
+
+          <label class="cart-partial-delivery--option" for="{{ option_id }}">
+            <input
+              class="cart-partial-delivery--input"
+              type="radio"
+              id="{{ option_id }}"
+              name="attributes[Teillieferung]"
+              value="{{ option_value | escape }}"
+              aria-describedby="{{ option_id }}-text"
+              {% if option_value == selected_value %}
+                checked
+              {% endif %}
+            >
+            <span class="cart-partial-delivery--option-content">
+              <span class="cart-partial-delivery--option-title">
+                {{- settings[title_setting] | escape -}}
+              </span>
+              <span class="cart-partial-delivery--option-text" id="{{ option_id }}-text">
+                {{- settings[text_setting] | escape -}}
+              </span>
+            </span>
+          </label>
+        {%- endfor -%}
+      </div>
+    </fieldset>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .cart-partial-delivery--root {
+    /* Zusammen mit dem 8px-Abstand der Summen ergibt das 12px bis zur Zwischensumme (Prototyp B3) */
+    margin-bottom: var(--spacing--0);
+    text-align: left;
+  }
+
+  .cart--root[data-view=desktop] .cart-partial-delivery--root {
+    /* Bündig mit dem Steuerhinweis (Prototyp B3) */
+    width: 361px;
+    max-width: 100%;
+  }
+
+  .cart--root[data-view=mobile] .cart-partial-delivery--root {
+    /* Randlos bis an den Bildschirmrand (Prototyp B3, Mobile 375) */
+    margin-inline: calc(50% - 50vw);
+  }
+
+  .cart--root[data-view=drawer] .cart-partial-delivery--root {
+    /* Randlos direkt unter der Trennlinie, der Summenbereich hat ringsum Innenabstand */
+    margin: calc(var(--spacing--item) * -1) calc(var(--spacing--item) * -1) 0;
+  }
+
+  .cart-partial-delivery--fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: var(--spacing--3);
+    border: 0;
+    /* Flächenfarbe aus dem Prototyp B3, kein passender Token vorhanden */
+    background-color: #f2f2f0;
+  }
+
+  /* Float holt die Legend in den Innenabstand der Fläche, sonst sitzt sie auf der oberen Kante */
+  .cart-partial-delivery--legend {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing--1);
+    margin-bottom: var(--spacing--0);
+    padding: 0;
+    color: var(--color--body);
+    font-family: var(--font--nav--family);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: none;
+  }
+
+  .cart-partial-delivery--legend svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  .cart-partial-delivery--options {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing--1);
+  }
+
+  .cart-partial-delivery--option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing--2);
+    min-height: 48px;
+    padding: var(--spacing--2);
+    border: 1px solid #d9d9d9;
+    background-color: var(--bg-color--body);
+    color: var(--color--body);
+    cursor: pointer;
+  }
+
+  .cart-partial-delivery--option:has(.cart-partial-delivery--input:checked) {
+    border-color: var(--color--body);
+    box-shadow: inset 0 0 0 1px var(--color--body);
+  }
+
+  /* Das Theme blendet den Fokusrahmen von Inputs aus, deshalb trägt ihn die Karte */
+  .cart-partial-delivery--option:has(.cart-partial-delivery--input:focus-visible) {
+    outline: 2px solid var(--color--body);
+    outline-offset: 2px;
+  }
+
+  /* Doppelte Klasse, damit die globalen Input-Regeln des Themes nicht greifen */
+  .cart-partial-delivery--option .cart-partial-delivery--input {
+    -webkit-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    /* Mittig zur ersten Titelzeile (20px Zeilenhöhe) */
+    margin: 1px 0 0;
+    padding: 0;
+    border: 1px solid var(--color--body);
+    border-radius: 50%;
+    background-color: var(--bg-color--body);
+    cursor: pointer;
+  }
+
+  .cart-partial-delivery--option .cart-partial-delivery--input:checked {
+    background-image: radial-gradient(circle, var(--color--body) 4px, transparent 4.5px);
+  }
+
+  /* Labels erben sonst die Versal-Schreibung der Navigation */
+  .cart-partial-delivery--option-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing--0);
+    text-transform: none;
+  }
+
+  .cart-partial-delivery--option-title {
+    font-family: var(--font--nav--family);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  .cart-partial-delivery--option-text {
+    font-family: var(--font--paragraph--family);
+    font-size: 14px;
+    line-height: 21px;
+  }
+{% endstylesheet %}

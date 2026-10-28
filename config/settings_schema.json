@@ -1219,5 +1219,64 @@
         "default": "#d32f2f"
       }
     ]
+  },
+  {
+    "name": "Teillieferung",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Auswahl im Warenkorb und im Cart-Drawer, ob bei unterschiedlicher Verfügbarkeit alles zusammen oder in Teilen geliefert wird. Die Wahl steht in der Bestellung unter „Zusätzliche Details“."
+      },
+      {
+        "type": "checkbox",
+        "id": "partial_delivery_enabled",
+        "label": "Auswahl anzeigen",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "partial_delivery_show_if_all_unavailable",
+        "label": "Auch anzeigen, wenn nur nicht lieferbare Artikel im Warenkorb sind",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_heading",
+        "label": "Überschrift",
+        "default": "Lieferung bei unterschiedlicher Verfügbarkeit"
+      },
+      {
+        "type": "header",
+        "content": "Alles zusammen liefern"
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_all_title",
+        "label": "Titel",
+        "default": "Alles zusammen liefern"
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_all_text",
+        "label": "Hinweis",
+        "default": "Versand, sobald alle Artikel verfügbar sind. Versandkosten fallen nur einmal an."
+      },
+      {
+        "type": "header",
+        "content": "Teillieferung"
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_partial_title",
+        "label": "Titel",
+        "default": "Teillieferung"
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_partial_text",
+        "label": "Hinweis",
+        "default": "Verfügbare Artikel kommen sofort. Für Nachlieferungen können zusätzliche Versandkosten entstehen."
+      }
+    ]
   }
 ]

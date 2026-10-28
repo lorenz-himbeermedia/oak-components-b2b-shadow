@@ -367,12 +367,15 @@ export class Drawer extends HTMLElement {
 customElements.define("drawer-element", Drawer);
 export class Cart extends HTMLElement {
     static basket = new Map;
+    // Gilt für alle Warenkorb-Ansichten gemeinsam, damit Drawer und Warenkorbseite nicht doppelt speichern
+    static partial_delivery_saved_value;
+    static partial_delivery_choice = null;
     static sections = window.location.pathname === Shopify.routes.cart ? ["cart-drawer", "cart-desktop", "cart-mobile"] : ["cart-drawer"];
     constructor() {
         super()
     }
     connectedCallback() {
-        this.abort_controllers = new Map, this.checkout_button = this.querySelector(".cart--button"), this.note = this.querySelector(".cart--notes--textarea"), this.view = this.dataset.view, this.toggleLoadingOnSubmit(), this.addUpdateHtmlListener(), this.addRefreshListener(), this.note && this.addNoteListeners(), "drawer" === this.view && (this.summary = this.querySelector(".cart--summary"), new ResizeObserver(() => {
+        this.abort_controllers = new Map, this.checkout_button = this.querySelector(".cart--button"), this.note = this.querySelector(".cart--notes--textarea"), this.view = this.dataset.view, this.toggleLoadingOnSubmit(), this.addUpdateHtmlListener(), this.addRefreshListener(), this.note && this.addNoteListeners(), this.addPartialDeliveryListeners(), "drawer" === this.view && (this.summary = this.querySelector(".cart--summary"), new ResizeObserver(() => {
             requestAnimationFrame(() => this.updateSummaryHeight())
         }).observe(this))
     }
@@ -388,7 +391,7 @@ export class Cart extends HTMLElement {
                 load_transitions: e
             }
         }) => {
-            t && (this.swapInNewContent(t.parse(".cart--form")), "drawer" === this.view && this.updateSummaryHeight(), this.toggleLoadingDisplay(!0), e && window.trigger(`theme:transition:reload:cart-${this.view}`), window.trigger("theme:cart:updated", this))
+            t && (this.swapInNewContent(t.parse(".cart--form")), this.syncPartialDelivery(), "drawer" === this.view && this.updateSummaryHeight(), this.toggleLoadingDisplay(!0), e && window.trigger(`theme:transition:reload:cart-${this.view}`), window.trigger("theme:cart:updated", this))
         })
     }
     addRefreshListener() {
@@ -442,6 +445,71 @@ export class Cart extends HTMLElement {
                     note: t
                 }),
                 signal: i.signal
+            })
+        } catch {}
+    }
+    addPartialDeliveryListeners() {
+        // Delegiert, weil der Block bei jedem Re-Render des Warenkorbs neu eingesetzt wird
+        this.on("change", ({
+            target
+        }) => {
+            if (!target.matches(".cart-partial-delivery--input")) return;
+            Cart.partial_delivery_choice = target.value;
+            this.updatePartialDelivery(target.value);
+            window.trigger("theme:cart:partialDeliveryUpdated", {
+                source: this.view,
+                value: target.value
+            })
+        });
+        window.on("theme:cart:partialDeliveryUpdated", ({
+            detail: {
+                source,
+                value
+            }
+        }) => {
+            source !== this.view && this.checkPartialDeliveryOption(value)
+        });
+        this.syncPartialDelivery()
+    }
+    syncPartialDelivery() {
+        const root = this.querySelector(".cart-partial-delivery--root");
+        if (!root) return;
+        if (Cart.partial_delivery_saved_value === undefined) {
+            Cart.partial_delivery_saved_value = root.dataset.savedValue
+        }
+        // Ausgeblendeter Block: kein alter Wert darf in der Bestellung landen
+        if (root.hidden) {
+            Cart.partial_delivery_saved_value !== "" && this.updatePartialDelivery("");
+            return
+        }
+        // Die Wahl des Kunden geht vor, auch wenn der Re-Render noch den alten Stand vom Server zeigt
+        Cart.partial_delivery_choice && this.checkPartialDeliveryOption(Cart.partial_delivery_choice);
+        const checked_input = root.querySelector(".cart-partial-delivery--input:checked");
+        checked_input && checked_input.value !== Cart.partial_delivery_saved_value && this.updatePartialDelivery(checked_input.value)
+    }
+    checkPartialDeliveryOption(value) {
+        this.querySelectorAll(".cart-partial-delivery--input").forEach(input => {
+            input.checked = input.value === value
+        })
+    }
+    async updatePartialDelivery(value) {
+        Cart.partial_delivery_saved_value = value;
+        const previous_controller = this.abort_controllers.get("partial_delivery");
+        previous_controller && previous_controller.abort();
+        const controller = new AbortController;
+        this.abort_controllers.set("partial_delivery", controller);
+        try {
+            await fetch(`${Shopify.routes.cart_update}.js`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    attributes: {
+                        Teillieferung: value
+                    }
+                }),
+                signal: controller.signal
             })
         } catch {}
     }

@@ -57,6 +57,8 @@
 {%- capture cart_summary -%}
   <div class="cart--summary">
     <div class="cart--totals">
+      {%- render 'cart-partial-delivery', view: view -%}
+
       {%- unless cart.cart_level_discount_applications == blank -%}
         <ul class="cart--discounts">
           {%- for discount_application in cart.cart_level_discount_applications -%}
