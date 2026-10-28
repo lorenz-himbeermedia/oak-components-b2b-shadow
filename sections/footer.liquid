@@ -83,6 +83,27 @@
                   {%- endunless -%}
 
                   {%- liquid
+                    assign icon_1 = block.settings.icon-1
+                    assign icon_2 = block.settings.icon-2
+                    assign icon_height = block.settings.icon-height
+                  -%}
+                  {%- if icon_1 != blank or icon_2 != blank -%}
+                    <div class="footer--about-icons" style="--icon-height:{{ icon_height }}px;">
+                      {%- liquid
+                        if icon_1 != blank
+                          assign rendered_width = icon_height | times: icon_1.aspect_ratio | times: 2 | ceil
+                          echo icon_1 | image_url: width: rendered_width | image_tag: loading: 'lazy', class: 'footer--about-icon'
+                        endif
+
+                        if icon_2 != blank
+                          assign rendered_width = icon_height | times: icon_2.aspect_ratio | times: 2 | ceil
+                          echo icon_2 | image_url: width: rendered_width | image_tag: loading: 'lazy', class: 'footer--about-icon'
+                        endif
+                      -%}
+                    </div>
+                  {%- endif -%}
+
+                  {%- liquid
                     if section.settings.enable-follow-on-shop
                       echo shop | login_button: action: 'follow'
                     endif
@@ -459,6 +480,21 @@
     max-width: 400px;
   }
 
+  .footer--about-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    margin-top: 16px;
+  }
+
+  .footer--about-icon {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: var(--icon-height);
+  }
+
   .footer--block--heading[data-item='nav-text'] {
     --font--size: var(--font--button--size);
   }
@@ -756,6 +792,30 @@
           "label": "Description and copyright",
           "default": "<p>[current_year] © Your brand name here.<br><br>A brief store summary, tagline, or vision statement.<p>",
           "info": "Inserting the text '[current_year]' will automatically insert the current year."
+        },
+        {
+          "type": "header",
+          "content": "Icons"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon-1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon-2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "range",
+          "id": "icon-height",
+          "min": 20,
+          "max": 120,
+          "step": 5,
+          "unit": "px",
+          "label": "Icon height",
+          "default": 60
         }
       ]
     },
