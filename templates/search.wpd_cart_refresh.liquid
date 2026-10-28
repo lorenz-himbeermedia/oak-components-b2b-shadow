@@ -140,4 +140,6 @@
 ,"active_tags": {{ active_tags | split: ',' | json }}
 }
 {% endcapture %}
-{{ output | strip_newlines }}
+{% comment %} Ohne Preis-Zugriff liefert dieser App-Endpunkt keine Preisdaten {% endcomment %}
+{% capture b2b_can_see_prices %}{% render 'b2b-price-access' %}{% endcapture %}
+{% if b2b_can_see_prices == 'true' %}{{ output | strip_newlines }}{% else %}{}{% endif %}

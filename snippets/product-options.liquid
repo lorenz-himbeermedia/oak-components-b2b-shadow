@@ -19,6 +19,41 @@
   endif
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
+{%- if current_variant and b2b_can_see_prices != 'true' -%}
+  {%- comment -%}
+    Für Gäste nur die Felder, die das Theme-JS beim Variantenwechsel liest. Alle Preisfelder sind null, damit kein Preis im Quelltext steht.
+  {%- endcomment -%}
+  {%- capture guest_variant_json -%}
+    {
+      "id": {{ current_variant.id | json }},
+      "title": {{ current_variant.title | json }},
+      "option1": {{ current_variant.option1 | json }},
+      "option2": {{ current_variant.option2 | json }},
+      "option3": {{ current_variant.option3 | json }},
+      "sku": {{ current_variant.sku | json }},
+      "barcode": {{ current_variant.barcode | json }},
+      "requires_shipping": {{ current_variant.requires_shipping | json }},
+      "taxable": {{ current_variant.taxable | json }},
+      "available": {{ current_variant.available | json }},
+      "name": {{ product.title | append: ' - ' | append: current_variant.title | json }},
+      "public_title": {{ current_variant.title | json }},
+      "options": {{ current_variant.options | json }},
+      "inventory_management": {{ current_variant.inventory_management | json }},
+      "inventory_policy": {{ current_variant.inventory_policy | json }},
+      "inventory_quantity": {{ current_variant.inventory_quantity | default: 0 | json }},
+      "featured_media": {% if current_variant.featured_media %}{ "id": {{ current_variant.featured_media.id | json }} }{% else %}null{% endif %},
+      "requires_selling_plan": {{ current_variant.requires_selling_plan | json }},
+      "price": null,
+      "compare_at_price": null,
+      "unit_price": null,
+      "unit_price_measurement": null,
+      "selling_plan_allocations": []
+    }
+  {%- endcapture -%}
+{%- endif -%}
+
 {%- unless product.has_only_default_variant -%}
   <product-options-element
     class="product-options--root"
@@ -82,7 +117,9 @@
 
     <script type="application/json" id="variant-json-{{ id }}">
       {%- liquid
-        if current_variant
+        if guest_variant_json
+          echo guest_variant_json
+        elsif current_variant
           assign inventory_policy = current_variant.inventory_policy
           assign policy_insert = '"inventory_policy":"' | append: inventory_policy | append: '",'
 

@@ -31,6 +31,8 @@
   assign empty_list = linklists[settings.cart--empty-list]
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 {%- capture cart_notes -%}
   {%- if settings.cart--show-note -%}
     <div
@@ -137,6 +139,15 @@
   </div>
 {%- endcapture -%}
 
+{%- unless b2b_can_see_prices == 'true' -%}
+  {%- comment -%} Ohne Preis-Zugriff weder Summen noch Checkout-Button, damit Gäste nicht zur Kasse kommen {%- endcomment -%}
+  {%- capture cart_summary -%}
+    <div class="cart--summary">
+      {%- render 'b2b-price-lock-box', button_style: checkout_button_style -%}
+    </div>
+  {%- endcapture -%}
+{%- endunless -%}
+
 {%- capture item_error -%}
   <div
     class="cart--error"
@@ -192,7 +203,7 @@
         </h2>
       </div>
 
-      {%- if settings.cart--shipping-enabled and settings.cart--shipping-limit != blank -%}
+      {%- if settings.cart--shipping-enabled and settings.cart--shipping-limit != blank and b2b_can_see_prices == 'true' -%}
         {%- liquid
           assign free_shipping_limit = settings.cart--shipping-limit | times: 100.0
 
@@ -240,15 +251,19 @@
           <div class="cart--headings" data-item="nav-text">
             <div class="cart--heading--image"></div>
             <div class="cart--heading--title"></div>
-            <div class="cart--heading--price">
-              {{- price_t -}}
-            </div>
+            {%- if b2b_can_see_prices == 'true' -%}
+              <div class="cart--heading--price">
+                {{- price_t -}}
+              </div>
+            {%- endif -%}
             <div class="cart--heading--quantity">
               {{- quantity_t -}}
             </div>
-            <div class="cart--heading--total">
-              {{- total_t -}}
-            </div>
+            {%- if b2b_can_see_prices == 'true' -%}
+              <div class="cart--heading--total">
+                {{- total_t -}}
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
 
@@ -319,37 +334,39 @@
           {%- endcapture -%}
 
           {%- capture item_price -%}
-            <div class="cart--item--price" data-item="nav-text">
-              {%- unless item.original_price == item.final_price -%}
-                <div data-item="nav-text" data-text-color="gray">
-                  <s class="money">{{ item.original_price | money }}</s>
-                </div>
-              {%- endunless -%}
+            {%- if b2b_can_see_prices == 'true' -%}
+              <div class="cart--item--price" data-item="nav-text">
+                {%- unless item.original_price == item.final_price -%}
+                  <div data-item="nav-text" data-text-color="gray">
+                    <s class="money">{{ item.original_price | money }}</s>
+                  </div>
+                {%- endunless -%}
 
-              <div class="money" data-item="nav-text">
-                {{- item.final_price | money -}}
+                <div class="money" data-item="nav-text">
+                  {{- item.final_price | money -}}
+                </div>
+
+                {%- if item.unit_price_measurement -%}
+                  <div class="cart--item--unit-price-container" data-item="small-text">
+                    {%- liquid
+                      echo item.unit_price | money | append: '/'
+                      if item.unit_price_measurement.reference_value != 1
+                        echo item.unit_price_measurement.reference_value
+                      endif
+                      echo item.unit_price_measurement.reference_unit
+                    -%}
+                  </div>
+                {%- endif -%}
+
+                {% if item.line_level_discount_allocations.size > 0 %}
+                  <div class="money" data-item="nav-text" data-text-color="gray">
+                    {%- for discount_allocation in item.line_level_discount_allocations -%}
+                      {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+                    {%- endfor -%}
+                  </div>
+                {% endif %}
               </div>
-
-              {%- if item.unit_price_measurement -%}
-                <div class="cart--item--unit-price-container" data-item="small-text">
-                  {%- liquid
-                    echo item.unit_price | money | append: '/'
-                    if item.unit_price_measurement.reference_value != 1
-                      echo item.unit_price_measurement.reference_value
-                    endif
-                    echo item.unit_price_measurement.reference_unit
-                  -%}
-                </div>
-              {%- endif -%}
-
-              {% if item.line_level_discount_allocations.size > 0 %}
-                <div class="money" data-item="nav-text" data-text-color="gray">
-                  {%- for discount_allocation in item.line_level_discount_allocations -%}
-                    {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
-                  {%- endfor -%}
-                </div>
-              {% endif %}
-            </div>
+            {%- endif -%}
           {%- endcapture -%}
 
           <div
@@ -400,17 +417,19 @@
               {{- item_price -}}
               {{- item_quantity -}}
 
-              <div class="cart--item--total" data-item="nav-text">
-                {%- unless item.original_line_price == item.final_line_price -%}
-                  <div data-item="nav-text" data-text-color="gray">
-                    <s class="money">{{ item.original_line_price | money }}</s>
-                  </div>
-                {%- endunless -%}
+              {%- if b2b_can_see_prices == 'true' -%}
+                <div class="cart--item--total" data-item="nav-text">
+                  {%- unless item.original_line_price == item.final_line_price -%}
+                    <div data-item="nav-text" data-text-color="gray">
+                      <s class="money">{{ item.original_line_price | money }}</s>
+                    </div>
+                  {%- endunless -%}
 
-                <div class="money">
-                  {{- item.final_line_price | money -}}
+                  <div class="money">
+                    {{- item.final_line_price | money -}}
+                  </div>
                 </div>
-              </div>
+              {%- endif -%}
 
             {%- else -%}
               <div class="cart--item--title">
