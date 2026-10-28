@@ -1024,6 +1024,69 @@
     ]
   },
   {
+    "name": "t:settings_schema.b2b_price_lock.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "b2b_price_lock_enabled",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_enabled.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_enabled.info",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_customer_tag",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_customer_tag.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_customer_tag.info",
+        "placeholder": "B2B",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_lock_heading",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_heading.label",
+        "default": "Preise nur für Händler",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "richtext",
+        "id": "b2b_price_lock_message",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_message.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_message.info",
+        "default": "<p>Melden Sie sich mit Ihrem Händlerkonto an, um Preise zu sehen und zu bestellen.</p>",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_lock_login_label",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_login_label.label",
+        "default": "Anmelden",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "url",
+        "id": "b2b_price_lock_login_url",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_login_url.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_login_url.info",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_lock_register_label",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_register_label.label",
+        "default": "Händlerkonto beantragen",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "url",
+        "id": "b2b_price_lock_register_url",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_register_url.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_register_url.info",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {

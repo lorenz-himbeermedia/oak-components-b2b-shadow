@@ -18,6 +18,8 @@
   assign placeholder_index = placeholder_index | default: 1
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 <a
   class="product-card--mini"
   href="{{ product_item.url }}"
@@ -53,7 +55,8 @@
       {%-
         render 'product-card--price',
         product: product_item,
-        onboarding: onboarding
+        onboarding: onboarding,
+        b2b_can_see_prices: b2b_can_see_prices
       -%}
     </div>
 
@@ -61,7 +64,8 @@
       render 'product-quick-add',
       product: product_item,
       onboarding: onboarding,
-      hover: false
+      hover: false,
+      b2b_can_see_prices: b2b_can_see_prices
     -%}
   </div>
 </a>
