@@ -1,0 +1,660 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "section-heading"
+          }
+        },
+        "icon_fxhWUf": {
+          "type": "icon",
+          "settings": {
+            "icon": "check-fat",
+            "icon-width": 20,
+            "text": ""
+          }
+        },
+        "icon_98GHzK": {
+          "type": "icon",
+          "settings": {
+            "icon": "check-fat",
+            "icon-width": 20,
+            "text": ""
+          }
+        },
+        "icon_yQUrFV": {
+          "type": "icon",
+          "settings": {
+            "icon": "check-fat",
+            "icon-width": 20,
+            "text": ""
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant-style": "dropdowns",
+            "swatches": "square",
+            "size-chart-enabled": true,
+            "size-chart-option": "size",
+            "size-chart-content": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "liquid_aHJ7tt": {
+          "type": "liquid",
+          "settings": {
+            "custom-liquid": "{%- assign versand_seite = pages['versandkosten'] -%}\n{%- if request.locale.iso_code == 'de' -%}\n  {%- assign versand_label = 'zzgl. Versandkosten' -%}\n  {%- assign versand_close = 'Schließen' -%}\n{%- else -%}\n  {%- assign versand_label = 'plus shipping' -%}\n  {%- assign versand_close = 'Close' -%}\n{%- endif -%}\n\n<button type=\"button\" class=\"oak-versand-link\" id=\"oak-versand-link\">{{ versand_label }}</button>\n\n<dialog id=\"oak-versand-dialog\" class=\"oak-versand-dialog\">\n  <div class=\"oak-versand-inner\">\n    <button type=\"button\" class=\"oak-versand-close\" aria-label=\"{{ versand_close }}\"\n      onclick=\"this.closest('dialog').close()\">&times;</button>\n    <h2 class=\"oak-versand-title\">{{ versand_seite.title }}</h2>\n    <div class=\"rte\">{{ versand_seite.content }}</div>\n  </div>\n</dialog>\n\n<style>\n  .oak-versand-link {\n    background: none; border: 0; padding: 0; margin: 0;\n    font: inherit; color: inherit;\n    text-decoration: underline; cursor: pointer;\n  }\n  .oak-versand-dialog {\n    border: 0; padding: 0; width: 90vw; max-width: 640px;\n    max-height: 80vh; overflow: auto;\n  }\n  .oak-versand-dialog::backdrop { background: rgba(0, 0, 0, 0.5); }\n  .oak-versand-inner { position: relative; padding: 32px 24px 24px; }\n  .oak-versand-close {\n    position: absolute; top: 8px; right: 12px;\n    background: none; border: 0; font-size: 28px;\n    line-height: 1; cursor: pointer; color: inherit;\n  }\n  .oak-versand-title { margin-top: 0; }\n  .oak-versand-dialog table { width: 100%; border-collapse: collapse; }\n\n  /* Linien */\n  .oak-versand-dialog th,\n  .oak-versand-dialog td {\n    border: 0 !important;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;\n  }\n  .oak-versand-dialog tr.oak-kopf > * {\n    border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;\n  }\n  .oak-versand-dialog tr.oak-land-zeile > * {\n    border-top: 1px solid rgba(0, 0, 0, 0.3) !important;\n  }\n\n  /* Flaggen */\n  .oak-flagge {\n    display: inline-block; width: 20px; height: 15px;\n    margin-right: 8px; vertical-align: -2px;\n    border-radius: 2px; object-fit: cover;\n    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);\n  }\n</style>\n\n<script>\n  (function () {\n    var dialog = document.getElementById('oak-versand-dialog');\n    var link = document.getElementById('oak-versand-link');\n    if (!dialog || !link) return;\n\n    link.addEventListener('click', function () { dialog.showModal(); });\n    dialog.addEventListener('click', function (e) {\n      if (e.target === dialog) dialog.close();\n    });\n\n    /* --- Flaggen und Linien in der Tabelle --- */\n    var laender = {\n      'deutschland': 'de', 'germany': 'de',\n      'schweiz': 'ch', 'switzerland': 'ch',\n      'vereinigtes königreich': 'gb', 'united kingdom': 'gb',\n      'vereinigte staaten': 'us', 'united states': 'us',\n      'kanada': 'ca', 'canada': 'ca',\n      'europäische union': 'eu', 'european union': 'eu',\n      'australien': 'au', 'australia': 'au',\n      'neuseeland': 'nz', 'new zealand': 'nz'\n    };\n\n    function euFlagge() {\n      var sterne = '';\n      for (var i = 0; i < 12; i++) {\n        var w = i * Math.PI / 6;\n        sterne += '<circle cx=\"' + (20 + 9 * Math.cos(w)).toFixed(2) +\n                  '\" cy=\"' + (15 + 9 * Math.sin(w)).toFixed(2) +\n                  '\" r=\"1.4\" fill=\"#ffcc00\"/>';\n      }\n      return 'data:image/svg+xml,' + encodeURIComponent(\n        '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 40 30\">' +\n        '<rect width=\"40\" height=\"30\" fill=\"#003399\"/>' + sterne + '</svg>'\n      );\n    }\n\n    dialog.querySelectorAll('table').forEach(function (tabelle) {\n      if (tabelle.rows.length) tabelle.rows[0].classList.add('oak-kopf');\n\n      Array.prototype.forEach.call(tabelle.rows, function (zeile, index) {\n        if (index === 0 || !zeile.cells.length) return;\n        var zelle = zeile.cells[0];\n        var name = zelle.textContent.replace(/\\*/g, '').trim().toLowerCase();\n        var code = laender[name];\n        if (!code) return;\n\n        var img = document.createElement('img');\n        img.className = 'oak-flagge';\n        img.alt = '';\n        img.width = 20;\n        img.height = 15;\n        img.src = code === 'eu'\n          ? euFlagge()\n          : 'https://cdn.shopify.com/static/images/flags/' + code + '.svg?width=40';\n\n        var walker = document.createTreeWalker(zelle, NodeFilter.SHOW_TEXT);\n        var text = walker.nextNode();\n        while (text && !text.nodeValue.trim()) text = walker.nextNode();\n        if (text) text.parentNode.insertBefore(img, text);\n\n        if (index > 1) zeile.classList.add('oak-land-zeile');\n      });\n    });\n\n    /* --- Link neben dem Steuerhinweis --- */\n    // art 'komma': \"Inklusive Steuern, zzgl. Versandkosten\"\n    // art 'zeile': Link in einer neuen Zeile direkt unter dem Text\n    var regeln = [\n      { muster: /^(Inklusive Steuern|Taxes included|Tax included)\\.?$/i, art: 'komma' },\n      { muster: /Taxes are charged by local authorities/i, art: 'zeile' }\n    ];\n    var bereich = document.querySelector('main') || document.body;\n\n    function sichtbar(el) {\n      return !!(el && el.getClientRects().length);\n    }\n\n    function einsetzen() {\n      if (link.isConnected && link.parentNode.dataset.oakTax) return;\n      var walker = document.createTreeWalker(bereich, NodeFilter.SHOW_TEXT);\n      var node;\n      while ((node = walker.nextNode())) {\n        var text = node.nodeValue.trim();\n        if (!text || !sichtbar(node.parentElement)) continue;\n\n        for (var i = 0; i < regeln.length; i++) {\n          if (!regeln[i].muster.test(text)) continue;\n\n          if (regeln[i].art === 'komma') {\n            node.nodeValue = text.replace(/\\.$/, '') + ', ';\n            node.parentNode.insertBefore(link, node.nextSibling);\n          } else {\n            var br = document.createElement('br');\n            node.parentNode.insertBefore(br, node.nextSibling);\n            node.parentNode.insertBefore(link, br.nextSibling);\n          }\n          node.parentNode.dataset.oakTax = '1';\n          return;\n        }\n      }\n    }\n\n    function start() {\n      einsetzen();\n      new MutationObserver(einsetzen).observe(bereich, { childList: true, subtree: true });\n    }\n\n    if (document.readyState === 'loading') {\n      document.addEventListener('DOMContentLoaded', start);\n    } else {\n      start();\n    }\n  })();\n</script>"
+          }
+        },
+        "liquid_TUWTE9": {
+          "type": "liquid",
+          "settings": {
+            "custom-liquid": "{% if localization.market.handle == 'usa' %}\n  <p>Important: MSRP does not include local taxes or tariffs. Payable upon delivery to shipping carrier.</p>\n{% else %}\n  \n{% endif %}"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "smart-payment-enabled": false,
+            "primary-button-style": "button-1",
+            "secondary-button-style": "button-3",
+            "sticky-add-enabled": true
+          }
+        },
+        "liquid_gjp7p3": {
+          "type": "liquid",
+          "settings": {
+            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>"
+          }
+        },
+        "collapsible_row_MKjEBQ": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "Kompatibilität",
+            "description": "<p>{{ product.metafields.custom.kompatibilitat | metafield_tag }}</p>",
+            "page-content": "",
+            "default-open": false
+          }
+        },
+        "collapsible_row_j6ymWA": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "Lieferumfang",
+            "description": "<p>{{ product.metafields.custom.lieferumfang | metafield_tag }}</p>",
+            "page-content": "",
+            "default-open": false
+          }
+        },
+        "collapsible_row_dNrW9q": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "Gewicht",
+            "description": "",
+            "page-content": "",
+            "default-open": false
+          }
+        },
+        "collapsible_row_JpCGim": {
+          "type": "collapsible-row",
+          "settings": {
+            "heading": "Fertigung & Material",
+            "description": "",
+            "page-content": "",
+            "default-open": false
+          }
+        },
+        "complementary_products_xcqnQq": {
+          "type": "complementary-products",
+          "settings": {
+            "title": "Ergänzend dazu",
+            "max-products": 3,
+            "collapsible-row-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "icon_fxhWUf",
+        "icon_98GHzK",
+        "icon_yQUrFV",
+        "options",
+        "price",
+        "liquid_aHJ7tt",
+        "liquid_TUWTE9",
+        "buy-buttons",
+        "liquid_gjp7p3",
+        "collapsible_row_MKjEBQ",
+        "collapsible_row_j6ymWA",
+        "collapsible_row_dNrW9q",
+        "collapsible_row_JpCGim",
+        "complementary_products_xcqnQq"
+      ],
+      "name": "Produktinformationen",
+      "settings": {
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "x-large",
+        "container-width": "4",
+        "background-color": "none",
+        "breadcrumbs-enabled": true,
+        "modal-enabled": true,
+        "variant-scroll-enabled": true,
+        "image-zoom-enabled": false,
+        "loop-enabled": false,
+        "text-column-width": 300,
+        "text-color": "body",
+        "text-alignment": "left",
+        "media-layout": "thumbnails",
+        "thumbnail-width": 80,
+        "media-gap": 8,
+        "column-spacing": "close",
+        "mobile-spacing-above": "small",
+        "mobile-spacing-below": "half",
+        "mobile-text-alignment": "left",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "overlapping_media_e4Ghda": {
+      "type": "overlapping-media",
+      "blocks": {
+        "media_FeMQ7d": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "image": "",
+            "video-url": ""
+          }
+        },
+        "media_gEJNn9": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "image": "",
+            "video-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_FeMQ7d",
+        "media_gEJNn9"
+      ],
+      "name": "Beschreibung mit 2x Bilder",
+      "settings": {
+        "overline": "",
+        "title": "",
+        "highlight-type": "italic",
+        "highlight-color": "#ffdd66",
+        "highlight-text": "#000000",
+        "description": "<p>{{ product.metafields.custom.beschreibung | metafield_tag }}</p>",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "medium",
+        "spacing-below": "large",
+        "background-color": "none",
+        "container-width": "4",
+        "reverse-layout": false,
+        "text-color": "body",
+        "heading-type": "block-heading",
+        "text-alignment": "left",
+        "text-column-width": 500,
+        "animation-enabled": false,
+        "image-offset": 48,
+        "mobile-spacing-above": "large",
+        "mobile-spacing-below": "large",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "image_with_text_M4QANr": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_4rHnPJ": {
+          "type": "overline",
+          "settings": {
+            "overline": "Standfestigkeit"
+          }
+        },
+        "heading_jB7DaN": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Im Labor:",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_nyd3hA": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Im Labor haben wir 92 Vollbremsungen in 16 Minuten gefahren – ohne Pause zum Abkühlen. Die orange Linie zeigt, wie sich die Bremsscheibe dabei von 44 °C auf über 300 °C aufheizt; die rote Linie zeigt die Bremskraft, die der Belag in jeder einzelnen Bremsung liefert. Sie bleibt praktisch waagerecht: 91 von 92 Bremsungen liegen innerhalb von ±10 % – die letzte Bremsung verzögert wie die erste.<br/><br/></p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_4rHnPJ",
+        "heading_jB7DaN",
+        "description_nyd3hA"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Hyperstop_Lab_Testing_Full_power_Stops_graphic_2.png",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "center",
+        "text-column-width": 500,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "original",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "image_with_text_tkxt3C": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_KByJj3": {
+          "type": "overline",
+          "settings": {
+            "overline": "16 Minuten Voll-Last"
+          }
+        },
+        "heading_HnWx7r": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Im Labor:",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_Mtmqpc": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Das ist der komplette Prüflauf in Echtzeit: Bei jeder der 113 Bremsungen fällt die Geschwindigkeit ab (blau) und der Bremsdruck steigt (grün), während die Scheibentemperatur (rot) auf rund 300 °C klettert und dort bleibt. Der Belag arbeitet also 16 Minuten lang im Dauerglühbereich – eine Belastung, die einer langen, steilen Abfahrt ohne Erholung entspricht. Es zeigt sich: Der Belag bleibt berechenbar, konstant und lässt dich nicht im Stich.<br/><br/><br/><br/></p>",
+            "mobile-hide-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "overline_KByJj3",
+        "heading_HnWx7r",
+        "description_Mtmqpc"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Hyperstop_Lab_Testing_Full_power_Stops_graphic_1.png",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "none",
+        "reverse-layout": false,
+        "text-color": "body",
+        "overlap": false,
+        "text-horizontal-alignment": "center",
+        "text-column-width": 500,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "none",
+        "image-display-type": "original",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-color": "body",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "icons_row_LMp7Pg": {
+      "type": "icons-row",
+      "blocks": {
+        "icon_JUk3R6": {
+          "type": "icon",
+          "settings": {
+            "icon": "sun",
+            "icon-image": "shopify://shop_images/TestingIcon_WebshopOAK.png",
+            "title": "Auf Herz und Nieren",
+            "description": "<p>Neben Labortests prüfen unsere Profi Teamrider und Ingenieure alle Parts im anspruchsvollsten Einsatzbereich.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_jt38Ka": {
+          "type": "icon",
+          "settings": {
+            "icon": "tree",
+            "icon-image": "shopify://shop_images/KundenIcon_WebshopOAK.png",
+            "title": "We got your back",
+            "description": "<p>Du brauchst Ersatzteile oder weiterführende Hilfe? Kontaktiere uns gerne jederzeit, wir helfen dir!</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        },
+        "icon_wxCiqA": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "icon-image": "shopify://shop_images/RueckgaberechtIcon_WebshopOAK_New.png",
+            "title": "Ohne Kompromisse",
+            "description": "<p>Wenn du nicht zufrieden bist, kann das Produkt innerhalb von 30 Tagen zurückgeschickt werden.</p>",
+            "button-text": "",
+            "button-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_JUk3R6",
+        "icon_jt38Ka",
+        "icon_wxCiqA"
+      ],
+      "name": "3x USP OAK",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "medium",
+        "block-spacing": true,
+        "background-color": "light",
+        "outer-background": true,
+        "container-width": "4",
+        "width": 3,
+        "icon-width": 0,
+        "heading-type": "section-heading",
+        "text-color": "body",
+        "section-alignment": "center",
+        "text-alignment": "center",
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-heading-alignment": "left",
+        "mobile-text-alignment": "center",
+        "mobile-width": "1",
+        "mobile-media-layout": "slideshow"
+      }
+    },
+    "171741870759ffe17f": {
+      "type": "apps",
+      "name": "Reviews",
+      "settings": {
+        "border": "none",
+        "spacing-above": "half",
+        "spacing-below": "half",
+        "container-width": "4",
+        "background-color": "none",
+        "text-color": "body",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "1777376003228082dc": {
+      "type": "apps",
+      "custom_css": [
+        "div,span,a,p {color: #fff !important; font-weight: normal;}",
+        "path {stroke: rgb(355, 355, 355) !important;}"
+      ],
+      "settings": {
+        "border": "none",
+        "spacing-above": "large",
+        "spacing-below": "none",
+        "container-width": "4",
+        "background-color": "dark",
+        "text-color": "white",
+        "text-alignment": "center",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium",
+        "mobile-text-alignment": "center"
+      }
+    },
+    "image_with_text_pwFmEE": {
+      "type": "image-with-text",
+      "blocks": {
+        "overline_tBDNM4": {
+          "type": "overline",
+          "settings": {
+            "overline": "Team OAK"
+          }
+        },
+        "heading_XyEdYp": {
+          "type": "heading",
+          "settings": {
+            "heading-type": "featured-heading",
+            "title": "Von Bikern für Biker",
+            "highlight-type": "italic",
+            "highlight-color": "accent-2",
+            "highlight-text": "none"
+          }
+        },
+        "description_FDfKgk": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Unsere Ingenieure sind selbst Vollblut Mountainbiker und holen mit ihren OAK Entwicklungen aus jeder Abfahrt maximalen Spaß und Performance heraus. Das Produktfeedback von Kunden aus aller Welt wird mit einbezogen um die bestmöglichen Parts anzubieten.</p>",
+            "mobile-hide-enabled": false
+          }
+        },
+        "button_aD8xrQ": {
+          "type": "button",
+          "settings": {
+            "text": "Mehr erfahren",
+            "link": "shopify://pages/about-us",
+            "style": "button-4"
+          }
+        }
+      },
+      "block_order": [
+        "overline_tBDNM4",
+        "heading_XyEdYp",
+        "description_FDfKgk",
+        "button_aD8xrQ"
+      ],
+      "name": "About OAK",
+      "settings": {
+        "image": "shopify://shop_images/Shooting19072024_DaniSH_web_16_von_114.jpg",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "large",
+        "container-width": "4",
+        "background-color": "dark",
+        "reverse-layout": false,
+        "text-color": "white",
+        "overlap": false,
+        "text-horizontal-alignment": "left",
+        "text-column-width": 800,
+        "text-style": "none",
+        "text-background-color": "transparent",
+        "overlay-style": "darken-bottom",
+        "image-display-type": "x-small",
+        "aspect-ratio": 56,
+        "parallax-enabled": false,
+        "mobile-image-display-type": "x-small",
+        "mobile-aspect-ratio": 134,
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "large",
+        "mobile-text-color": "white",
+        "mobile-text-horizontal-alignment": "center"
+      }
+    },
+    "grid_with_overlay_tBkGfd": {
+      "type": "grid-with-overlay",
+      "blocks": {
+        "image_CNnaYt": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_x7fRVm": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_WgMQpj": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        },
+        "image_gx97Ax": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "title": "",
+            "button-text": "",
+            "button-link": "",
+            "x-blocks": "1",
+            "y-blocks": "1",
+            "text-width": 400,
+            "text-horizontal-alignment": "center",
+            "text-vertical-alignment": "center",
+            "mobile-text-horizontal-alignment": "center",
+            "mobile-text-vertical-alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_CNnaYt",
+        "image_x7fRVm",
+        "image_WgMQpj",
+        "image_gx97Ax"
+      ],
+      "custom_css": [],
+      "name": "Bilder Grid",
+      "settings": {
+        "overline": "",
+        "heading": "",
+        "description": "",
+        "button-text": "",
+        "button-link": "",
+        "button-style": "button-1",
+        "border": "none",
+        "spacing-above": "none",
+        "spacing-below": "none",
+        "container-width": "6",
+        "background-color": "none",
+        "spacing": false,
+        "columns": 4,
+        "row-height": 250,
+        "heading-text-color": "body",
+        "section-alignment": "center",
+        "text-color": "white",
+        "text-style": "none",
+        "heading-type": "block-heading",
+        "overlay-style": "none",
+        "mobile-full-width": true,
+        "mobile-spacing-above": "none",
+        "mobile-spacing-below": "none",
+        "mobile-columns": "2",
+        "mobile-spacing": false,
+        "mobile-image-display-type": "original",
+        "mobile-aspect-ratio": 134
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "custom_css": [],
+      "name": "Verwandte Produkte",
+      "settings": {
+        "title": "Weitere Parts entdecken",
+        "border": "none",
+        "spacing-above": "full",
+        "spacing-below": "full",
+        "container-width": "5",
+        "background-color": "light",
+        "heading-type": "section-heading",
+        "heading-alignment": "center",
+        "text-color": "body",
+        "mobile-spacing-above": "half",
+        "mobile-spacing-below": "half",
+        "mobile-heading-alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "overlapping_media_e4Ghda",
+    "image_with_text_M4QANr",
+    "image_with_text_tkxt3C",
+    "icons_row_LMp7Pg",
+    "171741870759ffe17f",
+    "1777376003228082dc",
+    "image_with_text_pwFmEE",
+    "grid_with_overlay_tBkGfd",
+    "related-products"
+  ]
+}
