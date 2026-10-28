@@ -21,7 +21,7 @@
             "text": "<p>Wir legen Wert auf kurze Lieferwege und recycelte Verpackungen.<br/>[current_year] © OAK Components - alle Rechte vorbehalten.</p>",
             "icon-1": "shopify://shop_images/footer-lieferung-co2.png",
             "icon-2": "shopify://shop_images/footer-made-in-europe.png",
-            "icon-height": 60
+            "icon-height": 40
           }
         },
         "1f422316-5885-4672-af57-e8d7e77d15d4": {
@@ -55,7 +55,7 @@
             "text": "<p><strong>Zahlung</strong><br/>Rechnung</p><p><strong>Versand</strong></p>",
             "icon-1": "shopify://shop_images/footer-dhl.png",
             "icon-2": "shopify://shop_images/footer-ups.png",
-            "icon-height": 40
+            "icon-height": 30
           }
         }
       },
