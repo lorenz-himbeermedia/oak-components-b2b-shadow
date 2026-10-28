@@ -1,0 +1,38 @@
+{
+  "settings_schema": {
+    "b2b_price_lock": {
+      "name": "B2B price lock",
+      "settings": {
+        "b2b_price_lock_enabled": {
+          "label": "Enable price lock",
+          "info": "Prices, price filters, add to cart and checkout are only available to logged-in customers with the tag below."
+        },
+        "b2b_price_customer_tag": {
+          "label": "Customer tag",
+          "info": "Customers with this tag can see prices, e.g. B2B. Not case-sensitive. If left empty, logging in is enough."
+        },
+        "b2b_price_lock_heading": {
+          "label": "Lock box heading"
+        },
+        "b2b_price_lock_message": {
+          "label": "Message for visitors without access",
+          "info": "Shown in the lock box instead of the price on the product page, in quick add and instead of the checkout button in the cart."
+        },
+        "b2b_price_lock_login_label": {
+          "label": "Login button label"
+        },
+        "b2b_price_lock_login_url": {
+          "label": "Login button link",
+          "info": "If left empty, the button links to the shop's login page."
+        },
+        "b2b_price_lock_register_label": {
+          "label": "Registration button label"
+        },
+        "b2b_price_lock_register_url": {
+          "label": "Registration button link",
+          "info": "If left empty, the button links to /pages/b2b-registration. Should differ from the login link."
+        }
+      }
+    }
+  }
+}

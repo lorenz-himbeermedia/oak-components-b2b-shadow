@@ -12,6 +12,8 @@
   @param {string} [transition_id] - Transition identifier.
 {%- enddoc -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 {%- liquid
   assign new_t = 'products.new' | t
   assign off_t = 'products.off' | t
@@ -75,7 +77,10 @@
     assign url = product_item.url | within: collection
     assign vendor = product_item.vendor
 
-    if product_item.compare_at_price > product_item.price and product_item.available
+    comment
+      "Ohne Preis-Zugriff kein Sale-Badge, weil Prozent oder Betrag den Preis verraten"
+    endcomment
+    if b2b_can_see_prices == 'true' and product_item.compare_at_price > product_item.price and product_item.available
       assign compare_price = product_item.compare_at_price | money
     endif
 
@@ -245,7 +250,7 @@
         echo hover_image
       endif
 
-      render 'product-quick-add', product: product_item, onboarding: onboarding, hover: true
+      render 'product-quick-add', product: product_item, onboarding: onboarding, hover: true, b2b_can_see_prices: b2b_can_see_prices
     -%}
   </a>
 
@@ -281,7 +286,12 @@
       {%- endif -%}
     </div>
 
-    {%- render 'product-card--price', product: product_item, onboarding: onboarding -%}
+    {%-
+      render 'product-card--price',
+      product: product_item,
+      onboarding: onboarding,
+      b2b_can_see_prices: b2b_can_see_prices
+    -%}
 
     {%- if swatch_option -%}
       <div class="product-card--swatches--column-view">

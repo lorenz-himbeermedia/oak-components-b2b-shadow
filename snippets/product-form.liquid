@@ -18,6 +18,8 @@
   assign text_color = text_color | default: 'body'
 -%}
 
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
 {%- if onboarding -%}
   <div class="product-form" data-text-color="{{ text_color }}">
     {%- for block in section.blocks -%}
@@ -197,6 +199,9 @@
 
               assign sold_out_enabled = block.settings.sold-out-enabled
               assign sale_enabled = block.settings.sale-enabled
+              if b2b_can_see_prices != 'true'
+                assign sale_enabled = false
+              endif
               assign sale_type = block.settings.sale-type
               assign label_color = block.settings.color
               assign label_shape = block.settings.shape
@@ -381,7 +386,19 @@
             {%- render 'icon-block', settings: block.settings -%}
 
           {%- when 'liquid' -%}
-            {{- block.settings.custom-liquid -}}
+            {%- liquid
+              comment
+                "Die Zahlungs-Icons stehen als eigener Liquid-Block im Template. Ohne Kauf-Button sind sie für Gäste ohne Sinn."
+              endcomment
+              assign is_payment_icons_block = false
+              if block.settings.custom-liquid contains 'prd-Detail_PaymentProvider'
+                assign is_payment_icons_block = true
+              endif
+
+              if b2b_can_see_prices == 'true' or is_payment_icons_block == false
+                echo block.settings.custom-liquid
+              endif
+            -%}
 
           {%- when '@app' -%}
             {%- render block -%}
