@@ -280,6 +280,7 @@
   },
   "products": {
     "add_to_cart": "In den Warenkorb legen",
+    "b2b_hidden_in_editor": "Bei Preissperre ausgeblendet",
     "buy_it_now": "Kaufe es jetzt",
     "change": "Ändern",
     "choose_options": "Optionen wählen",

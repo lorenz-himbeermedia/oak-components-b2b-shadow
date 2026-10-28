@@ -582,6 +582,17 @@
           "id": "overline",
           "type": "text",
           "default": "Overline text"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -601,6 +612,17 @@
             { "label": "Medium", "value": "block-heading" }
           ],
           "default": "section-heading"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -671,6 +693,17 @@
           ],
           "default": "percent",
           "visible_if": "{{ block.settings.sale-enabled == true }}"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -678,7 +711,19 @@
       "type": "vendor",
       "name": "Vendor",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
+        }
+      ]
     },
     {
       "type": "price",
@@ -690,7 +735,19 @@
       "type": "quantity-selector",
       "name": "Quantity selector",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
+        }
+      ]
     },
     {
       "type": "low-stock",
@@ -712,6 +769,17 @@
           "label": "Show progress bar",
           "type": "checkbox",
           "default": true
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -719,7 +787,19 @@
       "type": "stock-light",
       "name": "Bestandsampel",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
+        }
+      ]
     },
     {
       "type": "options",
@@ -768,6 +848,17 @@
           "type": "page",
           "id": "size-chart-content",
           "label": "Page content"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -817,6 +908,17 @@
           "id": "sticky-add-enabled",
           "label": "Enable sticky add to cart button",
           "default": true
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -828,6 +930,17 @@
         {
           "type": "paragraph",
           "content": "Displays when a selected variant is not available."
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -839,6 +952,17 @@
         {
           "type": "paragraph",
           "content": "Allow your customers to see availability in retail stores by [setting up local pickup.](https://help.shopify.com/en/manual/sell-in-person/shopify-pos/order-management/local-pickup-for-online-orders)"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -858,6 +982,17 @@
           "id": "heading",
           "label": "Collapsible row heading",
           "default": "Description"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -895,6 +1030,17 @@
           "id": "url-enabled",
           "label": "Enable link sharing",
           "default": true
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -902,7 +1048,19 @@
       "type": "sku",
       "name": "SKU",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
+        }
+      ]
     },
     {
       "type": "collapsible-row",
@@ -931,13 +1089,37 @@
           "id": "default-open",
           "label": "Open by default",
           "default": false
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
     {
       "type": "rating",
       "name": "Product rating",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
+        }
+      ]
     },
     {
       "type": "complementary-products",
@@ -964,6 +1146,17 @@
           "type": "checkbox",
           "id": "collapsible-row-enabled",
           "label": "Show as collapsible row",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
           "default": false
         }
       ]
@@ -1159,6 +1352,17 @@
           "id": "text",
           "label": "Text",
           "default": "Feature text"
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },
@@ -1171,6 +1375,17 @@
           "id": "custom-liquid",
           "label": "Custom Liquid",
           "info": "Add app snippets or other Liquid code to create advanced customizations."
+        },
+        {
+          "type": "header",
+          "content": "B2B Preissperre"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_when_price_locked",
+          "label": "Bei aktiver Preissperre ausblenden",
+          "info": "Gäste und Kunden ohne Freigabe-Tag sehen diesen Block nicht.",
+          "default": false
         }
       ]
     },

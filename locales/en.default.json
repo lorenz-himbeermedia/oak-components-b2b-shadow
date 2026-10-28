@@ -280,6 +280,7 @@
   },
   "products": {
     "add_to_cart": "Add to cart",
+    "b2b_hidden_in_editor": "Hidden when price lock is active",
     "buy_it_now": "Buy it now",
     "change": "Change",
     "choose_options": "Choose options",
