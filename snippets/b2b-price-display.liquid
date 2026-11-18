@@ -1,26 +1,42 @@
 {%- doc -%}
   Händlerpreis-Darstellung zur App „BMT B2B Wholesale“: Zeile 1 HEK mit Bezeichnung und Steuerhinweis,
-  Zeile 2 die durchgestrichene Netto UVP. Die App ersetzt den Inhalt des Preis-Elements per JavaScript,
-  dieses Snippet baut ihr Markup danach in die Soll-Struktur um. Ohne App-Markup bleibt alles unverändert.
+  Zeile 2 die durchgestrichene Netto UVP. Die App ersetzt das Preis-Element per JavaScript durch ihr eigenes
+  (`div.bmt-wholesale-price` mit `.price-container` und `.sale-price`). Das Custom Element liest daraus den HEK,
+  blendet das Element aus und zeigt die Soll-Struktur in sich selbst. Ohne App-Markup bleibt alles unverändert.
 
   Zwei Teile, beide vom Preis-Snippet aufgerufen:
-  - `part: 'data'` gibt das JSON mit der Netto UVP je Variante aus (Varianten-ID → Betrag formatiert und in Cent),
-    für das Attribut `data-b2b-net-uvp` am Preis-Element. Im Land aus `settings.b2b_net_uvp_hidden_countries` bleibt es leer.
-  - `part: 'controller'` rendert das Custom Element mit der Vorlage. Es muss direkt hinter dem Preis-Element stehen.
+  - `part: 'data'` gibt das JSON mit der Netto UVP je Variante aus (Varianten-ID → Betrag formatiert und in Cent).
+    Im Land aus `settings.b2b_net_uvp_hidden_countries` bleibt es leer.
+  - `part: 'controller'` rendert das Custom Element mit Daten und Vorlage. Es muss direkt hinter dem Preis-Element stehen,
+    die Daten trägt es selbst, weil die App das Preis-Element samt Attributen austauscht.
+
+  Steuersatz: Das Markt-Metafeld `custom.mwst_satz` geht vor der Theme-Einstellung `b2b_net_uvp_tax_rate`.
+  Bei 0 (z. B. USA, dort ist der Vergleichspreis schon netto) wird nicht umgerechnet und der Steuerhinweis entfällt.
 
   @param {string} part - `data` oder `controller`.
   @param {product} [product] - Produkt mit den Varianten. Pflicht bei `part: 'data'`.
   @param {variant} [variant] - Nur diese Variante ausgeben, z. B. in Kacheln. Ohne Angabe alle Varianten.
+  @param {string} [net_uvp_json] - Ausgabe von `part: 'data'`. Für `part: 'controller'`.
+  @param {string} [variant_id] - ID der angezeigten Variante. Für `part: 'controller'`.
+  @param {string} [event_id] - ID des Preis-Elements für das Event `theme:product:<id>:variantChanged`. Nur Produktseite.
+  @param {string} [context] - `product` (Standard) oder `card` für die kleineren Maße in Kacheln.
 
   @example
   {%- capture b2b_net_uvp_json -%}{%- render 'b2b-price-display', part: 'data', product: product -%}{%- endcapture -%}
-  <div class="product-price--root" data-b2b-net-uvp="{{ b2b_net_uvp_json | escape }}" data-b2b-variant-id="{{ current_variant.id }}">…</div>
-  {%- render 'b2b-price-display', part: 'controller' -%}
+  <product-price-element class="product-price--root" data-id="{{ id }}">…</product-price-element>
+  {%- render 'b2b-price-display', part: 'controller', net_uvp_json: b2b_net_uvp_json, variant_id: current_variant.id, event_id: id -%}
 {%- enddoc -%}
+
+{%- liquid
+  assign tax_rate = settings.b2b_net_uvp_tax_rate | default: 19
+  assign market_tax_rate = localization.market.metafields.custom.mwst_satz.value
+  unless market_tax_rate == nil
+    assign tax_rate = market_tax_rate
+  endunless
+-%}
 
 {%- if part == 'data' -%}
   {%- liquid
-    assign tax_rate = settings.b2b_net_uvp_tax_rate | default: 19
     assign tax_divisor = tax_rate | plus: 100.0
     assign country_code = localization.country.iso_code | upcase
 
@@ -45,7 +61,7 @@
     unless net_uvp_hidden
       for net_uvp_variant in net_uvp_variants
         if net_uvp_variant.compare_at_price > 0
-          # Der Vergleichspreis ist brutto, die Netto UVP wird auf ganze Cent gerundet: 14900 × 100 ÷ 119 = 12521
+          # Netto UVP auf ganze Cent gerundet: 14900 × 100 ÷ 119 = 12521, bei Steuersatz 0 bleibt der Vergleichspreis
           assign net_uvp_cents = net_uvp_variant.compare_at_price | times: 100 | divided_by: tax_divisor | round
           assign net_uvp_formatted_json = net_uvp_cents | money | json
 
@@ -60,7 +76,15 @@
     echo '}'
   -%}
 {%- elsif part == 'controller' -%}
-  <b2b-price-display-element hidden>
+  <b2b-price-display-element
+    hidden
+    data-context="{{ context | default: 'product' }}"
+    data-net-uvp="{{ net_uvp_json | escape }}"
+    data-variant-id="{{ variant_id }}"
+    {% if event_id != blank %}
+      data-event-id="{{ event_id }}"
+    {% endif %}
+  >
     <template>
       <div class="b2b-price-display--root">
         <span class="b2b-price-display--hek" data-hek></span>
@@ -68,7 +92,7 @@
           <span class="b2b-price-display--label">
             {{- settings.b2b_price_label_hek | escape -}}
           </span>
-          {%- unless settings.b2b_price_tax_note == blank -%}
+          {%- unless settings.b2b_price_tax_note == blank or tax_rate == 0 -%}
             <span class="b2b-price-display--tax-note">
               {{- settings.b2b_price_tax_note | escape -}}
             </span>
@@ -145,8 +169,12 @@
     color: var(--color--body--light);
   }
 
+  b2b-price-display-element:not([hidden]) {
+    display: block;
+  }
+
   /* Kacheln: gleiche Struktur, kleinere Maße aus dem Entwurf V6 */
-  .product--price-container .b2b-price-display--root {
+  b2b-price-display-element[data-context='card'] .b2b-price-display--root {
     column-gap: 6px;
     row-gap: 0;
     padding: 0;
@@ -172,8 +200,8 @@
     }
   }
 
-  /* Die App setzt display:flex inline, deshalb reicht das hidden-Attribut zum Ausblenden nicht */
-  .price-container[data-b2b-price-display='applied'] {
+  /* Das Preis-Element der App hat Inline-Styles, deshalb reicht das hidden-Attribut zum Ausblenden nicht */
+  [data-b2b-price-display='applied'] {
     display: none !important;
   }
 {% endstylesheet %}
@@ -181,19 +209,22 @@
 {% javascript %}
   class B2bPriceDisplay extends HTMLElement {
     connectedCallback() {
-      this.price_root = this.previousElementSibling;
-      if (!this.price_root || !this.price_root.hasAttribute('data-b2b-net-uvp')) return;
+      if (!this.parentElement) return;
 
       this.template = this.querySelector('template');
       this.net_uvp_by_variant = this.parseNetUvp();
-      this.variant_id = this.price_root.dataset.b2bVariantId;
+      this.variant_id = this.dataset.variantId;
 
-      // Die App rendert beim Variantenwechsel neu – jede Änderung im Preis-Element prüft die Struktur erneut
-      this.observer = new MutationObserver(() => this.render());
-      this.observer.observe(this.price_root, { childList: true, subtree: true, characterData: true });
+      // Die App tauscht das Preis-Element aus (auch beim Variantenwechsel), deshalb wird der Elternknoten beobachtet.
+      // Änderungen in diesem Element selbst lösen nichts aus, sonst ruft sich render() endlos auf.
+      this.observer = new MutationObserver((mutations) => {
+        if (mutations.every((mutation) => this.contains(mutation.target))) return;
+        this.render();
+      });
+      this.observer.observe(this.parentElement, { childList: true, subtree: true, characterData: true });
 
-      if (this.price_root.dataset.id) {
-        this.event_name = `theme:product:${this.price_root.dataset.id}:variantChanged`;
+      if (this.dataset.eventId) {
+        this.event_name = `theme:product:${this.dataset.eventId}:variantChanged`;
         this.variantListener = ({ detail: { variant } }) => {
           if (!variant || !variant.id) return;
 
@@ -213,34 +244,40 @@
 
     parseNetUvp() {
       try {
-        return JSON.parse(this.price_root.dataset.b2bNetUvp || '{}');
+        return JSON.parse(this.dataset.netUvp || '{}');
       } catch (error) {
         return {};
       }
     }
 
     render() {
-      const app_container = this.price_root.querySelector('.price-container');
+      const price_element = this.previousElementSibling;
+      const app_container = price_element ? price_element.querySelector('.price-container') : null;
       const sale_price = app_container ? app_container.querySelector('.sale-price') : null;
 
       // Ohne App-Markup (Gäste, Kunden ohne Preisregel) bleibt der Theme-Preis unangetastet
-      if (!sale_price) return;
+      if (!sale_price) {
+        if (!this.hidden) this.hidden = true;
+        return;
+      }
 
-      let display = this.price_root.querySelector('.b2b-price-display--root');
+      let display = this.querySelector('.b2b-price-display--root');
       if (!display) {
         display = this.template.content.firstElementChild.cloneNode(true);
-        app_container.after(display);
+        this.append(display);
       }
 
-      if (app_container.dataset.b2bPriceDisplay !== 'applied') {
-        app_container.dataset.b2bPriceDisplay = 'applied';
+      if (price_element.dataset.b2bPriceDisplay !== 'applied') {
+        price_element.dataset.b2bPriceDisplay = 'applied';
       }
+
+      if (this.hidden) this.hidden = false;
 
       const hek_text = sale_price.textContent.trim();
       this.setText(display.querySelector('[data-hek]'), hek_text);
 
       const net_uvp = this.net_uvp_by_variant[this.variant_id];
-      const hek_cents = this.getHekCents(sale_price, app_container, hek_text);
+      const hek_cents = this.getHekCents(sale_price, app_container, price_element, hek_text);
       const show_net_uvp = Boolean(net_uvp) && Number.isFinite(hek_cents) && net_uvp.cents > hek_cents;
 
       display.querySelectorAll('[data-uvp]').forEach((element) => {
@@ -255,8 +292,8 @@
       if (element.textContent !== text) element.textContent = text;
     }
 
-    getHekCents(sale_price, app_container, hek_text) {
-      const amount_source = [sale_price, app_container, this.price_root].find((element) =>
+    getHekCents(sale_price, app_container, price_element, hek_text) {
+      const amount_source = [sale_price, app_container, price_element].find((element) =>
         element.hasAttribute('data-bmt-price-amount')
       );
 
@@ -271,12 +308,14 @@
       return this.parseMoney(hek_text);
     }
 
-    // Shop-Format „amount_with_comma_separator“ (z. B. €1.234,56): Punkt trennt Tausender, Komma die Cent
+    // Das letzte Trennzeichen mit ein oder zwei Ziffern dahinter trennt die Cent: €1.234,56 und $1,234.56
     parseMoney(text) {
-      let number = text.replace(/[^\d.,]/g, '');
-      if (number.includes(',')) number = number.replaceAll('.', '').replace(',', '.');
+      const number = text.replace(/[^\d.,]/g, '');
+      const parts = number.match(/^(.*?)[.,](\d{1,2})$/);
+      const amount = parts
+        ? parseFloat(parts[1].replace(/[.,]/g, '') + '.' + parts[2])
+        : parseFloat(number.replace(/[.,]/g, ''));
 
-      const amount = parseFloat(number);
       return Number.isFinite(amount) ? Math.round(amount * 100) : NaN;
     }
   }

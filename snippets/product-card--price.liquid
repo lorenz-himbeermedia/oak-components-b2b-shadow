@@ -52,11 +52,7 @@
     endunless
   -%}
 
-  <div
-    class="product--price-container"
-    data-b2b-net-uvp="{{ b2b_net_uvp_json | escape }}"
-    data-b2b-variant-id="{{ b2b_price_variant.id }}"
-  >
+  <div class="product--price-container">
     <div class="product--price-wrapper">
       {%- if product.price_varies -%}
         <span class="product--from" data-item="nav-text">
@@ -98,5 +94,10 @@
     {%- endif -%}
   </div>
 
-  {%- render 'b2b-price-display', part: 'controller' -%}
+  {%- render 'b2b-price-display',
+    part: 'controller',
+    net_uvp_json: b2b_net_uvp_json,
+    variant_id: b2b_price_variant.id,
+    context: 'card'
+  -%}
 {%- endif -%}

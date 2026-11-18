@@ -55,7 +55,7 @@
         },
         "b2b_net_uvp_tax_rate": {
           "label": "Tax rate for the net RRP (%)",
-          "info": "Net RRP = compare-at price of the variant ÷ (1 + tax rate/100), rounded to the cent."
+          "info": "Net RRP = compare-at price of the variant ÷ (1 + tax rate/100), rounded to the cent. A market can override the rate with the market metafield custom.mwst_satz, 0 = compare-at price is already net and the tax note is hidden."
         },
         "b2b_net_uvp_hidden_countries": {
           "label": "Countries without net RRP",

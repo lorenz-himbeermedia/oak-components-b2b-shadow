@@ -55,7 +55,7 @@
         },
         "b2b_net_uvp_tax_rate": {
           "label": "Steuersatz für die Netto UVP (%)",
-          "info": "Netto UVP = Vergleichspreis der Variante ÷ (1 + Steuersatz/100), auf Cent gerundet."
+          "info": "Netto UVP = Vergleichspreis der Variante ÷ (1 + Steuersatz/100), auf Cent gerundet. Ein Markt kann den Satz mit dem Markt-Metafeld custom.mwst_satz überschreiben, 0 = Vergleichspreis ist schon netto und der Steuerhinweis entfällt."
         },
         "b2b_net_uvp_hidden_countries": {
           "label": "Länder ohne Netto UVP",

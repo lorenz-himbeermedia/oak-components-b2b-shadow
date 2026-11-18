@@ -468,7 +468,7 @@
     }
 
     /* Der Händlerpreis-Block braucht die volle Kachelbreite und steht deshalb immer unter dem Titel */
-    .product-card--root &:has(.product--price-container .b2b-price-display--root) {
+    .product-card--root &:has(b2b-price-display-element:not([hidden])) {
       flex-direction: column;
       align-items: stretch;
     }

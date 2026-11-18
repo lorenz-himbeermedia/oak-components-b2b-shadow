@@ -1117,8 +1117,7 @@
         "type": "text",
         "id": "b2b_net_uvp_hidden_countries",
         "label": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_hidden_countries.label",
-        "info": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_hidden_countries.info",
-        "default": "US"
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_hidden_countries.info"
       },
       {
         "type": "header",
