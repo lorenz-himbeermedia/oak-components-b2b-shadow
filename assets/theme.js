@@ -499,7 +499,7 @@ export class Cart extends HTMLElement {
         const controller = new AbortController;
         this.abort_controllers.set("partial_delivery", controller);
         try {
-            await fetch(`${Shopify.routes.cart_update}.js`, {
+            const response = await fetch(`${Shopify.routes.cart_update}.js`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -510,8 +510,58 @@ export class Cart extends HTMLElement {
                     }
                 }),
                 signal: controller.signal
-            })
+            });
+            if (!response.ok) return;
+            const cart = await response.json();
+            await this.updatePartialDeliveryMetafield(value, cart.token, controller.signal)
         } catch {}
+    }
+    // Spiegelt die Wahl in ein Cart-Metafeld, das Shopify beim Anlegen der Bestellung ins Bestell-Metafeld kopiert
+    async updatePartialDeliveryMetafield(value, cart_token, signal) {
+        const root = this.querySelector(".cart-partial-delivery--root");
+        const storefront_token = root?.dataset.storefrontToken;
+        const metafield_key = root?.dataset.metafieldKey;
+        if (!storefront_token || !metafield_key || !cart_token) return;
+        // Die Storefront API akzeptiert den Warenkorb nur mit dem ?key=-Teil des Tokens
+        if (!cart_token.includes("?key=")) {
+            console.warn("Teillieferung: Cart-Token ohne ?key=, Metafeld wird nicht gesetzt");
+            return
+        }
+        const owner_id = `gid://shopify/Cart/${cart_token}`;
+        const request = value ? {
+            query: "mutation($metafields: [CartMetafieldsSetInput!]!) { cartMetafieldsSet(metafields: $metafields) { userErrors { code field message } } }",
+            variables: {
+                metafields: [{
+                    ownerId: owner_id,
+                    key: metafield_key,
+                    // Boolean, weil weclapp das Zusatzfeld „Teillieferung erwünscht“ als Ja/Nein erwartet
+                    type: "boolean",
+                    value: String(value.startsWith("Ja"))
+                }]
+            }
+        } : {
+            query: "mutation($input: CartMetafieldDeleteInput!) { cartMetafieldDelete(input: $input) { userErrors { code field message } } }",
+            variables: {
+                input: {
+                    ownerId: owner_id,
+                    key: metafield_key
+                }
+            }
+        };
+        // Absoluter Pfad ohne Sprach-Präfix, die Storefront API liegt nur unter /api/
+        const response = await fetch("/api/2026-10/graphql.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Shopify-Storefront-Access-Token": storefront_token
+            },
+            body: JSON.stringify(request),
+            signal
+        });
+        const result = await response.json();
+        const payload = result.data?.cartMetafieldsSet || result.data?.cartMetafieldDelete;
+        const errors = [...(result.errors || []), ...(payload?.userErrors || [])];
+        errors.length && console.warn("Teillieferung: Cart-Metafeld konnte nicht gespeichert werden", errors)
     }
     toggleLoadingDisplay(t, e) {
         if (!t && e) {

@@ -4,6 +4,7 @@
   Renders the partial delivery choice above the cart totals.
   The block only shows when the cart mixes available and unavailable lines (optionally also when every line is unavailable).
   The choice is stored as cart attribute "Teillieferung", the wrapper stays in the DOM while hidden so theme.js can clear an old value.
+  With a public Storefront API token in the theme settings, theme.js also mirrors the choice into a cart metafield, which Shopify copies to the order metafield of the same key.
   @param {string} view - Active cart view ('desktop', 'mobile' or 'drawer'), used for unique ids.
 {%- enddoc -%}
 
@@ -45,6 +46,10 @@
 <div
   class="cart-partial-delivery--root"
   data-saved-value="{{ saved_value | escape }}"
+  {%- if settings.partial_delivery_storefront_token != blank and settings.partial_delivery_metafield_key contains '.' %}
+    data-storefront-token="{{ settings.partial_delivery_storefront_token | strip | escape }}"
+    data-metafield-key="{{ settings.partial_delivery_metafield_key | strip | escape }}"
+  {%- endif %}
   {% unless show_partial_delivery %}
     hidden
   {% endunless %}
