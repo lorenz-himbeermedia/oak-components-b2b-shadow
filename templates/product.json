@@ -68,14 +68,11 @@
             "hide_when_price_locked": false
           }
         },
-        "payment_icons": {
-          "type": "payment-icons",
+        "liquid_gjp7p3": {
+          "type": "liquid",
           "settings": {
-            "icons": "visa,klarna,amex,paypal,applepay,mastercard",
-            "icon_width": 30,
-            "alignment": "center",
-            "space_before": "auto",
-            "hide_when_price_locked": true
+            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>",
+            "hide_when_price_locked": false
           }
         }
       },
@@ -87,7 +84,7 @@
         "price",
         "stock-light",
         "buy-buttons",
-        "payment_icons"
+        "liquid_gjp7p3"
       ],
       "name": "Produktinformationen",
       "settings": {
