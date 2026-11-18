@@ -1339,6 +1339,27 @@
         "id": "partial_delivery_partial_text",
         "label": "Hinweis",
         "default": "Verfügbare Artikel kommen sofort. Für Nachlieferungen können zusätzliche Versandkosten entstehen."
+      },
+      {
+        "type": "header",
+        "content": "Bestell-Metafeld"
+      },
+      {
+        "type": "paragraph",
+        "content": "Schreibt die Wahl zusätzlich in ein Cart-Metafeld, das Shopify beim Anlegen der Bestellung in das gleichnamige Bestell-Metafeld kopiert. Dafür braucht es eine Bestell-Metafeld-Definition (Typ: Wahr oder falsch, „true“ = Teillieferung gewünscht) mit aktivierter Option „Vom Warenkorb in die Bestellung kopieren“. Ohne Token bleibt es beim Cart-Attribut."
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_storefront_token",
+        "label": "Öffentlicher Storefront-API-Token",
+        "info": "Nur den öffentlichen Token eintragen (z. B. aus dem Headless-Kanal), niemals den privaten.",
+        "default": "78e7301755edd97f329a876c74ace226"
+      },
+      {
+        "type": "text",
+        "id": "partial_delivery_metafield_key",
+        "label": "Metafeld (namespace.key)",
+        "default": "custom.teillieferung"
       }
     ]
   }
