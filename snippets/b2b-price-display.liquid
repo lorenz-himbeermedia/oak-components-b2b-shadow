@@ -269,7 +269,7 @@
       return this.parseMoney(hek_text);
     }
 
-    // Format €{{amount_with_comma_separator}}: Punkt trennt Tausender, Komma die Cent
+    // Shop-Format „amount_with_comma_separator“ (z. B. €1.234,56): Punkt trennt Tausender, Komma die Cent
     parseMoney(text) {
       let number = text.replace(/[^\d.,]/g, '');
       if (number.includes(',')) number = number.replaceAll('.', '').replace(',', '.');
