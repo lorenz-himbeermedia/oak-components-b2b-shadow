@@ -39,6 +39,19 @@
 
 {%- comment -%} In Kacheln gibt es für Gäste bewusst keinen Platzhalter, damit keine Lücke entsteht {%- endcomment -%}
 {%- if b2b_can_see_prices == 'true' -%}
+  {%- liquid
+    assign b2b_price_variant = current_variant
+    assign b2b_net_uvp_json = '{}'
+
+    unless onboarding
+      # Die Kachel zeigt den günstigsten Preis, die Netto UVP gehört deshalb zu der Variante mit diesem Preis
+      assign b2b_price_variant = product.variants | where: 'price', product.price | first | default: current_variant
+      capture b2b_net_uvp_json
+        render 'b2b-price-display', part: 'data', product: product, variant: b2b_price_variant
+      endcapture
+    endunless
+  -%}
+
   <div class="product--price-container">
     <div class="product--price-wrapper">
       {%- if product.price_varies -%}
@@ -80,4 +93,11 @@
       </div>
     {%- endif -%}
   </div>
+
+  {%- render 'b2b-price-display',
+    part: 'controller',
+    net_uvp_json: b2b_net_uvp_json,
+    variant_id: b2b_price_variant.id,
+    context: 'card'
+  -%}
 {%- endif -%}

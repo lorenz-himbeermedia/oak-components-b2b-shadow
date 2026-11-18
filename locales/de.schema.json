@@ -40,6 +40,72 @@
         "b2b_price_lock_register_url": {
           "label": "Link Button Händlerkonto",
           "info": "Leer lassen für /pages/b2b-registration. Sollte nicht auf dieselbe Seite wie Anmelden führen."
+        },
+        "price_display_header": {
+          "content": "Preisdarstellung für Händler"
+        },
+        "b2b_price_label_hek": {
+          "label": "Bezeichnung Händlerpreis"
+        },
+        "b2b_price_label_uvp": {
+          "label": "Bezeichnung Netto UVP"
+        },
+        "b2b_price_tax_note": {
+          "label": "Steuerhinweis neben dem Händlerpreis"
+        },
+        "b2b_net_uvp_tax_rate": {
+          "label": "Steuersatz für die Netto UVP (%)",
+          "info": "Netto UVP = Vergleichspreis der Variante ÷ (1 + Steuersatz/100), auf Cent gerundet. Ein Markt kann den Satz mit dem Markt-Metafeld custom.mwst_satz überschreiben, 0 = Vergleichspreis ist schon netto und der Steuerhinweis entfällt."
+        },
+        "b2b_net_uvp_hidden_countries": {
+          "label": "Länder ohne Netto UVP",
+          "info": "Ländercodes kommagetrennt, z. B. US,CH. Dort erscheint keine Netto UVP."
+        },
+        "registration_header": {
+          "content": "Händlerregistrierung"
+        },
+        "b2b_header_register_label": {
+          "label": "Text Button Händler werden",
+          "info": "Im Header und in der Leiste unter dem Header für Gäste."
+        },
+        "b2b_pending_label": {
+          "label": "Hinweis Freischaltung ausstehend",
+          "info": "Im Header und als Titel der Sperr-Box, solange der Antrag geprüft wird."
+        },
+        "b2b_bar_guest_text": {
+          "label": "Leiste unter dem Header: Text für Gäste"
+        },
+        "b2b_bar_pending_text": {
+          "label": "Leiste unter dem Header: Text bei Antrag in Prüfung"
+        },
+        "b2b_bar_no_application_text": {
+          "label": "Leiste unter dem Header: Text ohne Antrag"
+        },
+        "b2b_lock_pending_message": {
+          "label": "Sperr-Box: Meldung bei Antrag in Prüfung"
+        },
+        "b2b_lock_no_application_heading": {
+          "label": "Sperr-Box: Titel ohne Antrag"
+        },
+        "b2b_lock_no_application_message": {
+          "label": "Sperr-Box: Meldung ohne Antrag"
+        }
+      }
+    },
+    "stock_light": {
+      "settings": {
+        "stock_light_eta_paragraph": {
+          "content": "Zweite Zeile mit dem Liefertermin aus den Variantenmetafeldern custom.wiederbeschaffungstage und custom.bestand_null_seit. [weeks] wird durch die verbleibenden Wochen ersetzt."
+        },
+        "stock_light_eta_text": {
+          "label": "Liefertermin in Wochen"
+        },
+        "stock_light_eta_text_one": {
+          "label": "Liefertermin in 1 Woche"
+        },
+        "stock_light_eta_unknown_text": {
+          "label": "Liefertermin unbekannt",
+          "info": "Wenn die Frist abgelaufen ist oder ein Metafeld fehlt."
         }
       }
     }

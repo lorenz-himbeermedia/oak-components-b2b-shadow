@@ -1083,6 +1083,104 @@
         "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_register_url.label",
         "info": "t:settings_schema.b2b_price_lock.settings.b2b_price_lock_register_url.info",
         "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.b2b_price_lock.settings.price_display_header.content"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_label_hek",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_label_hek.label",
+        "default": "HEK"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_label_uvp",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_label_uvp.label",
+        "default": "Netto UVP"
+      },
+      {
+        "type": "text",
+        "id": "b2b_price_tax_note",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_price_tax_note.label",
+        "default": "zzgl. MwSt."
+      },
+      {
+        "type": "number",
+        "id": "b2b_net_uvp_tax_rate",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_tax_rate.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_tax_rate.info",
+        "default": 19
+      },
+      {
+        "type": "text",
+        "id": "b2b_net_uvp_hidden_countries",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_hidden_countries.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_net_uvp_hidden_countries.info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.b2b_price_lock.settings.registration_header.content",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_header_register_label",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_header_register_label.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_header_register_label.info",
+        "default": "Händler werden",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_pending_label",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_pending_label.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_pending_label.info",
+        "default": "Freischaltung ausstehend",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_bar_guest_text",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_bar_guest_text.label",
+        "default": "Preise und Bestellung nur für Händler.",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_bar_pending_text",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_bar_pending_text.label",
+        "default": "Ihr Händlerkonto wird geprüft. Preise sehen Sie nach der Freischaltung.",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_bar_no_application_text",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_bar_no_application_text.label",
+        "default": "Ihr Konto ist noch nicht für Händlerpreise freigeschaltet.",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "richtext",
+        "id": "b2b_lock_pending_message",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_lock_pending_message.label",
+        "default": "<p>Wir prüfen Ihre Angaben. Sobald Ihr Händlerkonto freigeschaltet ist, sehen Sie hier Preise und können bestellen.</p>",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "text",
+        "id": "b2b_lock_no_application_heading",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_lock_no_application_heading.label",
+        "default": "Noch kein Händlerkonto",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
+      },
+      {
+        "type": "richtext",
+        "id": "b2b_lock_no_application_message",
+        "label": "t:settings_schema.b2b_price_lock.settings.b2b_lock_no_application_message.label",
+        "default": "<p>Sie sind angemeldet, aber noch nicht als Händler freigeschaltet. Beantragen Sie Ihr Händlerkonto, wir prüfen es zeitnah.</p>",
+        "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
       }
     ]
   },
@@ -1257,13 +1355,36 @@
         "type": "text",
         "id": "stock_light_backorder_text",
         "label": "Text",
-        "default": "Lieferbar auf Nachbestellung"
+        "default": "Aktuell nicht auf Lager"
       },
       {
         "type": "color",
         "id": "stock_light_backorder_color",
         "label": "Farbe",
         "default": "#f5b400"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.stock_light.settings.stock_light_eta_paragraph.content"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_eta_text",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_text.label",
+        "default": "Lieferung voraussichtlich in [weeks] Wochen"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_eta_text_one",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_text_one.label",
+        "default": "Lieferung voraussichtlich in 1 Woche"
+      },
+      {
+        "type": "text",
+        "id": "stock_light_eta_unknown_text",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_unknown_text.label",
+        "info": "t:settings_schema.stock_light.settings.stock_light_eta_unknown_text.info",
+        "default": "Liefertermin auf Anfrage"
       },
       {
         "type": "header",

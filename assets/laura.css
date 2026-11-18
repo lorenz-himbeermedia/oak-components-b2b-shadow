@@ -84,18 +84,15 @@ span.needsclick.Teaser-pointer-Hn1zd.kl-private-reset-css-Xuajs1 {
 
 
 
-/* Produktdetailseite */
-.product-form--block {
-  margin-top: 10px !important;
-}
+/* Produktdetailseite: Abstände zwischen den Blöcken regelt snippets/product-form.liquid (Einstellung „Abstand oben“) */
+/* Übergang: alter Custom-Liquid-Block mit den Zahlungsarten, bis er im Template durch den Block „Zahlungsarten“ ersetzt ist */
 .prd-Detail_PaymentProviders {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0;
 }
 .prd-Detail_PaymentProvider {
-  margin: 10px 5px 30px;
+  margin: 0 5px;
   max-width: 30px;
 }
 .product-form--block .collapsible-row--root:before {
@@ -129,8 +126,12 @@ span.needsclick.Teaser-pointer-Hn1zd.kl-private-reset-css-Xuajs1 {
      line-height: 1.2;
      
   }
-  h2.product-form--block--heading {
+  /* Der Titel steht mobil über den Bildern (h1 oben). Der Titel-Block entfällt ganz, der Block danach ist der erste und hat keinen Abstand */
+  .product-form > .product-form--block[data-block-type='heading'] {
     display: none;
+  }
+  .product-form > .product-form--block[data-block-type='heading'][data-space] + .product-form--block {
+    margin-block-start: 0;
   }
 }
 
@@ -245,13 +246,8 @@ form.g-container {
    margin-top: 0 !important;
   padding: 5px 0;
   }
-.main-product--wrapper .jdgm-preview-badge,
-.product-price--root,
-.product-options--root{
+.main-product--wrapper .jdgm-preview-badge {
   padding: 15px 0;
-}
-.product-buy-buttons--primary {
-  margin-bottom: 15px;
 }
 .complementary-products--heading {
   margin-top: 30px;
@@ -304,13 +300,6 @@ form.g-container {
 
 .product--block {
   padding-top: 10px;
-}
-[data-block-type="buy-buttons"] {
-  margin-top: 0 !important;
-}
-.main-product--form [data-block-type="icon"] {
-  padding-top: 0;
-  margin-top: 5px;
 }
 .section--product-page [data-item~=section-heading] {
   font-size: 23px !important;
