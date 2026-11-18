@@ -1,0 +1,90 @@
+<!-- snippets/product-payment-icons.liquid -->
+
+{%- doc -%}
+  Zahlungsarten-Icons unter dem Kauf-Button, feste Auswahl in fester Reihenfolge.
+  Die Bilder liegen wie bisher in den Dateien des B2C-Shops (PNG 40 × 30). Liegen sie später im B2B-Shop,
+  reicht es, die Quelle unten auf `file_url` umzustellen.
+
+  @param {object} block_settings - Einstellungen des Blocks: `icons` (Dateinamen ohne .png, kommagetrennt),
+    `icon_width` (px) und `alignment` (left, center, right).
+
+  @example
+  {%- render 'product-payment-icons', block_settings: block.settings -%}
+{%- enddoc -%}
+
+{%- liquid
+  assign icon_source = '//cdn.shopify.com/s/files/1/0572/2472/4539/files/'
+  assign icon_names = block_settings.icons | default: 'visa,klarna,amex,paypal,applepay,mastercard' | split: ','
+  assign icon_width = block_settings.icon_width | default: 30
+  assign icon_height = icon_width | times: 3 | divided_by: 4.0
+  assign alignment = block_settings.alignment | default: 'center'
+-%}
+
+<ul
+  class="product-payment-icons--root"
+  data-alignment="{{ alignment }}"
+  style="--product-payment-icons--width: {{ icon_width }}px;"
+>
+  {%- for icon_name in icon_names -%}
+    {%- assign icon_key = icon_name | strip | downcase -%}
+    {%- if icon_key == blank -%}
+      {%- continue -%}
+    {%- endif -%}
+
+    {%- liquid
+      case icon_key
+        when 'amex'
+          assign icon_alt = 'American Express'
+        when 'applepay'
+          assign icon_alt = 'Apple Pay'
+        when 'paypal'
+          assign icon_alt = 'PayPal'
+        else
+          assign icon_alt = icon_key | capitalize
+      endcase
+    -%}
+
+    <li class="product-payment-icons--item">
+      <img
+        class="product-payment-icons--icon"
+        src="{{ icon_source }}{{ icon_key }}.png"
+        alt="{{ icon_alt | escape }}"
+        width="{{ icon_width }}"
+        height="{{ icon_height }}"
+        loading="lazy"
+      >
+    </li>
+  {%- endfor -%}
+</ul>
+
+{% stylesheet %}
+  .product-payment-icons--root {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* 10px zwischen den Icons wie bisher (je 5px links und rechts) */
+    gap: var(--spacing--1) 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &[data-alignment='left'] {
+      justify-content: flex-start;
+    }
+
+    &[data-alignment='right'] {
+      justify-content: flex-end;
+    }
+  }
+
+  .product-payment-icons--item {
+    display: block;
+  }
+
+  .product-payment-icons--icon {
+    display: block;
+    width: var(--product-payment-icons--width);
+    height: auto;
+  }
+{% endstylesheet %}

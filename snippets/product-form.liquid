@@ -31,6 +31,7 @@
       <div
         class="product-form--block"
         data-block-type="{{ block.type }}"
+        data-space="{{ block.settings.space_before | default: 'auto' }}"
         {% if block.type == 'collapsible-row' %}
           data-fit-together="true"
         {% endif %}
@@ -117,6 +118,9 @@
           {%- when 'icon' -%}
             {%- render 'icon-block', settings: block.settings -%}
 
+          {%- when 'payment-icons' -%}
+            {%- render 'product-payment-icons', block_settings: block.settings -%}
+
           {%- when 'liquid' -%}
             {{- block.settings.custom-liquid -}}
 
@@ -169,6 +173,7 @@
       <div
         class="product-form--block"
         data-block-type="{{ block.type }}"
+        data-space="{{ block.settings.space_before | default: 'auto' }}"
         data-fit-together="{{ fit_together }}"
         {{- block.shopify_attributes -}}
       >
@@ -395,6 +400,9 @@
           {%- when 'icon' -%}
             {%- render 'icon-block', settings: block.settings -%}
 
+          {%- when 'payment-icons' -%}
+            {%- render 'product-payment-icons', block_settings: block.settings -%}
+
           {%- when 'liquid' -%}
             {%- liquid
               comment
@@ -450,10 +458,21 @@
 
 {% stylesheet %}
   .product-form {
-    display: block;
+    /* Abstandsstufen zwischen den Blöcken. Sie gelten sichtbar: von der Buchstaben- oder Rahmenkante
+       des Blocks darüber bis zur Kante des nächsten Blocks */
+    --product-form--space-xs: var(--spacing--1);
+    --product-form--space-s: var(--spacing--2);
+    --product-form--space-m: var(--spacing--3);
+    --product-form--space-l: 24px;
+    --product-form--space-xl: var(--spacing--4);
+
+    /* Flex statt Blockfluss, damit Außenabstände der Blöcke nie zusammenfallen */
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-color);
 
     @media (max-width: 767px) {
+      --product-form--space-xl: 24px;
       width: 100%;
     }
 
@@ -465,35 +484,117 @@
     }
   }
 
+  /* Der Abstand gehört zum Formular: eine Regel setzt ihn vor jedem Block, über dem ein sichtbarer Block steht.
+     Der erste sichtbare Block bleibt bei 0, auch wenn Blöcke darüber ausgeblendet sind. Blöcke haben keine eigenen Außenabstände */
+  .product-form > .product-form--block:not(:empty, :has(> *:empty), [aria-hidden='true']) ~ .product-form--block {
+    margin-block-start: calc(var(--product-form--space) - var(--product-form--trim-start));
+  }
+
+  /* Den Leerraum unter der letzten Textzeile zieht der Block selbst ab, damit die Stufe bis zur Buchstabenkante gilt */
+  .product-form > .product-form--block:has(~ .product-form--block) {
+    margin-block-end: calc(-1 * var(--product-form--trim-end));
+  }
+
   .product-form--block {
+    /* Stufe aus der Einstellung „Abstand oben“, bei „Standard“ die Vorgabe des Blocktyps */
+    --product-form--space: var(--product-form--space-l);
+    /* Leerraum der Zeilenbox über der ersten und unter der letzten Textzeile, gemessen für die OAK-Schriften */
+    --product-form--trim-start: 0px;
+    --product-form--trim-end: 0px;
+
+    min-width: 0;
     text-align: var(--text-alignment);
 
-    /* top instead of bottom margin here because of how collapsible rows stack */
-    &[data-block-type] {
-      margin-top: var(--spacing--block);
+    &[data-space='auto'] {
+      &:is(
+          [data-block-type='overline'],
+          [data-block-type='heading'],
+          [data-block-type='vendor'],
+          [data-block-type='rating'],
+          [data-block-type='sku'],
+          [data-block-type='buy-buttons']
+        ) {
+        --product-form--space: var(--product-form--space-m);
+      }
+
+      /* Die Variantenwahl beginnt den Kaufbereich */
+      &[data-block-type='options'] {
+        --product-form--space: var(--product-form--space-xl);
+      }
+
+      &[data-block-type='payment-icons'] {
+        --product-form--space: var(--product-form--space-s);
+      }
+
+      /* Preis-Sperrbox für Gäste: 16px zur Variantenwahl wie im Entwurf V6 */
+      &[data-block-type='price']:has(> .b2b-price-lock--root) {
+        --product-form--space: var(--product-form--space-m);
+      }
     }
 
-    &[data-block-type='icon'] + &[data-block-type='icon'] {
-      margin-top: var(--spacing--1);
+    /* Icon-Zeilen rücken an die Icon-Zeile darüber, Akkordeons schließen direkt aneinander an */
+    &[data-block-type='icon'] + &[data-space='auto'][data-block-type='icon'] {
+      --product-form--space: var(--product-form--space-xs);
     }
 
-    &:is(
-        [data-block-type='price'],
-        [data-block-type='vendor'],
-        [data-block-type='rating'],
-        [data-block-type='sku'],
-        [data-block-type='heading']
-      ) {
-      margin-top: var(--spacing--item);
+    &[data-fit-together='true'] + &[data-space='auto'][data-fit-together='true'] {
+      --product-form--space: 0px;
     }
 
-    input[type='hidden'] + &[data-block-type],
-    &[data-block-type]:first-child {
-      margin-top: 0;
+    &[data-space='none'] {
+      --product-form--space: 0px;
+    }
+
+    &[data-space='xs'] {
+      --product-form--space: var(--product-form--space-xs);
+    }
+
+    &[data-space='s'] {
+      --product-form--space: var(--product-form--space-s);
+    }
+
+    &[data-space='m'] {
+      --product-form--space: var(--product-form--space-m);
+    }
+
+    &[data-space='l'] {
+      --product-form--space: var(--product-form--space-l);
+    }
+
+    &[data-space='xl'] {
+      --product-form--space: var(--product-form--space-xl);
+    }
+
+    &[data-block-type='heading'] {
+      --product-form--trim-start: 5px;
+      --product-form--trim-end: 5px;
+    }
+
+    &[data-block-type='icon'] {
+      --product-form--trim-start: 2px;
+    }
+
+    &[data-block-type='options']:has(.disclosure--label[data-item='nav-text']) {
+      --product-form--trim-start: 6px;
+    }
+
+    &[data-block-type='price']:not(:has(> .b2b-price-lock--root)) {
+      --product-form--trim-start: 5px;
+      --product-form--trim-end: 5px;
+    }
+
+    &[data-block-type='stock-light'] {
+      --product-form--trim-start: 5px;
+      --product-form--trim-end: 4px;
     }
 
     &[data-block-type]:is(:empty, :has(> *:empty), [aria-hidden='true']) {
       display: none;
+    }
+
+    /* Innerhalb der Variantenwahl: „Farbe“ und Auswahlfeld sichtbar 8px auseinander (6px Leerraum unter der Grundlinie) */
+    &[data-block-type='options'] .disclosure--label {
+      padding-bottom: calc(var(--product-form--space-xs) - 6px);
     }
 
     :is(
@@ -527,10 +628,6 @@
     }
 
     @media (max-width: 767px) {
-      .product--breadcrumbs + & {
-        margin-top: 0;
-      }
-
       [data-mobile-x-alignment='center'] & .product--label {
         margin: 0 auto;
       }
