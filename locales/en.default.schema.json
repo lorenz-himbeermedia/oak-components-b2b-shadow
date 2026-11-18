@@ -91,6 +91,23 @@
           "label": "Lock box: message without application"
         }
       }
+    },
+    "stock_light": {
+      "settings": {
+        "stock_light_eta_paragraph": {
+          "content": "Second line with the delivery date from the variant metafields custom.wiederbeschaffungstage and custom.bestand_null_seit. [weeks] is replaced by the remaining weeks."
+        },
+        "stock_light_eta_text": {
+          "label": "Delivery estimate in weeks"
+        },
+        "stock_light_eta_text_one": {
+          "label": "Delivery estimate in 1 week"
+        },
+        "stock_light_eta_unknown_text": {
+          "label": "Delivery date unknown",
+          "info": "When the period has expired or a metafield is missing."
+        }
+      }
     }
   }
 }

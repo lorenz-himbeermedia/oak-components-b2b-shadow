@@ -91,6 +91,23 @@
           "label": "Sperr-Box: Meldung ohne Antrag"
         }
       }
+    },
+    "stock_light": {
+      "settings": {
+        "stock_light_eta_paragraph": {
+          "content": "Zweite Zeile mit dem Liefertermin aus den Variantenmetafeldern custom.wiederbeschaffungstage und custom.bestand_null_seit. [weeks] wird durch die verbleibenden Wochen ersetzt."
+        },
+        "stock_light_eta_text": {
+          "label": "Liefertermin in Wochen"
+        },
+        "stock_light_eta_text_one": {
+          "label": "Liefertermin in 1 Woche"
+        },
+        "stock_light_eta_unknown_text": {
+          "label": "Liefertermin unbekannt",
+          "info": "Wenn die Frist abgelaufen ist oder ein Metafeld fehlt."
+        }
+      }
     }
   }
 }

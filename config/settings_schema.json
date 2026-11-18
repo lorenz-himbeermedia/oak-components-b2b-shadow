@@ -1129,6 +1129,7 @@
         "type": "text",
         "id": "b2b_header_register_label",
         "label": "t:settings_schema.b2b_price_lock.settings.b2b_header_register_label.label",
+        "info": "t:settings_schema.b2b_price_lock.settings.b2b_header_register_label.info",
         "default": "Händler werden",
         "visible_if": "{{ settings.b2b_price_lock_enabled == true }}"
       },
@@ -1365,25 +1366,25 @@
       },
       {
         "type": "paragraph",
-        "content": "Zweite Zeile mit dem Liefertermin aus den Variantenmetafeldern custom.wiederbeschaffungstage und custom.bestand_null_seit. [weeks] wird durch die verbleibenden Wochen ersetzt."
+        "content": "t:settings_schema.stock_light.settings.stock_light_eta_paragraph.content"
       },
       {
         "type": "text",
         "id": "stock_light_eta_text",
-        "label": "Liefertermin in Wochen",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_text.label",
         "default": "Lieferung voraussichtlich in [weeks] Wochen"
       },
       {
         "type": "text",
         "id": "stock_light_eta_text_one",
-        "label": "Liefertermin in 1 Woche",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_text_one.label",
         "default": "Lieferung voraussichtlich in 1 Woche"
       },
       {
         "type": "text",
         "id": "stock_light_eta_unknown_text",
-        "label": "Liefertermin unbekannt",
-        "info": "Wenn die Frist abgelaufen ist oder ein Metafeld fehlt.",
+        "label": "t:settings_schema.stock_light.settings.stock_light_eta_unknown_text.label",
+        "info": "t:settings_schema.stock_light.settings.stock_light_eta_unknown_text.info",
         "default": "Liefertermin auf Anfrage"
       },
       {
