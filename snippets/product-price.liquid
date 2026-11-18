@@ -20,10 +20,17 @@
 {%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
 
 {%- if b2b_can_see_prices == 'true' -%}
+  {%- capture b2b_net_uvp_json -%}
+    {%- render 'b2b-price-display', part: 'data', product: product -%}
+  {%- endcapture -%}
+
+  {%- comment -%} Die Händler-App ersetzt nur den Inhalt, die Attribute für die Netto UVP bleiben stehen {%- endcomment -%}
   <product-price-element
     class="product-price--root"
     data-id="{{ id }}"
     data-money-format="{{ shop.money_format | escape }}"
+    data-b2b-net-uvp="{{ b2b_net_uvp_json | escape }}"
+    data-b2b-variant-id="{{ current_variant.id }}"
   >
     <div class="product-price--wrapper">
       <div
@@ -71,6 +78,8 @@
       </div>
     {%- endif -%}
   </product-price-element>
+
+  {%- render 'b2b-price-display', part: 'controller' -%}
 {%- else -%}
   {%- comment -%} Ohne Preis-Element bleibt auch das Preis-JS beim Variantenwechsel außen vor {%- endcomment -%}
   {%- render 'b2b-price-lock-box' -%}

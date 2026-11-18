@@ -40,6 +40,55 @@
         "b2b_price_lock_register_url": {
           "label": "Registration button link",
           "info": "If left empty, the button links to /pages/b2b-registration. Should differ from the login link."
+        },
+        "price_display_header": {
+          "content": "Dealer price display"
+        },
+        "b2b_price_label_hek": {
+          "label": "Dealer price label"
+        },
+        "b2b_price_label_uvp": {
+          "label": "Net RRP label"
+        },
+        "b2b_price_tax_note": {
+          "label": "Tax note next to the dealer price"
+        },
+        "b2b_net_uvp_tax_rate": {
+          "label": "Tax rate for the net RRP (%)",
+          "info": "Net RRP = compare-at price of the variant ÷ (1 + tax rate/100), rounded to the cent."
+        },
+        "b2b_net_uvp_hidden_countries": {
+          "label": "Countries without net RRP",
+          "info": "Comma-separated country codes, e.g. US,CH. No net RRP is shown there."
+        },
+        "registration_header": {
+          "content": "Dealer registration"
+        },
+        "b2b_header_register_label": {
+          "label": "Become a dealer button label",
+          "info": "Shown in the header and in the bar below the header for guests."
+        },
+        "b2b_pending_label": {
+          "label": "Approval pending notice",
+          "info": "Shown in the header and as the lock box heading while the application is being reviewed."
+        },
+        "b2b_bar_guest_text": {
+          "label": "Bar below header: text for guests"
+        },
+        "b2b_bar_pending_text": {
+          "label": "Bar below header: text while under review"
+        },
+        "b2b_bar_no_application_text": {
+          "label": "Bar below header: text without application"
+        },
+        "b2b_lock_pending_message": {
+          "label": "Lock box: message while under review"
+        },
+        "b2b_lock_no_application_heading": {
+          "label": "Lock box: heading without application"
+        },
+        "b2b_lock_no_application_message": {
+          "label": "Lock box: message without application"
         }
       }
     }

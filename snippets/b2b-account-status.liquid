@@ -1,0 +1,37 @@
+{%- doc -%}
+  Ermittelt den Händler-Zustand des Besuchers und gibt einen dieser Werte aus:
+  `guest` (nicht angemeldet), `pending` (Tag „needs approval“, noch nicht freigeschaltet),
+  `no_application` (angemeldet, ohne Antrag und nicht freigeschaltet) oder `approved` (`b2b-price-access` liefert `true`).
+
+  Freigeschaltet gewinnt, auch wenn „needs approval“ noch am Kunden steht. Der Tag-Vergleich ignoriert
+  Groß-/Kleinschreibung und Leerzeichen am Rand, wie in `b2b-price-access`. Bei ausgeschalteter Preissperre immer `approved`.
+
+  @example
+  {%- capture b2b_account_status -%}{%- render 'b2b-account-status' -%}{%- endcapture -%}
+  {%- if b2b_account_status == 'pending' -%} … {%- endif -%}
+{%- enddoc -%}
+
+{%- capture b2b_can_see_prices -%}{%- render 'b2b-price-access' -%}{%- endcapture -%}
+
+{%- liquid
+  # Diesen Tag setzt das Registrierungsformular beim Händlerantrag
+  assign pending_tag = 'needs approval'
+
+  if b2b_can_see_prices == 'true'
+    assign account_status = 'approved'
+  elsif customer
+    assign account_status = 'no_application'
+
+    for customer_tag in customer.tags
+      assign normalized_customer_tag = customer_tag | strip | downcase
+      if normalized_customer_tag == pending_tag
+        assign account_status = 'pending'
+        break
+      endif
+    endfor
+  else
+    assign account_status = 'guest'
+  endif
+
+  echo account_status
+-%}

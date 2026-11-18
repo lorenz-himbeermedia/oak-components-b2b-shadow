@@ -1,0 +1,285 @@
+{%- doc -%}
+  Händlerpreis-Darstellung zur App „BMT B2B Wholesale“: Zeile 1 HEK mit Bezeichnung und Steuerhinweis,
+  Zeile 2 die durchgestrichene Netto UVP. Die App ersetzt den Inhalt des Preis-Elements per JavaScript,
+  dieses Snippet baut ihr Markup danach in die Soll-Struktur um. Ohne App-Markup bleibt alles unverändert.
+
+  Zwei Teile, beide vom Preis-Snippet aufgerufen:
+  - `part: 'data'` gibt das JSON mit der Netto UVP je Variante aus (Varianten-ID → Betrag formatiert und in Cent),
+    für das Attribut `data-b2b-net-uvp` am Preis-Element. Im Land aus `settings.b2b_net_uvp_hidden_countries` bleibt es leer.
+  - `part: 'controller'` rendert das Custom Element mit der Vorlage. Es muss direkt hinter dem Preis-Element stehen.
+
+  @param {string} part - `data` oder `controller`.
+  @param {product} [product] - Produkt mit den Varianten. Pflicht bei `part: 'data'`.
+  @param {variant} [variant] - Nur diese Variante ausgeben, z. B. in Kacheln. Ohne Angabe alle Varianten.
+
+  @example
+  {%- capture b2b_net_uvp_json -%}{%- render 'b2b-price-display', part: 'data', product: product -%}{%- endcapture -%}
+  <div class="product-price--root" data-b2b-net-uvp="{{ b2b_net_uvp_json | escape }}" data-b2b-variant-id="{{ current_variant.id }}">…</div>
+  {%- render 'b2b-price-display', part: 'controller' -%}
+{%- enddoc -%}
+
+{%- if part == 'data' -%}
+  {%- liquid
+    assign tax_rate = settings.b2b_net_uvp_tax_rate | default: 19
+    assign tax_divisor = tax_rate | plus: 100.0
+    assign country_code = localization.country.iso_code | upcase
+
+    assign net_uvp_hidden = false
+    assign hidden_countries = settings.b2b_net_uvp_hidden_countries | upcase | split: ','
+    for hidden_country in hidden_countries
+      assign normalized_country = hidden_country | strip
+      if normalized_country == country_code
+        assign net_uvp_hidden = true
+        break
+      endif
+    endfor
+
+    assign net_uvp_variants = product.variants
+    if variant != blank
+      assign net_uvp_variants = product.variants | where: 'id', variant.id
+    endif
+
+    assign separator = ''
+
+    echo '{'
+    unless net_uvp_hidden
+      for net_uvp_variant in net_uvp_variants
+        if net_uvp_variant.compare_at_price > 0
+          # Der Vergleichspreis ist brutto, die Netto UVP wird auf ganze Cent gerundet: 14900 × 100 ÷ 119 = 12521
+          assign net_uvp_cents = net_uvp_variant.compare_at_price | times: 100 | divided_by: tax_divisor | round
+          assign net_uvp_formatted_json = net_uvp_cents | money | json
+
+          echo separator
+          echo '"' | append: net_uvp_variant.id | append: '":'
+          echo '{"formatted":' | append: net_uvp_formatted_json
+          echo ',"cents":' | append: net_uvp_cents | append: '}'
+          assign separator = ','
+        endif
+      endfor
+    endunless
+    echo '}'
+  -%}
+{%- elsif part == 'controller' -%}
+  <b2b-price-display-element hidden>
+    <template>
+      <div class="b2b-price-display--root">
+        <span class="b2b-price-display--hek" data-hek></span>
+        <span class="b2b-price-display--hek-labels">
+          <span class="b2b-price-display--label">
+            {{- settings.b2b_price_label_hek | escape -}}
+          </span>
+          {%- unless settings.b2b_price_tax_note == blank -%}
+            <span class="b2b-price-display--tax-note">
+              {{- settings.b2b_price_tax_note | escape -}}
+            </span>
+          {%- endunless -%}
+        </span>
+
+        <s class="b2b-price-display--uvp" data-uvp hidden></s>
+        <span class="b2b-price-display--label b2b-price-display--uvp-label" data-uvp hidden>
+          {{- settings.b2b_price_label_uvp | escape -}}
+        </span>
+      </div>
+    </template>
+  </b2b-price-display-element>
+{%- endif -%}
+
+{% stylesheet %}
+  /* Maße aus dem freigegebenen Entwurf V6 (Variante A, Produktseite) */
+  .b2b-price-display--root {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 10px;
+    row-gap: 2px;
+    align-items: baseline;
+    color: var(--color--body);
+    font-variant-numeric: tabular-nums;
+    text-align: left;
+  }
+
+  .b2b-price-display--hek {
+    font-family: var(--font--nav--family);
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+
+  .b2b-price-display--hek-labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--spacing--1);
+  }
+
+  .b2b-price-display--label {
+    font-family: var(--font--nav--family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .b2b-price-display--tax-note {
+    font-family: var(--font--paragraph--family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    text-transform: none;
+    color: var(--color--body--light);
+  }
+
+  .b2b-price-display--uvp {
+    font-family: var(--font--nav--family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color--body--light);
+    white-space: nowrap;
+  }
+
+  .b2b-price-display--uvp-label {
+    color: var(--color--body--light);
+  }
+
+  /* Kacheln: gleiche Struktur, kleinere Maße aus dem Entwurf V6 */
+  .product--price-container .b2b-price-display--root {
+    column-gap: 6px;
+    row-gap: 0;
+    padding: 0;
+
+    .b2b-price-display--hek {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .b2b-price-display--uvp {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .b2b-price-display--label {
+      font-size: 11px;
+      line-height: 18px;
+    }
+
+    .b2b-price-display--tax-note {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
+  /* Die App setzt display:flex inline, deshalb reicht das hidden-Attribut zum Ausblenden nicht */
+  .price-container[data-b2b-price-display='applied'] {
+    display: none !important;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class B2bPriceDisplay extends HTMLElement {
+    connectedCallback() {
+      this.price_root = this.previousElementSibling;
+      if (!this.price_root || !this.price_root.hasAttribute('data-b2b-net-uvp')) return;
+
+      this.template = this.querySelector('template');
+      this.net_uvp_by_variant = this.parseNetUvp();
+      this.variant_id = this.price_root.dataset.b2bVariantId;
+
+      // Die App rendert beim Variantenwechsel neu – jede Änderung im Preis-Element prüft die Struktur erneut
+      this.observer = new MutationObserver(() => this.render());
+      this.observer.observe(this.price_root, { childList: true, subtree: true, characterData: true });
+
+      if (this.price_root.dataset.id) {
+        this.event_name = `theme:product:${this.price_root.dataset.id}:variantChanged`;
+        this.variantListener = ({ detail: { variant } }) => {
+          if (!variant || !variant.id) return;
+
+          this.variant_id = String(variant.id);
+          this.render();
+        };
+        window.addEventListener(this.event_name, this.variantListener);
+      }
+
+      this.render();
+    }
+
+    disconnectedCallback() {
+      if (this.observer) this.observer.disconnect();
+      if (this.event_name) window.removeEventListener(this.event_name, this.variantListener);
+    }
+
+    parseNetUvp() {
+      try {
+        return JSON.parse(this.price_root.dataset.b2bNetUvp || '{}');
+      } catch (error) {
+        return {};
+      }
+    }
+
+    render() {
+      const app_container = this.price_root.querySelector('.price-container');
+      const sale_price = app_container ? app_container.querySelector('.sale-price') : null;
+
+      // Ohne App-Markup (Gäste, Kunden ohne Preisregel) bleibt der Theme-Preis unangetastet
+      if (!sale_price) return;
+
+      let display = this.price_root.querySelector('.b2b-price-display--root');
+      if (!display) {
+        display = this.template.content.firstElementChild.cloneNode(true);
+        app_container.after(display);
+      }
+
+      if (app_container.dataset.b2bPriceDisplay !== 'applied') {
+        app_container.dataset.b2bPriceDisplay = 'applied';
+      }
+
+      const hek_text = sale_price.textContent.trim();
+      this.setText(display.querySelector('[data-hek]'), hek_text);
+
+      const net_uvp = this.net_uvp_by_variant[this.variant_id];
+      const hek_cents = this.getHekCents(sale_price, app_container, hek_text);
+      const show_net_uvp = Boolean(net_uvp) && Number.isFinite(hek_cents) && net_uvp.cents > hek_cents;
+
+      display.querySelectorAll('[data-uvp]').forEach((element) => {
+        if (element.hidden === show_net_uvp) element.hidden = !show_net_uvp;
+      });
+
+      if (show_net_uvp) this.setText(display.querySelector('s[data-uvp]'), net_uvp.formatted);
+    }
+
+    // Nur bei echter Änderung schreiben, sonst löst die eigene Mutation den Observer endlos aus
+    setText(element, text) {
+      if (element.textContent !== text) element.textContent = text;
+    }
+
+    getHekCents(sale_price, app_container, hek_text) {
+      const amount_source = [sale_price, app_container, this.price_root].find((element) =>
+        element.hasAttribute('data-bmt-price-amount')
+      );
+
+      if (amount_source) {
+        const amount = amount_source.getAttribute('data-bmt-price-amount').trim();
+
+        // Ganzzahl gilt als Cent-Betrag wie bei Shopify, mit Dezimaltrenner als Euro-Betrag
+        if (/^\d+$/.test(amount)) return parseInt(amount, 10);
+        return this.parseMoney(amount);
+      }
+
+      return this.parseMoney(hek_text);
+    }
+
+    // Format €{{amount_with_comma_separator}}: Punkt trennt Tausender, Komma die Cent
+    parseMoney(text) {
+      let number = text.replace(/[^\d.,]/g, '');
+      if (number.includes(',')) number = number.replaceAll('.', '').replace(',', '.');
+
+      const amount = parseFloat(number);
+      return Number.isFinite(amount) ? Math.round(amount * 100) : NaN;
+    }
+  }
+
+  if (!customElements.get('b2b-price-display-element')) {
+    customElements.define('b2b-price-display-element', B2bPriceDisplay);
+  }
+{% endjavascript %}

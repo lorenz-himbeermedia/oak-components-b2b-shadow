@@ -3,8 +3,11 @@
 {%- doc -%}
   Renders the stock light (status dot and text) for the current variant.
   Threshold, texts and colors come from the theme settings, the placeholder [count] is replaced by the inventory quantity.
+  Bei Nachbestellung folgt eine zweite Zeile mit dem Liefertermin aus den Variantenmetafeldern
+  `custom.wiederbeschaffungstage` und `custom.bestand_null_seit`. Die Wochen rechnet der Browser, damit gecachte Seiten stimmen.
   @param {variant} current_variant - Variant providing inventory data.
   @param {string} id - Unique product id, used to listen for variant changes.
+  @param {product} [product] - Produkt der Variante, liefert die Liefertermin-Daten aller Varianten für den Variantenwechsel.
 {%- enddoc -%}
 
 {%- liquid
@@ -28,20 +31,55 @@
 
   assign status_color_setting = 'stock_light_' | append: status | append: '_color'
   assign status_color = settings[status_color_setting]
+
+  # Startwert für Besucher ohne JavaScript, der Browser rechnet beim Laden mit dem heutigen Datum nach
+  assign eta_text = settings.stock_light_eta_unknown_text
+  assign restock_days = current_variant.metafields.custom.wiederbeschaffungstage.value
+  assign out_of_stock_since = current_variant.metafields.custom.bestand_null_seit.value
+
+  if restock_days != blank and out_of_stock_since != blank
+    assign today_seconds = 'now' | date: '%Y-%m-%d' | date: '%s'
+    assign since_seconds = out_of_stock_since | date: '%Y-%m-%d' | date: '%s'
+    assign days_passed = today_seconds | minus: since_seconds | divided_by: 86400.0 | round
+    assign days_left = restock_days | minus: days_passed
+
+    if days_left > 0
+      assign weeks_left = days_left | divided_by: 7.0 | ceil
+
+      if weeks_left == 1
+        assign eta_text = settings.stock_light_eta_text_one
+      else
+        assign eta_text = settings.stock_light_eta_text | replace: '[weeks]', weeks_left
+      endif
+    endif
+  endif
+
+  assign eta_product = product | default: current_variant.product
 -%}
 
 <product-stock-light-element
   class="product-stock-light--root"
   data-id="{{ id }}"
   data-status="{{ status }}"
+  data-variant-id="{{ current_variant.id }}"
   style="--product-stock-light--color:{{ status_color }};"
   role="status"
   aria-live="polite"
 >
   <span class="product-stock-light--dot" aria-hidden="true"></span>
-  <p class="product-stock-light--text" data-item="paragraph">
-    {{- status_text | escape -}}
-  </p>
+  <div class="product-stock-light--texts">
+    <p class="product-stock-light--text" data-item="paragraph">
+      {{- status_text | escape -}}
+    </p>
+    <p
+      class="product-stock-light--eta"
+      {% unless status == 'backorder' %}
+        hidden
+      {% endunless %}
+    >
+      {{- eta_text | escape -}}
+    </p>
+  </div>
 
   <script type="application/json" data-stock-light-config>
     {
@@ -50,13 +88,28 @@
         "in_stock": {{ settings.stock_light_in_stock_text | json }},
         "low_stock": {{ settings.stock_light_low_stock_text | json }},
         "backorder": {{ settings.stock_light_backorder_text | json }},
-        "sold_out": {{ settings.stock_light_sold_out_text | json }}
+        "sold_out": {{ settings.stock_light_sold_out_text | json }},
+        "eta": {{ settings.stock_light_eta_text | json }},
+        "eta_one": {{ settings.stock_light_eta_text_one | json }},
+        "eta_unknown": {{ settings.stock_light_eta_unknown_text | json }}
       },
       "colors": {
         "in_stock": "{{ settings.stock_light_in_stock_color }}",
         "low_stock": "{{ settings.stock_light_low_stock_color }}",
         "backorder": "{{ settings.stock_light_backorder_color }}",
         "sold_out": "{{ settings.stock_light_sold_out_color }}"
+      },
+      "restock": {
+        {%- for eta_variant in eta_product.variants -%}
+          {%- liquid
+            assign variant_restock_days = eta_variant.metafields.custom.wiederbeschaffungstage.value
+            assign variant_since = eta_variant.metafields.custom.bestand_null_seit.value
+          -%}
+          "{{ eta_variant.id }}": {
+            "days": {% if variant_restock_days != blank %}{{ variant_restock_days | json }}{% else %}null{% endif %},
+            "since": {% if variant_since != blank %}{{ variant_since | date: '%Y-%m-%d' | json }}{% else %}null{% endif %}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
       }
     }
   </script>
@@ -65,7 +118,8 @@
 {% stylesheet %}
   .product-stock-light--root {
     display: flex;
-    align-items: center;
+    /* Oben bündig, damit der Punkt bei zwei Zeilen an der ersten steht und nicht mittig über beiden */
+    align-items: flex-start;
     justify-content: var(--x-alignment, flex-start);
     /* 16px, damit nach dem 4px-Ring sichtbar 12px bis zum Text bleiben – wie bei den Icon-Zeilen */
     gap: var(--spacing--3);
@@ -77,11 +131,31 @@
     flex-shrink: 0;
     width: 10px;
     height: 10px;
-    /* Einzug in Ringbreite, damit der Ring bündig mit der Spaltenkante abschließt */
+    /* 5,5px Versatz mittig zur ersten Zeile (21px Zeilenhöhe), Einzug in Ringbreite für die bündige Spaltenkante */
+    margin-top: 5.5px;
     margin-left: var(--spacing--0);
     border-radius: 50%;
     background-color: var(--product-stock-light--color);
     box-shadow: 0 0 0 var(--spacing--0) color-mix(in srgb, var(--product-stock-light--color) 22%, transparent);
+  }
+
+  .product-stock-light--texts {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  /* Zweite Zeile laut Entwurf V6: Inconsolata 13/19 */
+  .product-stock-light--eta {
+    margin: 0;
+    font-family: var(--font--paragraph--family);
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--color--body--light);
+
+    &[hidden] {
+      display: none;
+    }
   }
 {% endstylesheet %}
 
@@ -89,11 +163,17 @@
   class ProductStockLight extends HTMLElement {
     connectedCallback() {
       this.text = this.querySelector('.product-stock-light--text');
+      this.eta = this.querySelector('.product-stock-light--eta');
       this.config = JSON.parse(this.querySelector('script[data-stock-light-config]').textContent);
       this.event_name = `theme:product:${this.dataset.id}:variantChanged`;
       this.variantListener = ({ detail: { variant } }) => this.update(variant);
 
       window.addEventListener(this.event_name, this.variantListener);
+
+      // Liquid kennt nur das Datum beim Rendern, bei gecachten Seiten stimmen die Wochen erst nach dem Nachrechnen
+      if (this.dataset.status === 'backorder') {
+        this.eta.textContent = this.getEtaText(this.dataset.variantId);
+      }
     }
 
     disconnectedCallback() {
@@ -113,6 +193,8 @@
       this.dataset.status = status;
       this.style.setProperty('--product-stock-light--color', this.config.colors[status]);
       this.text.textContent = this.config.texts[status].replaceAll('[count]', quantity);
+      this.eta.hidden = status !== 'backorder';
+      if (status === 'backorder') this.eta.textContent = this.getEtaText(variant.id);
       this.parentNode.hidden = false;
     }
 
@@ -123,6 +205,26 @@
       if (variant.inventory_policy === 'continue') return 'backorder';
 
       return 'sold_out';
+    }
+
+    getEtaText(variant_id) {
+      const restock = (this.config.restock || {})[variant_id];
+      if (!restock || restock.days === null || !restock.since) return this.config.texts.eta_unknown;
+
+      // Volle Kalendertage in Ortszeit, gerundet wegen der Zeitumstellung
+      const [year, month, day] = restock.since.split('-').map(Number);
+      const since = new Date(year, month - 1, day);
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const days_passed = Math.round((today - since) / 86400000);
+      const days_left = restock.days - days_passed;
+
+      if (days_left <= 0) return this.config.texts.eta_unknown;
+
+      const weeks_left = Math.ceil(days_left / 7);
+      if (weeks_left === 1) return this.config.texts.eta_one;
+
+      return this.config.texts.eta.replaceAll('[weeks]', weeks_left);
     }
   }
 

@@ -1,0 +1,253 @@
+<!-- snippets/b2b-header-actions.liquid -->
+
+{%- doc -%}
+  Händler-Hinweise im Header je Zustand aus `b2b-account-status`: Gast (Anmelden und Händler werden),
+  Antrag in Prüfung (Hinweis ohne Link), kein Antrag (Händler werden). Freigeschaltete Kunden sehen nichts,
+  bei ausgeschalteter Preissperre erscheint ebenfalls nichts.
+
+  - `part: 'buttons'` steht in `.header--secondary-nav` vor den Icons und fließt so in die Überlappungsmessung
+    des Headers ein. Liegt das Menü im Drawer oder ist der Bildschirm schmaler als 768px, ist es ausgeblendet.
+  - `part: 'bar'` ist die Leiste direkt unter dem Header für genau diese Fälle. Sie klebt nicht mit dem Header mit.
+
+  @param {string} part - `buttons` oder `bar`.
+
+  @example
+  {%- render 'b2b-header-actions', part: 'buttons' -%}
+{%- enddoc -%}
+
+{%- liquid
+  assign account_status = 'approved'
+  if settings.b2b_price_lock_enabled
+    capture account_status
+      render 'b2b-account-status'
+    endcapture
+  endif
+
+  assign login_url = settings.b2b_price_lock_login_url | default: routes.account_login_url
+  assign register_url = settings.b2b_price_lock_register_url | default: '/pages/b2b-registration'
+-%}
+
+{%- unless account_status == 'approved' -%}
+  {%- if part == 'buttons' -%}
+    <div class="b2b-header-actions--buttons">
+      {%- if account_status == 'pending' -%}
+        <span class="b2b-header-actions--notice">
+          <span class="b2b-header-actions--icon" aria-hidden="true">
+            {%- render 'icons', icon: 'clock' -%}
+          </span>
+          {{- settings.b2b_pending_label | escape -}}
+        </span>
+      {%- else -%}
+        {%- if account_status == 'guest' -%}
+          <a class="b2b-header-actions--button" href="{{ login_url }}" data-type="outline">
+            {{- settings.b2b_price_lock_login_label | escape -}}
+          </a>
+        {%- endif -%}
+
+        <a class="b2b-header-actions--button" href="{{ register_url }}" data-type="filled">
+          {{- settings.b2b_header_register_label | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+  {%- elsif part == 'bar' -%}
+    {%- liquid
+      case account_status
+        when 'pending'
+          assign bar_text = settings.b2b_bar_pending_text
+          assign bar_icon = 'clock'
+        when 'no_application'
+          assign bar_text = settings.b2b_bar_no_application_text
+          assign bar_icon = 'lock'
+        else
+          assign bar_text = settings.b2b_bar_guest_text
+          assign bar_icon = 'lock'
+      endcase
+    -%}
+
+    <b2b-header-bar-element class="b2b-header-actions--bar" data-status="{{ account_status }}" role="note">
+      <p class="b2b-header-actions--bar-text">
+        <span class="b2b-header-actions--icon" aria-hidden="true">
+          {%- render 'icons', icon: bar_icon -%}
+        </span>
+        <span>{{- bar_text | escape -}}</span>
+      </p>
+
+      {%- unless account_status == 'pending' -%}
+        <div class="b2b-header-actions--bar-buttons">
+          {%- if account_status == 'guest' -%}
+            <a class="b2b-header-actions--button" href="{{ login_url }}" data-type="outline">
+              {{- settings.b2b_price_lock_login_label | escape -}}
+            </a>
+
+            <a class="b2b-header-actions--button" href="{{ register_url }}" data-type="filled">
+              {{- settings.b2b_header_register_label | escape -}}
+            </a>
+          {%- else -%}
+            <a class="b2b-header-actions--button" href="{{ register_url }}" data-type="filled">
+              {{- settings.b2b_price_lock_register_label | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+    </b2b-header-bar-element>
+  {%- endif -%}
+{%- endunless -%}
+
+{% stylesheet %}
+  /* Maße und Farben aus dem freigegebenen Entwurf V6 (Händlerregistrierung) */
+  .b2b-header-actions--buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing--1);
+    /* Mit dem 16px-Abstand der Navigation ergeben sich 20px bis zu den Icons */
+    margin-right: var(--spacing--0);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    .header--root:is([data-layout='drawer'], [aria-expanded='true'][data-overlap-behavior='drawer']) & {
+      display: none;
+    }
+  }
+
+  .b2b-header-actions--button,
+  .b2b-header-actions--notice {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid #f7af36;
+    border-radius: 2px;
+    font-family: var(--font--nav--family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .b2b-header-actions--button {
+    &[data-type='filled'] {
+      /* Gleiche Farben wie der gelbe Warenkorb-Button aus laura.css */
+      background-color: #f7af36;
+      color: #000000;
+
+      &:hover {
+        background-color: #f9c772;
+        border-color: #f9c772;
+      }
+    }
+
+    &[data-type='outline'] {
+      border-color: var(--color--body);
+      background-color: #ffffff;
+      color: var(--color--body);
+
+      &:hover {
+        background-color: var(--bg-color--light);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color--body);
+      outline-offset: 2px;
+    }
+  }
+
+  .b2b-header-actions--notice {
+    gap: var(--spacing--1);
+    background-color: #fef3e0;
+    color: var(--color--body);
+  }
+
+  .b2b-header-actions--icon {
+    display: flex;
+    flex-shrink: 0;
+
+    .icon--clock {
+      width: 16px;
+      height: 16px;
+    }
+
+    .icon--lock {
+      width: 14px;
+      height: 18px;
+    }
+  }
+
+  /* Die Leiste erscheint nur, wenn die Header-Buttons ausgeblendet sind */
+  .b2b-header-actions--bar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px 14px;
+    border-bottom: 1px solid #f7af36;
+    background-color: #fef3e0;
+    color: var(--color--body);
+
+    @media (max-width: 767px) {
+      display: flex;
+    }
+
+    body:has(.header--root:is([data-layout='drawer'], [aria-expanded='true'][data-overlap-behavior='drawer'])) & {
+      display: flex;
+    }
+
+    &[data-status='pending'] {
+      border-bottom-color: rgba(33, 33, 33, 0.1);
+      background-color: #f1f1f1;
+    }
+
+    .b2b-header-actions--button {
+      flex: 1 1 0;
+      min-width: 0;
+      /* 44px als Mindestgröße für Tap-Ziele */
+      height: 44px;
+      font-size: 14px;
+    }
+  }
+
+  .b2b-header-actions--bar-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+    font-family: var(--font--paragraph--family);
+    font-size: 14px;
+    line-height: 21px;
+
+    .b2b-header-actions--icon {
+      align-items: center;
+      height: 21px;
+    }
+  }
+
+  .b2b-header-actions--bar-buttons {
+    display: flex;
+    gap: var(--spacing--1);
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class B2bHeaderBar extends HTMLElement {
+    connectedCallback() {
+      const header_section = this.closest('.shopify-section');
+      if (!header_section) return;
+
+      // Der Header klebt beim Scrollen als ganze Section, die Leiste soll mitscrollen und rückt deshalb dahinter
+      document.querySelectorAll('b2b-header-bar-element').forEach((other_bar) => {
+        if (other_bar !== this && !other_bar.closest('.shopify-section')) other_bar.remove();
+      });
+
+      header_section.after(this);
+    }
+  }
+
+  if (!customElements.get('b2b-header-bar-element')) {
+    customElements.define('b2b-header-bar-element', B2bHeaderBar);
+  }
+{% endjavascript %}

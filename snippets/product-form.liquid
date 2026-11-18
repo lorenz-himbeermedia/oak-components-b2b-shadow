@@ -273,7 +273,7 @@
             -%}
 
           {%- when 'stock-light' -%}
-            {%- render 'product-stock-light', current_variant: current_variant, id: product_id -%}
+            {%- render 'product-stock-light', current_variant: current_variant, id: product_id, product: product -%}
 
           {%- when 'options' -%}
             {%-

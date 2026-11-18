@@ -237,6 +237,8 @@
     </nav>
 
     <nav class="header--secondary-nav" data-item="nav-text">
+      {%- render 'b2b-header-actions', part: 'buttons' -%}
+
       {%- if locale_enabled or region_enabled -%}
         <div class="header--localization" data-mq="large">
           {%-
@@ -295,6 +297,8 @@
     </nav>
   </div>
 </header-element>
+
+{%- render 'b2b-header-actions', part: 'bar' -%}
 
 <style>
   :root {
