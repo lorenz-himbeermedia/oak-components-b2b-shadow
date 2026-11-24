@@ -15,33 +15,39 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading-type": "block-heading"
+            "heading-type": "block-heading",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "icon_fxhWUf": {
           "type": "icon",
           "settings": {
-            "icon": "leaf",
+            "icon": "check-fat",
             "icon-width": 20,
-            "text": ""
+            "text": "",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "icon_98GHzK": {
           "type": "icon",
           "settings": {
             "icon": "check-fat",
-            "icon-image": "",
             "icon-width": 20,
-            "text": ""
+            "text": "",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "icon_yQUrFV": {
           "type": "icon",
           "settings": {
             "icon": "check-fat",
-            "icon-image": "",
             "icon-width": 20,
-            "text": ""
+            "text": "",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "options": {
@@ -51,17 +57,23 @@
             "swatches": "circle",
             "size-chart-enabled": false,
             "size-chart-option": "Größe",
-            "size-chart-content": ""
+            "size-chart-content": "",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "space_before": "auto"
+          }
         },
         "liquid_CEMafA": {
           "type": "liquid",
           "settings": {
-            "custom-liquid": "{%- assign versand_seite = pages['versandkosten'] -%}\n{%- if request.locale.iso_code == 'de' -%}\n  {%- assign versand_label = 'zzgl. Versandkosten' -%}\n  {%- assign versand_close = 'Schließen' -%}\n{%- else -%}\n  {%- assign versand_label = 'plus shipping' -%}\n  {%- assign versand_close = 'Close' -%}\n{%- endif -%}\n\n<button type=\"button\" class=\"oak-versand-link\" id=\"oak-versand-link\">{{ versand_label }}</button>\n\n<dialog id=\"oak-versand-dialog\" class=\"oak-versand-dialog\">\n  <div class=\"oak-versand-inner\">\n    <button type=\"button\" class=\"oak-versand-close\" aria-label=\"{{ versand_close }}\"\n      onclick=\"this.closest('dialog').close()\">&times;</button>\n    <h2 class=\"oak-versand-title\">{{ versand_seite.title }}</h2>\n    <div class=\"rte\">{{ versand_seite.content }}</div>\n  </div>\n</dialog>\n\n<style>\n  .oak-versand-link {\n    background: none; border: 0; padding: 0; margin: 0;\n    font: inherit; color: inherit;\n    text-decoration: underline; cursor: pointer;\n  }\n  .oak-versand-dialog {\n    border: 0; padding: 0; width: 90vw; max-width: 640px;\n    max-height: 80vh; overflow: auto;\n  }\n  .oak-versand-dialog::backdrop { background: rgba(0, 0, 0, 0.5); }\n  .oak-versand-inner { position: relative; padding: 32px 24px 24px; }\n  .oak-versand-close {\n    position: absolute; top: 8px; right: 12px;\n    background: none; border: 0; font-size: 28px;\n    line-height: 1; cursor: pointer; color: inherit;\n  }\n  .oak-versand-title { margin-top: 0; }\n  .oak-versand-dialog table { width: 100%; border-collapse: collapse; }\n\n  /* Linien */\n  .oak-versand-dialog th,\n  .oak-versand-dialog td {\n    border: 0 !important;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;\n  }\n  .oak-versand-dialog tr.oak-kopf > * {\n    border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;\n  }\n  .oak-versand-dialog tr.oak-land-zeile > * {\n    border-top: 1px solid rgba(0, 0, 0, 0.3) !important;\n  }\n\n  /* Flaggen */\n  .oak-flagge {\n    display: inline-block; width: 20px; height: 15px;\n    margin-right: 8px; vertical-align: -2px;\n    border-radius: 2px; object-fit: cover;\n    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);\n  }\n</style>\n\n<script>\n  (function () {\n    var dialog = document.getElementById('oak-versand-dialog');\n    var link = document.getElementById('oak-versand-link');\n    if (!dialog || !link) return;\n\n    link.addEventListener('click', function () { dialog.showModal(); });\n    dialog.addEventListener('click', function (e) {\n      if (e.target === dialog) dialog.close();\n    });\n\n    /* --- Flaggen und Linien in der Tabelle --- */\n    var laender = {\n      'deutschland': 'de', 'germany': 'de',\n      'schweiz': 'ch', 'switzerland': 'ch',\n      'vereinigtes königreich': 'gb', 'united kingdom': 'gb',\n      'vereinigte staaten': 'us', 'united states': 'us',\n      'kanada': 'ca', 'canada': 'ca',\n      'europäische union': 'eu', 'european union': 'eu',\n      'australien': 'au', 'australia': 'au',\n      'neuseeland': 'nz', 'new zealand': 'nz'\n    };\n\n    function euFlagge() {\n      var sterne = '';\n      for (var i = 0; i < 12; i++) {\n        var w = i * Math.PI / 6;\n        sterne += '<circle cx=\"' + (20 + 9 * Math.cos(w)).toFixed(2) +\n                  '\" cy=\"' + (15 + 9 * Math.sin(w)).toFixed(2) +\n                  '\" r=\"1.4\" fill=\"#ffcc00\"/>';\n      }\n      return 'data:image/svg+xml,' + encodeURIComponent(\n        '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 40 30\">' +\n        '<rect width=\"40\" height=\"30\" fill=\"#003399\"/>' + sterne + '</svg>'\n      );\n    }\n\n    dialog.querySelectorAll('table').forEach(function (tabelle) {\n      if (tabelle.rows.length) tabelle.rows[0].classList.add('oak-kopf');\n\n      Array.prototype.forEach.call(tabelle.rows, function (zeile, index) {\n        if (index === 0 || !zeile.cells.length) return;\n        var zelle = zeile.cells[0];\n        var name = zelle.textContent.replace(/\\*/g, '').trim().toLowerCase();\n        var code = laender[name];\n        if (!code) return;\n\n        var img = document.createElement('img');\n        img.className = 'oak-flagge';\n        img.alt = '';\n        img.width = 20;\n        img.height = 15;\n        img.src = code === 'eu'\n          ? euFlagge()\n          : 'https://cdn.shopify.com/static/images/flags/' + code + '.svg?width=40';\n\n        var walker = document.createTreeWalker(zelle, NodeFilter.SHOW_TEXT);\n        var text = walker.nextNode();\n        while (text && !text.nodeValue.trim()) text = walker.nextNode();\n        if (text) text.parentNode.insertBefore(img, text);\n\n        if (index > 1) zeile.classList.add('oak-land-zeile');\n      });\n    });\n\n    /* --- Link neben dem Steuerhinweis --- */\n    // art 'komma': \"Inklusive Steuern, zzgl. Versandkosten\"\n    // art 'zeile': Link in einer neuen Zeile direkt unter dem Text\n    var regeln = [\n      { muster: /^(Inklusive Steuern|Taxes included|Tax included)\\.?$/i, art: 'komma' },\n      { muster: /Taxes are charged by local authorities/i, art: 'zeile' }\n    ];\n    var bereich = document.querySelector('main') || document.body;\n\n    function sichtbar(el) {\n      return !!(el && el.getClientRects().length);\n    }\n\n    function einsetzen() {\n      if (link.isConnected && link.parentNode.dataset.oakTax) return;\n      var walker = document.createTreeWalker(bereich, NodeFilter.SHOW_TEXT);\n      var node;\n      while ((node = walker.nextNode())) {\n        var text = node.nodeValue.trim();\n        if (!text || !sichtbar(node.parentElement)) continue;\n\n        for (var i = 0; i < regeln.length; i++) {\n          if (!regeln[i].muster.test(text)) continue;\n\n          if (regeln[i].art === 'komma') {\n            node.nodeValue = text.replace(/\\.$/, '') + ', ';\n            node.parentNode.insertBefore(link, node.nextSibling);\n          } else {\n            var br = document.createElement('br');\n            node.parentNode.insertBefore(br, node.nextSibling);\n            node.parentNode.insertBefore(link, br.nextSibling);\n          }\n          node.parentNode.dataset.oakTax = '1';\n          return;\n        }\n      }\n    }\n\n    function start() {\n      einsetzen();\n      new MutationObserver(einsetzen).observe(bereich, { childList: true, subtree: true });\n    }\n\n    if (document.readyState === 'loading') {\n      document.addEventListener('DOMContentLoaded', start);\n    } else {\n      start();\n    }\n  })();\n</script>"
+            "custom-liquid": "{%- assign versand_seite = pages['versandkosten'] -%}\n{%- if request.locale.iso_code == 'de' -%}\n  {%- assign versand_label = 'zzgl. Versandkosten' -%}\n  {%- assign versand_close = 'Schließen' -%}\n{%- else -%}\n  {%- assign versand_label = 'plus shipping' -%}\n  {%- assign versand_close = 'Close' -%}\n{%- endif -%}\n\n<button type=\"button\" class=\"oak-versand-link\" id=\"oak-versand-link\">{{ versand_label }}</button>\n\n<dialog id=\"oak-versand-dialog\" class=\"oak-versand-dialog\">\n  <div class=\"oak-versand-inner\">\n    <button type=\"button\" class=\"oak-versand-close\" aria-label=\"{{ versand_close }}\"\n      onclick=\"this.closest('dialog').close()\">&times;</button>\n    <h2 class=\"oak-versand-title\">{{ versand_seite.title }}</h2>\n    <div class=\"rte\">{{ versand_seite.content }}</div>\n  </div>\n</dialog>\n\n<style>\n  .oak-versand-link {\n    background: none; border: 0; padding: 0; margin: 0;\n    font: inherit; color: inherit;\n    text-decoration: underline; cursor: pointer;\n  }\n  .oak-versand-dialog {\n    border: 0; padding: 0; width: 90vw; max-width: 640px;\n    max-height: 80vh; overflow: auto;\n  }\n  .oak-versand-dialog::backdrop { background: rgba(0, 0, 0, 0.5); }\n  .oak-versand-inner { position: relative; padding: 32px 24px 24px; }\n  .oak-versand-close {\n    position: absolute; top: 8px; right: 12px;\n    background: none; border: 0; font-size: 28px;\n    line-height: 1; cursor: pointer; color: inherit;\n  }\n  .oak-versand-title { margin-top: 0; }\n  .oak-versand-dialog table { width: 100%; border-collapse: collapse; }\n\n  /* Linien */\n  .oak-versand-dialog th,\n  .oak-versand-dialog td {\n    border: 0 !important;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;\n  }\n  .oak-versand-dialog tr.oak-kopf > * {\n    border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;\n  }\n  .oak-versand-dialog tr.oak-land-zeile > * {\n    border-top: 1px solid rgba(0, 0, 0, 0.3) !important;\n  }\n\n  /* Flaggen */\n  .oak-flagge {\n    display: inline-block; width: 20px; height: 15px;\n    margin-right: 8px; vertical-align: -2px;\n    border-radius: 2px; object-fit: cover;\n    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);\n  }\n</style>\n\n<script>\n  (function () {\n    var dialog = document.getElementById('oak-versand-dialog');\n    var link = document.getElementById('oak-versand-link');\n    if (!dialog || !link) return;\n\n    link.addEventListener('click', function () { dialog.showModal(); });\n    dialog.addEventListener('click', function (e) {\n      if (e.target === dialog) dialog.close();\n    });\n\n    /* --- Flaggen und Linien in der Tabelle --- */\n    var laender = {\n      'deutschland': 'de', 'germany': 'de',\n      'schweiz': 'ch', 'switzerland': 'ch',\n      'vereinigtes königreich': 'gb', 'united kingdom': 'gb',\n      'vereinigte staaten': 'us', 'united states': 'us',\n      'kanada': 'ca', 'canada': 'ca',\n      'europäische union': 'eu', 'european union': 'eu',\n      'australien': 'au', 'australia': 'au',\n      'neuseeland': 'nz', 'new zealand': 'nz'\n    };\n\n    function euFlagge() {\n      var sterne = '';\n      for (var i = 0; i < 12; i++) {\n        var w = i * Math.PI / 6;\n        sterne += '<circle cx=\"' + (20 + 9 * Math.cos(w)).toFixed(2) +\n                  '\" cy=\"' + (15 + 9 * Math.sin(w)).toFixed(2) +\n                  '\" r=\"1.4\" fill=\"#ffcc00\"/>';\n      }\n      return 'data:image/svg+xml,' + encodeURIComponent(\n        '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 40 30\">' +\n        '<rect width=\"40\" height=\"30\" fill=\"#003399\"/>' + sterne + '</svg>'\n      );\n    }\n\n    dialog.querySelectorAll('table').forEach(function (tabelle) {\n      if (tabelle.rows.length) tabelle.rows[0].classList.add('oak-kopf');\n\n      Array.prototype.forEach.call(tabelle.rows, function (zeile, index) {\n        if (index === 0 || !zeile.cells.length) return;\n        var zelle = zeile.cells[0];\n        var name = zelle.textContent.replace(/\\*/g, '').trim().toLowerCase();\n        var code = laender[name];\n        if (!code) return;\n\n        var img = document.createElement('img');\n        img.className = 'oak-flagge';\n        img.alt = '';\n        img.width = 20;\n        img.height = 15;\n        img.src = code === 'eu'\n          ? euFlagge()\n          : 'https://cdn.shopify.com/static/images/flags/' + code + '.svg?width=40';\n\n        var walker = document.createTreeWalker(zelle, NodeFilter.SHOW_TEXT);\n        var text = walker.nextNode();\n        while (text && !text.nodeValue.trim()) text = walker.nextNode();\n        if (text) text.parentNode.insertBefore(img, text);\n\n        if (index > 1) zeile.classList.add('oak-land-zeile');\n      });\n    });\n\n    /* --- Link neben dem Steuerhinweis --- */\n    // art 'komma': \"Inklusive Steuern, zzgl. Versandkosten\"\n    // art 'zeile': Link in einer neuen Zeile direkt unter dem Text\n    var regeln = [\n      { muster: /^(Inklusive Steuern|Taxes included|Tax included)\\.?$/i, art: 'komma' },\n      { muster: /Taxes are charged by local authorities/i, art: 'zeile' }\n    ];\n    var bereich = document.querySelector('main') || document.body;\n\n    function sichtbar(el) {\n      return !!(el && el.getClientRects().length);\n    }\n\n    function einsetzen() {\n      if (link.isConnected && link.parentNode.dataset.oakTax) return;\n      var walker = document.createTreeWalker(bereich, NodeFilter.SHOW_TEXT);\n      var node;\n      while ((node = walker.nextNode())) {\n        var text = node.nodeValue.trim();\n        if (!text || !sichtbar(node.parentElement)) continue;\n\n        for (var i = 0; i < regeln.length; i++) {\n          if (!regeln[i].muster.test(text)) continue;\n\n          if (regeln[i].art === 'komma') {\n            node.nodeValue = text.replace(/\\.$/, '') + ', ';\n            node.parentNode.insertBefore(link, node.nextSibling);\n          } else {\n            var br = document.createElement('br');\n            node.parentNode.insertBefore(br, node.nextSibling);\n            node.parentNode.insertBefore(link, br.nextSibling);\n          }\n          node.parentNode.dataset.oakTax = '1';\n          return;\n        }\n      }\n    }\n\n    function start() {\n      einsetzen();\n      new MutationObserver(einsetzen).observe(bereich, { childList: true, subtree: true });\n    }\n\n    if (document.readyState === 'loading') {\n      document.addEventListener('DOMContentLoaded', start);\n    } else {\n      start();\n    }\n  })();\n</script>",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "buy-buttons": {
@@ -70,13 +82,17 @@
             "smart-payment-enabled": false,
             "primary-button-style": "button-1",
             "secondary-button-style": "button-3",
-            "sticky-add-enabled": false
+            "sticky-add-enabled": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "liquid_gjp7p3": {
           "type": "liquid",
           "settings": {
-            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>"
+            "custom-liquid": "{% assign payment_icons = 'visa,klarna,amex,paypal,applepay,mastercard' | split: ',' %}\n<div class=\"prd-Detail_PaymentProviders\">\n  {% for icon in payment_icons %}\n    {% capture icon_url %}//cdn.shopify.com/s/files/1/0572/2472/4539/files/{{ icon }}.png?v=1716810458{% endcapture %}\n    {% if icon_url != '' %}\n      <img class=\"prd-Detail_PaymentProvider\" src=\"{{ icon_url }}\" alt=\"{{ icon | capitalize }}\" width=\"40\" height=\"30\" loading=\"lazy\">\n    {% endif %}\n  {% endfor %}\n</div>",
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "collapsible_row_HJLPtV": {
@@ -85,7 +101,9 @@
             "heading": "Kompatibilität",
             "description": "<p>{{ product.metafields.custom.kompatibilitat | metafield_tag }}</p>",
             "page-content": "",
-            "default-open": false
+            "default-open": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "collapsible_row_MiJwDe": {
@@ -94,7 +112,9 @@
             "heading": "Lieferumfang",
             "description": "<p>{{ product.metafields.custom.lieferumfang | metafield_tag }}</p>",
             "page-content": "",
-            "default-open": false
+            "default-open": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "collapsible_row_YWGejE": {
@@ -104,7 +124,9 @@
             "heading": "Gewicht",
             "description": "",
             "page-content": "",
-            "default-open": false
+            "default-open": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "collapsible_row_kfpdQn": {
@@ -113,7 +135,9 @@
             "heading": "Fertigung & Material",
             "description": "",
             "page-content": "",
-            "default-open": false
+            "default-open": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "collapsible_row_JpCGim": {
@@ -122,15 +146,20 @@
             "heading": "Montage",
             "description": "",
             "page-content": "",
-            "default-open": false
+            "default-open": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         },
         "complementary_products_xcqnQq": {
           "type": "complementary-products",
+          "disabled": true,
           "settings": {
             "title": "Ergänzend dazu",
             "max-products": 3,
-            "collapsible-row-enabled": false
+            "collapsible-row-enabled": false,
+            "space_before": "auto",
+            "hide_when_price_locked": false
           }
         }
       },
@@ -183,7 +212,6 @@
           "type": "media",
           "settings": {
             "type": "image",
-            "image": "",
             "video-url": ""
           }
         },
@@ -191,7 +219,6 @@
           "type": "media",
           "settings": {
             "type": "image",
-            "image": "",
             "video-url": ""
           }
         }
@@ -230,6 +257,7 @@
     },
     "1773307617e4d940ae": {
       "type": "apps",
+      "disabled": true,
       "custom_css": [
         "div,span,a,p {color: #fff !important; font-weight: normal;}",
         "path {stroke: rgb(355, 355, 355) !important;}"
@@ -281,9 +309,9 @@
         "heading_cnMB4G",
         "description_hcgXFz"
       ],
+      "disabled": true,
       "name": "Expertenstimme",
       "settings": {
-        "image": "",
         "border": "none",
         "spacing-above": "none",
         "spacing-below": "large",
@@ -316,7 +344,6 @@
           "type": "icon",
           "settings": {
             "icon": "sun",
-            "icon-image": "shopify://shop_images/TestingIcon_WebshopOAK.png",
             "title": "Auf Herz und Nieren",
             "description": "<p>Neben Labortests prüfen unsere Profi Teamrider und Ingenieure alle Parts im anspruchsvollsten Einsatzbereich.</p>",
             "button-text": "",
@@ -327,7 +354,6 @@
           "type": "icon",
           "settings": {
             "icon": "tree",
-            "icon-image": "shopify://shop_images/KundenIcon_WebshopOAK.png",
             "title": "We got your back",
             "description": "<p>Du brauchst Ersatzteile oder weiterführende Hilfe? Kontaktiere uns gerne jederzeit, wir helfen dir!</p>",
             "button-text": "",
@@ -338,7 +364,6 @@
           "type": "icon",
           "settings": {
             "icon": "recycle",
-            "icon-image": "shopify://shop_images/RueckgaberechtIcon_WebshopOAK_New.png",
             "title": "Ohne Kompromisse",
             "description": "<p>Wenn du nicht zufrieden bist, kann das Produkt innerhalb von 30 Tagen zurückgeschickt werden.</p>",
             "button-text": "",
@@ -438,6 +463,7 @@
         "description_rjAikN",
         "button_tx7taL"
       ],
+      "disabled": true,
       "custom_css": [
         "img {height: auto; margin: auto; max-width: 120px;}",
         ".image--root {height: auto;}",
@@ -445,7 +471,6 @@
       ],
       "name": "Pressestimme",
       "settings": {
-        "image": "",
         "border": "none",
         "spacing-above": "large",
         "spacing-below": "large",
@@ -512,9 +537,9 @@
         "description_qeTFLt",
         "button_ViRT4d"
       ],
+      "disabled": true,
       "name": "About OAK",
       "settings": {
-        "image": "shopify://shop_images/Shooting19072024_DaniSH_web_16_von_114.jpg",
         "border": "none",
         "spacing-above": "large",
         "spacing-below": "large",
@@ -546,7 +571,6 @@
         "image_CNnaYt": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -562,7 +586,6 @@
         "image_x7fRVm": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -578,7 +601,6 @@
         "image_WgMQpj": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -594,7 +616,6 @@
         "image_GtLtNf": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -610,7 +631,6 @@
         "image_trBD3B": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -626,7 +646,6 @@
         "image_pdPXWt": {
           "type": "image",
           "settings": {
-            "image": "",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -682,6 +701,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "custom_css": [],
       "name": "Verwandte Produkte",
       "settings": {
