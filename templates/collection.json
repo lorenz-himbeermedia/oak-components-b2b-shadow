@@ -40,12 +40,14 @@
       "blocks": {
         "overline_tQcNHY": {
           "type": "overline",
-          "settings": {}
+          "settings": {
+            "overline": "Overline text"
+          }
         },
         "heading_F9Jiid": {
           "type": "heading",
           "settings": {
-            "heading-type": "featured-heading",
+            "heading-type": "banner-heading",
             "title": "{{ collection.title }}",
             "highlight-type": "italic",
             "highlight-color": "accent-2",
@@ -184,9 +186,9 @@
         "description_UdV3K3",
         "button_rqHpTL"
       ],
+      "disabled": true,
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/ShootingLeogang_web-26.jpg",
         "border": "none",
         "spacing-above": "large",
         "spacing-below": "large",
@@ -219,7 +221,6 @@
           "type": "icon",
           "settings": {
             "icon": "sun",
-            "icon-image": "shopify://shop_images/CO2Neutral_WebshopOAK.png",
             "title": "CO2 reduzierte Lieferungen",
             "description": "",
             "button-text": "",
@@ -230,7 +231,6 @@
           "type": "icon",
           "settings": {
             "icon": "tree",
-            "icon-image": "shopify://shop_images/LieferketteIcon_WebshopOAK.png",
             "title": "Kurze Lieferketten",
             "description": "",
             "button-text": "",
@@ -241,7 +241,6 @@
           "type": "icon",
           "settings": {
             "icon": "recycle",
-            "icon-image": "shopify://shop_images/HerzEuropaIcon_WebshopOAK.png",
             "title": "Made in Europe",
             "description": "",
             "button-text": "",
@@ -254,6 +253,7 @@
         "icon_f6xQed",
         "icon_WnXrVU"
       ],
+      "disabled": true,
       "name": "Icons row",
       "settings": {
         "overline": "",
@@ -353,6 +353,7 @@
         "image_djRfeA",
         "image_MxKqc4"
       ],
+      "disabled": true,
       "name": "Grid with overlay",
       "settings": {
         "overline": "",

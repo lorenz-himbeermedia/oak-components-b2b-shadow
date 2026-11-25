@@ -356,6 +356,7 @@
         "overline_N4EqHm",
         "heading_itFTEW"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "border": "none",
@@ -373,6 +374,7 @@
     },
     "1773230450de37fc34": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "border": "none",
         "spacing-above": "none",
@@ -400,6 +402,7 @@
       "block_order": [
         "overline_6EUbL7"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "border": "none",
@@ -469,6 +472,7 @@
         "image_MyUWND",
         "image_YYmdUw"
       ],
+      "disabled": true,
       "custom_css": [
         "picture.image--root {width: 80px; height: 80px; margin: auto auto 20px auto;}"
       ],
@@ -533,6 +537,7 @@
         "description_XUzPac",
         "button_PxBFpt"
       ],
+      "disabled": true,
       "custom_css": [
         "a {margin-top: 20px;}"
       ],
@@ -551,12 +556,65 @@
         "mobile-text-alignment": "center"
       }
     },
+    "oak_usp_banner_ekdLUE": {
+      "type": "oak-usp-banner",
+      "blocks": {
+        "usp_a74L9P": {
+          "type": "usp",
+          "settings": {
+            "icon": "precision",
+            "title": "German performance & engineering excellence"
+          }
+        },
+        "usp_NQYEfq": {
+          "type": "usp",
+          "settings": {
+            "icon": "trail",
+            "title": "We ride & create!\nDeveloped by bikers for bikers"
+          }
+        },
+        "usp_fLRpJm": {
+          "type": "usp",
+          "settings": {
+            "icon": "package",
+            "title": "Unique innovative products in smart packaging"
+          }
+        },
+        "usp_6qeXdy": {
+          "type": "usp",
+          "settings": {
+            "icon": "camera",
+            "title": "Premium content available"
+          }
+        }
+      },
+      "block_order": [
+        "usp_a74L9P",
+        "usp_NQYEfq",
+        "usp_fLRpJm",
+        "usp_6qeXdy"
+      ],
+      "name": "OAK USP banner",
+      "settings": {
+        "overline": "OAK for dealers",
+        "heading": "Precision MTB components for your shop.",
+        "text": "Engineered in Germany, tested on the trail and packed ready for your shelf.",
+        "button-text": "Shop the range",
+        "button-link": "",
+        "background-color": "#000000",
+        "text-color": "#ffffff",
+        "accent-color": "#ffffff",
+        "padding-top": 64,
+        "padding-bottom": 64
+      }
+    },
     "grid_with_overlay_CPQN6G": {
       "type": "grid-with-overlay",
       "blocks": {
         "image_P8p8gT": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/RTH_Sonntag_web-93.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -572,6 +630,7 @@
         "image_mpE3Km": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/EBike_Meteor_studio_web-2.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -587,6 +646,7 @@
         "image_Nn8kNK": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/05_PLA_1_819074b4-30fa-43e4-829e-1d0a8fb5143b.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -602,6 +662,7 @@
         "image_yCDn9N": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Hyperstop_BrakePads_19.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -617,6 +678,7 @@
         "image_aXMPmN": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/RLD177_1.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -632,6 +694,7 @@
         "image_pPty7k": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/HT4Mounted_gold.jpg",
             "title": "",
             "button-text": "",
             "button-link": "",
@@ -694,6 +757,7 @@
     "featured_text_kDXkdh",
     "text_columns_icVDhC",
     "featured_text_nw3kKW",
+    "oak_usp_banner_ekdLUE",
     "grid_with_overlay_CPQN6G"
   ]
 }
