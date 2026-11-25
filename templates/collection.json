@@ -38,12 +38,6 @@
     "image_with_text_overlay_ihrXyj": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "overline_tQcNHY": {
-          "type": "overline",
-          "settings": {
-            "overline": "Overline text"
-          }
-        },
         "heading_F9Jiid": {
           "type": "heading",
           "settings": {
@@ -53,19 +47,10 @@
             "highlight-color": "accent-2",
             "highlight-text": "none"
           }
-        },
-        "description_Lgp9VD": {
-          "type": "description",
-          "settings": {
-            "description": "{{ collection.description }}",
-            "mobile-hide-enabled": false
-          }
         }
       },
       "block_order": [
-        "overline_tQcNHY",
-        "heading_F9Jiid",
-        "description_Lgp9VD"
+        "heading_F9Jiid"
       ],
       "name": "Image with text overlay",
       "settings": {
@@ -85,7 +70,7 @@
         "text-style": "none",
         "text-background-color": "transparent",
         "image-display-type": "x-small",
-        "aspect-ratio": 56,
+        "aspect-ratio": 24,
         "parallax-enabled": false,
         "mobile-image-display-type": "x-small",
         "mobile-aspect-ratio": 134,
