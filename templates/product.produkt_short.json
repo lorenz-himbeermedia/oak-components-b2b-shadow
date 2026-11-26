@@ -50,7 +50,9 @@
         },
         "stock_light_iKNcxt": {
           "type": "stock-light",
-          "settings": {}
+          "settings": {
+            "hide_when_price_locked": true
+          }
         },
         "buy-buttons": {
           "type": "buy-buttons",

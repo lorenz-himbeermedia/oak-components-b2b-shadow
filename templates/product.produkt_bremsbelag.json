@@ -126,6 +126,12 @@
             "max-products": 3,
             "collapsible-row-enabled": false
           }
+        },
+        "stock_light_Brm3Xp": {
+          "type": "stock-light",
+          "settings": {
+            "hide_when_price_locked": true
+          }
         }
       },
       "block_order": [
@@ -135,6 +141,7 @@
         "icon_yQUrFV",
         "options",
         "price",
+        "stock_light_Brm3Xp",
         "liquid_aHJ7tt",
         "liquid_TUWTE9",
         "buy-buttons",
