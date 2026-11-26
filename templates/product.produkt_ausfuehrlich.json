@@ -68,6 +68,13 @@
             "space_before": "auto"
           }
         },
+        "stock_light_NmPXiq": {
+          "type": "stock-light",
+          "settings": {
+            "space_before": "auto",
+            "hide_when_price_locked": true
+          }
+        },
         "liquid_CEMafA": {
           "type": "liquid",
           "settings": {
@@ -170,6 +177,7 @@
         "icon_yQUrFV",
         "options",
         "price",
+        "stock_light_NmPXiq",
         "liquid_CEMafA",
         "buy-buttons",
         "liquid_gjp7p3",
