@@ -61,7 +61,7 @@
 	{% if wcp_apply_vd == "true" %}      
 		{% assign Discount_Price = 0 %}		
         {%- capture wcp_vd_HTML_table_tmp -%}
-					{"HeaderText":"{{shop.metafields.wcp_net.VDTableNote}}", "calculation_mode":"{{calculation_mode}}",
+					{"HeaderText":{{shop.metafields.wcp_net.VDTableNote | json}}, "calculation_mode":"{{calculation_mode}}",
 					{% for variant in wcp_vd_table_change.variants %}                      
                         {% if wcp_vd_on == "v" %}  
                            {% unless wcp_vd_metafield_data contains variant.id %}   
